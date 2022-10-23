@@ -18,7 +18,7 @@ export default function Layout({ children }) {
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
-          <small className="text-slate-400">Next.js / Tailwind CSS</small>
+          <small className="text-slate-400">footer</small>
         </Footer>
       </main>
     </>
