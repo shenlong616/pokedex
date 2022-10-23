@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import Pokedex from "pokedex-promise-v2";
-import Tilt from "react-parallax-tilt";
 import Stat from "./components/Stat";
 import clsx from "clsx";
 import { InView } from "react-intersection-observer";
@@ -67,64 +66,58 @@ export default function Pokedex_() {
                         render: [
                           ...prevState.render,
                           <div key={id}>
-                            <Tilt
-                              glareEnable={false}
-                              tiltMaxAngleX="6"
-                              tiltMaxAngleY="3"
+                            <div
+                              className={clsx(
+                                [
+                                  "grid scale-90 cursor-pointer grid-cols-2 rounded-md border-2 border-transparent bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100",
+                                ],
+                                {
+                                  "hover:border-green-500":
+                                    getHighestElement === 0,
+                                },
+                                {
+                                  "hover:border-red-500":
+                                    getHighestElement === 1,
+                                },
+                                {
+                                  "hover:border-blue-500":
+                                    getHighestElement === 2,
+                                }
+                              )}
                             >
-                              <div
-                                className={clsx(
-                                  [
-                                    "grid scale-90 cursor-pointer grid-cols-2 rounded-md border-2 border-transparent bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100",
-                                  ],
-                                  {
-                                    "hover:border-green-500":
-                                      getHighestElement === 0,
-                                  },
-                                  {
-                                    "hover:border-red-500":
-                                      getHighestElement === 1,
-                                  },
-                                  {
-                                    "hover:border-blue-500":
-                                      getHighestElement === 2,
-                                  }
-                                )}
-                              >
-                                <Image
-                                  src={sprites.front_default}
-                                  width={"100%"}
-                                  height={"100%"}
-                                  alt={species.name}
-                                  // onLoadingComplete={() => {}}
-                                />
-                                <div className="self-center">
+                              <Image
+                                src={sprites.front_default}
+                                width={"100%"}
+                                height={"100%"}
+                                alt={species.name}
+                                // onLoadingComplete={() => {}}
+                              />
+                              <div className="self-center">
+                                <Stat>
+                                  {[
+                                    array[0],
+                                    "bg-green-500",
+                                    (stats[0].base_stat / totalArray) * 100,
+                                  ]}
+                                </Stat>
+                                <div className="my-0.5">
                                   <Stat>
                                     {[
-                                      array[0],
-                                      "bg-green-500",
-                                      (stats[0].base_stat / totalArray) * 100,
-                                    ]}
-                                  </Stat>
-                                  <div className="my-0.5">
-                                    <Stat>
-                                      {[
-                                        array[1],
-                                        "bg-red-500",
-                                        (stats[1].base_stat / totalArray) * 100,
-                                      ]}
-                                    </Stat>
-                                  </div>
-                                  <Stat>
-                                    {[
-                                      array[2],
-                                      "bg-blue-500",
-                                      (stats[2].base_stat / totalArray) * 100,
+                                      array[1],
+                                      "bg-red-500",
+                                      (stats[1].base_stat / totalArray) * 100,
                                     ]}
                                   </Stat>
                                 </div>
+                                <Stat>
+                                  {[
+                                    array[2],
+                                    "bg-blue-500",
+                                    (stats[2].base_stat / totalArray) * 100,
+                                  ]}
+                                </Stat>
                               </div>
-                            </Tilt>
+                            </div>
                             <small className="font-mono font-medium">
                               {name}
                             </small>
