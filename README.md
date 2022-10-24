@@ -37,7 +37,7 @@ pages
 
 README
  ┗ img
- ┃ ┗ 1.png
+ ┃ ┗ 0.png
 
 styles
  ┣ globals.scss
