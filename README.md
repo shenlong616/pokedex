@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](./README/img/1.png)
+![](./README/img/0.png)
 
 ## To do
 
@@ -13,26 +13,27 @@
 - [ ] Search bar component.
 - [ ] Filter component.
 
-## Add/Modify/Delete
+## Main files
 
-### Tree files
+### Tree
 
 ```text
 components
- ┣ Pokedex
+ ┣ Layout
+ ┃ ┣ Footer.jsx
+ ┃ ┣ Header.jsx
+ ┃ ┣ index.jsx
+ ┃ ┣ NoiseTexture.jsx
+ ┃ ┗ Slideout.jsx
+ ┗ Pokedex
  ┃ ┣ components
- ┃ ┃ ┗ Stat.js
- ┃ ┗ index.js
- ┣ Footer.js
- ┣ Header.js
- ┣ Layout.js
- ┣ Noise.js
- ┗ Slideout.js
+ ┃ ┃ ┗ Stat.jsx
+ ┃ ┗ index.jsx
 
 pages
- ┣ index.js
- ┣ _app.js
- ┗ _document.js
+ ┣ index.jsx
+ ┣ _app.jsx
+ ┗ _document.jsx
 
 README
  ┗ img

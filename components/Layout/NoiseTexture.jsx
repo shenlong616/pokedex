@@ -1,5 +1,5 @@
 // https://github.com/delbaoliveira/website/blob/main/ui/Layout.tsx#L40-L58
-export default function Noise() {
+export default function () {
   return (
     <svg
       className="pointer-events-none fixed isolate z-50 opacity-30 mix-blend-color-burn"

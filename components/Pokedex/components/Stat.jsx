@@ -1,4 +1,4 @@
-export default function Stat({ children }) {
+export default function ({ children }) {
   return (
     <>
       <div className="text-left font-mono text-xs text-slate-400">

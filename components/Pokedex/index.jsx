@@ -7,7 +7,7 @@ import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
 
-export default function Pokedex_() {
+export default function () {
   const [state, setState] = useState({
     // boolean: false,
     // data: { count: {} },

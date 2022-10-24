@@ -1,12 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Noise from "./Noise";
-import { settings } from "../pokedex.config.js";
+import NoiseTexture from "./NoiseTexture";
+import { settings } from "../../pokedex.config.js";
 
-export default function Layout({ children }) {
+export default function ({ children }) {
   return (
     <>
-      <Noise />
+      <NoiseTexture />
       <main className="text-slate-100 antialiased">
         <Header>
           {settings.title}

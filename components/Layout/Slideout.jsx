@@ -1,7 +1,7 @@
+// https://css-tricks.com/the-slideout-footer/
 import clsx from "clsx";
 
-// https://css-tricks.com/the-slideout-footer/
-export default function Slideout({ prop1, children }) {
+export default function ({ prop1, children }) {
   return (
     <div
       className={clsx(
