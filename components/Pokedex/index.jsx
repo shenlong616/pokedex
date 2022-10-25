@@ -71,7 +71,7 @@ export default function () {
                             show={true}
                             appear
                             enter="ease-in-out duration-300"
-                            enterFrom="opacity-0 translate-y-1/3"
+                            enterFrom="opacity-0 translate-y-2/3"
                             enterTo="opacity-100 translate-y-0"
                           >
                             <div
