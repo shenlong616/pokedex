@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
+import { Transition } from "@headlessui/react";
 
 export default function () {
   const [state, setState] = useState({
@@ -65,7 +66,14 @@ export default function () {
                         index: prevState.index + 1,
                         render: [
                           ...prevState.render,
-                          <div key={id}>
+                          <Transition
+                            key={id}
+                            show={true}
+                            appear
+                            enter="ease-in-out duration-300"
+                            enterFrom="opacity-0 translate-y-1/3"
+                            enterTo="opacity-100 translate-y-0"
+                          >
                             <div
                               className={clsx(
                                 [
@@ -121,7 +129,7 @@ export default function () {
                             <small className="font-mono font-medium">
                               {name}
                             </small>
-                          </div>,
+                          </Transition>,
                         ],
                       };
                     });
