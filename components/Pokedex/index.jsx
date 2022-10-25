@@ -71,7 +71,7 @@ export default function () {
                             key={id}
                             show={true}
                             appear
-                            enter="ease-in-out duration-300"
+                            enter="transition-all ease-in-out duration-300"
                             enterFrom="opacity-0 translate-y-2/3 skew-y-12"
                             enterTo="opacity-100 translate-y-0 skew-y-0"
                           >
