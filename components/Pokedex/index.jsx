@@ -69,18 +69,18 @@ export default function () {
                             <div
                               className={clsx(
                                 [
-                                  "grid scale-90 cursor-pointer grid-cols-2 rounded-md border-2 border-transparent bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100",
+                                  "grid scale-90 cursor-pointer grid-cols-2 rounded-md border border-zinc-700 bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100",
                                 ],
                                 {
-                                  "hover:border-green-500":
+                                  "hover:shadow-xl hover:shadow-green-500":
                                     getHighestElement === 0,
                                 },
                                 {
-                                  "hover:border-red-500":
+                                  "hover:shadow-xl hover:shadow-red-500":
                                     getHighestElement === 1,
                                 },
                                 {
-                                  "hover:border-blue-500":
+                                  "hover:shadow-xl hover:shadow-blue-500":
                                     getHighestElement === 2,
                                 }
                               )}
