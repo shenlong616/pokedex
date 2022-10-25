@@ -75,7 +75,7 @@ export default function () {
                             enterFrom="opacity-0 translate-y-2/3 skew-y-12"
                             enterTo="opacity-100 translate-y-0 skew-y-0"
                           >
-                            <Tilt tiltMaxAngleX={12} tiltMaxAngleY={3}>
+                            <Tilt tiltMaxAngleX={9} tiltMaxAngleY={3}>
                               <div
                                 className={clsx(
                                   [
