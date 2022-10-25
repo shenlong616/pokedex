@@ -94,6 +94,7 @@ export default function () {
                                       getHighestElement === 2,
                                   }
                                 )}
+                                onClick={() => alert(`${id} - ${name} `)}
                               >
                                 <Image
                                   src={sprites.front_default}
