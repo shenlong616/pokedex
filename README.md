@@ -44,6 +44,8 @@ styles
  ┗ _tailwind.scss
 ```
 
+## Install command
+
 ```text
  _______________
 / $ mpm i       \
