@@ -71,8 +71,8 @@ export default function () {
                             show={true}
                             appear
                             enter="ease-in-out duration-300"
-                            enterFrom="opacity-0 translate-y-2/3"
-                            enterTo="opacity-100 translate-y-0"
+                            enterFrom="opacity-0 translate-y-2/3 skew-y-12"
+                            enterTo="opacity-100 translate-y-0 skew-y-0"
                           >
                             <div
                               className={clsx(
