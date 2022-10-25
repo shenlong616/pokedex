@@ -2,7 +2,7 @@
 export default function () {
   return (
     <svg
-      className="pointer-events-none fixed isolate z-50 opacity-30 mix-blend-color-burn"
+      className="pointer-events-none fixed isolate z-50 mix-blend-color-burn"
       width="100%"
       height="100%"
     >

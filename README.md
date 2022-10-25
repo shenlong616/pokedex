@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](./README/img/0.png)
+![](./README/img/1.png)
 
 ## To do
 
@@ -42,4 +42,16 @@ README
 styles
  ┣ globals.scss
  ┗ _tailwind.scss
+```
+
+```text
+ _______________
+/ $ mpm i       \
+\ $ npm run dev /
+ ---------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
 ```
