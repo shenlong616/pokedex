@@ -14,7 +14,7 @@ export default function ({ children }) {
             v{settings.version}
           </small>
         </Header>
-        <div className="bg-zinc-900 py-4">
+        <div className={`${settings.styles.background.body} py-4`}>
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
