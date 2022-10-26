@@ -3,7 +3,7 @@ import Stat from "./Stat";
 import clsx from "clsx";
 import { Transition } from "@headlessui/react";
 import Tilt from "react-parallax-tilt";
-import { settings } from "../../../pokedex.config";
+import { settings } from "../../../../pokedex.config";
 
 export default function ({ children }) {
   const { stats, sprites, species, name } = children;
