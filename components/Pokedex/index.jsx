@@ -7,23 +7,9 @@ import Card from "./components/Card";
 
 export default function () {
   const [state, setState] = useState({
-    // boolean: false,
-    // data: { count: {} },
     render: [],
     index: 1,
   });
-
-  // useEffect(() => {
-  //   new Pokedex().getPokemonsList().then((value) =>
-  //     setState((prevState) => {
-  //       return {
-  //         ...prevState,
-  //         boolean: true,
-  //         data: { ...prevState.data, count: value.count },
-  //       };
-  //     })
-  //   );
-  // }, []);
 
   return (
     <>
