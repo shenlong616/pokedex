@@ -130,7 +130,7 @@ export default function () {
                                 </div>
                               </div>
                             </Tilt>
-                            <small className="font-mono font-medium">
+                            <small className="select-all font-mono font-medium">
                               {name}
                             </small>
                           </Transition>,

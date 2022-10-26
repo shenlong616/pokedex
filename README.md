@@ -41,7 +41,8 @@ README
 
 styles
  ┣ globals.scss
- ┗ _tailwind.scss
+ ┣ _selectors.scss
+ ┗ _tailwindcss.scss
 ```
 
 ## Install command
