@@ -27,7 +27,9 @@ components
  ┃ ┗ Slideout.jsx
  ┗ Pokedex
  ┃ ┣ components
- ┃ ┃ ┗ Stat.jsx
+ ┃ ┃ ┗ Card
+ ┃ ┃ ┃ ┣ index.jsx
+ ┃ ┃ ┃ ┗ Stat.jsx
  ┃ ┗ index.jsx
 
 pages

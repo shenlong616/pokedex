@@ -5,8 +5,8 @@ import { Transition } from "@headlessui/react";
 import Tilt from "react-parallax-tilt";
 import { settings } from "../../../../pokedex.config";
 
-export default function ({ children }) {
-  const { stats, sprites, species, name } = children;
+export default function ({ response }) {
+  const { stats, sprites, species, name } = response;
 
   const array = [stats[0].base_stat, stats[1].base_stat, stats[2].base_stat];
 

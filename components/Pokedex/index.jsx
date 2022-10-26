@@ -49,7 +49,7 @@ export default function () {
                         index: prevState.index + 1,
                         render: [
                           ...prevState.render,
-                          <Card key={prevState.index}>{response}</Card>,
+                          <Card key={prevState.index} response={response} />,
                         ],
                       };
                     });
