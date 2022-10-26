@@ -79,18 +79,18 @@ export default function () {
                               <div
                                 className={clsx(
                                   [
-                                    "grid scale-90 cursor-pointer grid-cols-2 rounded-md border border-zinc-700 bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100 hover:animate-pulse active:translate-y-1",
+                                    "grid scale-90 cursor-pointer grid-cols-2 rounded-md border border-zinc-700 bg-zinc-800 p-1 transition duration-150 ease-in-out hover:scale-100 hover:animate-pulse active:translate-y-1.5",
                                   ],
                                   {
-                                    "hover:shadow-xl hover:shadow-green-500 active:ring-1 active:ring-green-500 active:ring-offset-2 active:ring-offset-green-500":
+                                    "hover:shadow-xl hover:shadow-green-500 hover:ring-1 hover:ring-green-500 hover:ring-offset-2 hover:ring-offset-green-500":
                                       getHighestElement === 0,
                                   },
                                   {
-                                    "hover:shadow-xl hover:shadow-red-500 active:ring-1 active:ring-red-500 active:ring-offset-2 active:ring-offset-red-500":
+                                    "hover:shadow-xl hover:shadow-red-500 hover:ring-1 hover:ring-red-500 hover:ring-offset-2 hover:ring-offset-red-500":
                                       getHighestElement === 1,
                                   },
                                   {
-                                    "hover:shadow-xl hover:shadow-blue-500 active:ring-1 active:ring-blue-500 active:ring-offset-2 active:ring-offset-blue-500":
+                                    "hover:shadow-xl hover:shadow-blue-500 hover:ring-1 hover:ring-blue-500 hover:ring-offset-2 hover:ring-offset-blue-500":
                                       getHighestElement === 2,
                                   }
                                 )}
