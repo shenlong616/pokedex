@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
-import { settings } from "../../../../pokedex.config";
+import { settings } from "../../../pokedex.config";
 
 export default function ({ prop1, prop2 }) {
   return (
