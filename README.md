@@ -25,12 +25,14 @@ components
  ┃ ┣ index.jsx
  ┃ ┣ NoiseTexture.jsx
  ┃ ┗ Slideout.jsx
- ┗ Pokedex
+ ┣ Pokedex
  ┃ ┣ components
- ┃ ┃ ┗ Card
+ ┃ ┃ ┣ Card
  ┃ ┃ ┃ ┣ index.jsx
  ┃ ┃ ┃ ┗ Stat.jsx
+ ┃ ┃ ┗ Dialog.jsx
  ┃ ┗ index.jsx
+ ┗ Button.jsx
 
 pages
  ┣ index.jsx

@@ -7,6 +7,7 @@ export const settings = {
     </u>
   ),
 
+  // https://tailwindcss.com/
   style: {
     background: {
       body: "bg-zinc-900",
