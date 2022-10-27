@@ -18,7 +18,7 @@ export default function ({ children }) {
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
-          <small className="text-slate-400">footer</small>
+          <small className="text-slate-400">{settings.footer}</small>
         </Footer>
       </main>
     </>

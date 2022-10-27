@@ -1,6 +1,12 @@
 export const settings = {
   title: "Pokédex",
   version: "0.0.1",
+  footer: (
+    <u>
+      <i>footer</i>
+    </u>
+  ),
+
   style: {
     background: {
       body: "bg-zinc-900",
@@ -24,6 +30,11 @@ export const settings = {
       },
     },
   },
+
+  // https://github.com/mkosir/react-parallax-tilt
+  tilt: { tiltMaxAngleX: 6, tiltMaxAngleY: 3 },
+
+  // https://headlessui.com/
   headlessui: {
     transition: {
       0: {

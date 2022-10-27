@@ -24,7 +24,10 @@ export default function ({ response }) {
       enterFrom={settings.headlessui.transition[0].enterFrom}
       enterTo={settings.headlessui.transition[0].enterTo}
     >
-      <Tilt tiltMaxAngleX={6} tiltMaxAngleY={3}>
+      <Tilt
+        tiltMaxAngleX={settings.tilt.tiltMaxAngleX}
+        tiltMaxAngleY={settings.tilt.tiltMaxAngleY}
+      >
         <div
           className={clsx(
             [
