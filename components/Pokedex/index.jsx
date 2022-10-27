@@ -5,6 +5,7 @@ import Head from "next/head";
 import { settings } from "../../pokedex.config";
 import Card from "./components/Card";
 import Dialog from "./components/Dialog";
+import { Transition } from "@headlessui/react";
 
 export default function () {
   const [state, setState] = useState({
@@ -24,7 +25,7 @@ export default function () {
 
       <Dialog prop1={state2} prop2={() => setState2(false)} />
 
-      <div className="grid grid-cols-2 place-items-center gap-2 text-center sm:grid-cols-4 sm:gap-2 md:grid-cols-5 md:gap-4 xl:grid-cols-8 xl:gap-3">
+      <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-5 md:gap-5 xl:grid-cols-6 xl:gap-5">
         {state.render}
       </div>
 
@@ -42,12 +43,23 @@ export default function () {
                         index: prevState.index + 1,
                         render: [
                           ...prevState.render,
-                          <div
+                          <Transition
                             key={prevState.index}
-                            onClick={() => setState2(true)}
+                            show={true}
+                            appear
+                            enter={settings.headlessui.transition[0].enter}
+                            enterFrom={
+                              settings.headlessui.transition[0].enterFrom
+                            }
+                            enterTo={settings.headlessui.transition[0].enterTo}
                           >
-                            <Card response={response} />
-                          </div>,
+                            <div onClick={() => setState2(true)}>
+                              <Card response={response} />
+                            </div>
+                            <small className="select-all font-mono font-medium">
+                              {response.name}
+                            </small>
+                          </Transition>,
                         ],
                       };
                     });
