@@ -10,19 +10,14 @@ export default function ({ prop1, prop2 }) {
       <Dialog as="div" className="relative z-40" onClose={prop2}>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-75"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-75"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+          enter={settings.headlessui.transition[2].enter}
+          enterFrom={settings.headlessui.transition[2].enterFrom}
+          enterTo={settings.headlessui.transition[2].enterTo}
+          leave={settings.headlessui.transition[2].leave}
+          leaveFrom={settings.headlessui.transition[2].leaveFrom}
+          leaveTo={settings.headlessui.transition[2].leaveTo}
         >
-          <div
-            className={clsx(
-              ["fixed inset-0"],
-              [settings.style.background.body]
-            )}
-          />
+          <div className="fixed inset-0 bg-black/50" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -55,16 +50,6 @@ export default function ({ prop1, prop2 }) {
                     Your payment has been successfully submitted. We’ve sent you
                     an email with all of the details of your order.
                   </p>
-                </div>
-
-                <div className="mt-4">
-                  <button
-                    type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                    onClick={prop2}
-                  >
-                    Got it, thanks!
-                  </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
