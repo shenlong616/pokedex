@@ -6,7 +6,7 @@ export default function () {
   return (
     <Html>
       <Head />
-      <body className={settings.styles.background.body}>
+      <body className={settings.style.background.body}>
         <Main />
         <NextScript />
       </body>
