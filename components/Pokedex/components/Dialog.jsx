@@ -4,7 +4,8 @@ import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
 export default function ({ prop1, prop2, prop3 }) {
-  const { id, name } = prop3;
+  // console.log(prop3);
+  const { id, name, types = [] } = prop3;
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -44,23 +45,34 @@ export default function ({ prop1, prop2, prop3 }) {
                   ]
                 )}
               >
-                <legend className="font-medium">
+                <legend>
                   <span
                     className={clsx(
-                      ["select-all font-mono text-xs"],
+                      ["select-all pl-1 font-mono text-xs"],
                       [settings.style.text.color[1]]
                     )}
                   >
                     {`${id}`}/
-                  </span>{" "}
+                  </span>
                   <span
                     className={clsx(
-                      ["select-all text-xl uppercase"],
+                      ["select-all px-1 text-xl font-medium uppercase"],
                       [settings.style.text.color[0]]
                     )}
                   >
                     {name}
                   </span>
+                  {types.map((element, index) => (
+                    <span
+                      key={index}
+                      className={clsx(
+                        ["select-all pr-1 font-mono text-xs"],
+                        [settings.style.text.color[1]]
+                      )}
+                    >
+                      {`#${element.type.name}`}
+                    </span>
+                  ))}
                 </legend>
                 {/* <Dialog.Title></Dialog.Title> */}
                 <Dialog.Description
