@@ -2,15 +2,26 @@ import Header from "./Header";
 import Footer from "./Footer";
 import NoiseTexture from "./NoiseTexture";
 import { settings } from "../../pokedex.config.js";
+import clsx from "clsx";
 
 export default function ({ children }) {
   return (
     <>
       <NoiseTexture />
-      <main className="inset-0 text-slate-100 antialiased">
+      <main
+        className={clsx(
+          ["inset-0 antialiased"],
+          [settings.style.text.color[0]]
+        )}
+      >
         <Header>
-          {settings.title}
-          <small className="pl-1 font-mono text-xs font-normal text-slate-400">
+          {settings.title}{" "}
+          <small
+            className={clsx(
+              ["font-mono text-xs font-normal"],
+              [settings.style.text.color[1]]
+            )}
+          >
             v{settings.version}
           </small>
         </Header>
@@ -18,7 +29,9 @@ export default function ({ children }) {
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
-          <small className="text-slate-400">{settings.footer}</small>
+          <small className={settings.style.text.color[1]}>
+            {settings.footer}
+          </small>
         </Footer>
       </main>
     </>

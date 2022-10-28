@@ -10,6 +10,7 @@ export const settings = {
 
   // https://tailwindcss.com/
   style: {
+    text: { color: { 0: "text-slate-100", 1: "text-slate-400" } },
     background: {
       body: "bg-zinc-900",
       card: "bg-zinc-800",

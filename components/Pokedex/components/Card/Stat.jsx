@@ -1,7 +1,15 @@
+import clsx from "clsx";
+import { settings } from "../../../../pokedex.config.js";
+
 export default function ({ children }) {
   return (
     <>
-      <div className="text-left font-mono text-xs text-slate-400">
+      <div
+        className={clsx(
+          ["text-left font-mono text-xs"],
+          [settings.style.text.color[1]]
+        )}
+      >
         <small>{children[0]}</small>
       </div>
       <div className="h-1 w-full rounded-full bg-transparent">

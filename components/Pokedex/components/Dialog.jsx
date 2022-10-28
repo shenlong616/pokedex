@@ -41,14 +41,29 @@ export default function ({ prop1, prop2, prop3 }) {
                 )}
               >
                 <Dialog.Title
-                  as="h3"
-                  className="text-lg font-medium leading-6 text-white"
+                  className={clsx(
+                    ["text-xl font-medium"],
+                    [settings.style.text.color[0]]
+                  )}
                 >
-                  {`${id}. ${name}`}
+                  <small
+                    className={clsx(
+                      ["select-all font-mono text-sm"],
+                      [settings.style.text.color[1]]
+                    )}
+                  >
+                    {`${id}`}.
+                  </small>{" "}
+                  <span className="select-all uppercase">{name}</span>
                 </Dialog.Title>
-                <div className="mt-2">
-                  <p className="text-sm text-slate-400">{(id, name)}</p>
-                </div>
+                <Dialog.Description
+                  className={clsx(
+                    ["mt-2 text-sm"],
+                    [settings.style.text.color[1]]
+                  )}
+                >
+                  description
+                </Dialog.Description>
               </Dialog.Panel>
             </Transition.Child>
           </div>
