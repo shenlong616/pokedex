@@ -51,11 +51,11 @@ export const settings = {
       },
       1: {
         enter: "ease-out duration-300",
-        enterFrom: "opacity-0 scale-95",
+        enterFrom: "opacity-0 scale-90",
         enterTo: "opacity-100 scale-100",
-        leave: "ease-out duration-300",
+        leave: "ease-out duration-200",
         leaveFrom: "opacity-100 scale-100",
-        leaveTo: "opacity-0 scale-90",
+        leaveTo: "opacity-0 scale-75",
       },
       2: {
         enter: "ease-out duration-200",
