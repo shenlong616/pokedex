@@ -3,11 +3,12 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
-export default function ({ prop1, prop2 }) {
+export default function ({ prop1, prop2, prop3 }) {
+  const { id, name } = prop3;
+
   return (
-    // https://headlessui.com/react/dialog
-    <Transition appear show={prop1} as={Fragment}>
-      <Dialog as="div" className="relative z-40" onClose={prop2}>
+    <Transition appear show={prop2} as={Fragment}>
+      <Dialog as="div" className="relative z-40" onClose={prop1}>
         <Transition.Child
           as={Fragment}
           enter={settings.headlessui.transition[2].enter}
@@ -36,20 +37,17 @@ export default function ({ prop1, prop2 }) {
                   [
                     "w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all",
                   ],
-                  [settings.style.background.card]
+                  [settings.style.background.dialog]
                 )}
               >
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-white"
                 >
-                  Payment successful
+                  {`${id}. ${name}`}
                 </Dialog.Title>
                 <div className="mt-2">
-                  <p className="text-sm text-slate-400">
-                    Your payment has been successfully submitted. We’ve sent you
-                    an email with all of the details of your order.
-                  </p>
+                  <p className="text-sm text-slate-400">{(id, name)}</p>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

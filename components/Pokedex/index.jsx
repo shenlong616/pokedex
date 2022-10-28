@@ -8,13 +8,14 @@ import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
 
 export default function () {
-  const [state, setState] = useState({
+  // Card
+  const [state1, setState1] = useState({
     render: [],
     index: 1,
   });
 
   // Dialog
-  const [state2, setState2] = useState(false);
+  const [state2, setState2] = useState({ boolean: false, response: {} });
 
   return (
     <>
@@ -23,10 +24,18 @@ export default function () {
         <meta name="description" content={settings.description} />
       </Head>
 
-      <Dialog prop1={state2} prop2={() => setState2(false)} />
+      <Dialog
+        prop1={() =>
+          setState2((prevState) => {
+            return { ...prevState, boolean: false };
+          })
+        }
+        prop2={state2.boolean}
+        prop3={state2.response}
+      />
 
       <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-5 md:gap-5 xl:grid-cols-7 xl:gap-5">
-        {state.render}
+        {state1.render}
       </div>
 
       <InView>
@@ -34,10 +43,12 @@ export default function () {
           if (inView) {
             (async () => {
               await new Pokedex().getPokemonByName(
-                state.index,
+                state1.index,
                 (response, error) => {
                   if (!error) {
-                    setState((prevState) => {
+                    const { name } = response;
+
+                    setState1((prevState) => {
                       return {
                         ...prevState,
                         index: prevState.index + 1,
@@ -53,11 +64,22 @@ export default function () {
                             }
                             enterTo={settings.headlessui.transition[0].enterTo}
                           >
-                            <div onClick={() => setState2(true)}>
+                            <div
+                              onClick={() =>
+                                setState2((prevState) => {
+                                  return {
+                                    ...prevState,
+                                    boolean: true,
+                                    response: response,
+                                  };
+                                })
+                              }
+                            >
                               <Card response={response} />
                             </div>
+
                             <small className="select-all font-mono font-medium">
-                              {response.name}
+                              {name}
                             </small>
                           </Transition>,
                         ],
