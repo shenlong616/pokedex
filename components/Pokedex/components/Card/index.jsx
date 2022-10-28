@@ -48,7 +48,7 @@ export default function ({ response }) {
           <Stat>
             {[
               array[0],
-              "bg-green-500",
+              settings.style.color.green[2],
               (stats[0].base_stat / totalArray) * 100,
             ]}
           </Stat>
@@ -56,13 +56,17 @@ export default function ({ response }) {
             <Stat>
               {[
                 array[1],
-                "bg-red-500",
+                settings.style.color.red[2],
                 (stats[1].base_stat / totalArray) * 100,
               ]}
             </Stat>
           </div>
           <Stat>
-            {[array[2], "bg-blue-500", (stats[2].base_stat / totalArray) * 100]}
+            {[
+              array[2],
+              settings.style.color.blue[2],
+              (stats[2].base_stat / totalArray) * 100,
+            ]}
           </Stat>
         </div>
       </div>

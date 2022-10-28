@@ -10,7 +10,9 @@ export default function ({ children }) {
           [settings.style.text.color[1]]
         )}
       >
-        <span className="text-xs">{children[0]}</span>
+        <span className="text-xs">
+          <small>{children[0]}</small>
+        </span>
       </div>
       <div className="h-1 w-full rounded-full bg-transparent">
         <div

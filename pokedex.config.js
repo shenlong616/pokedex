@@ -18,19 +18,23 @@ export const settings = {
     },
     border: {
       card: "border-zinc-700",
+      dialog: "border-zinc-700",
     },
     color: {
       green: {
         0: "shadow-xl shadow-green-500 ring-1 ring-green-500 ring-offset-2 ring-offset-green-500",
         1: "hover:shadow-xl hover:shadow-green-500 hover:ring-1 hover:ring-green-500 hover:ring-offset-2 hover:ring-offset-green-500",
+        2: "bg-green-500",
       },
       red: {
         0: "shadow-xl shadow-red-500 ring-1 ring-red-500 ring-offset-2 ring-offset-red-500",
         1: "hover:shadow-xl hover:shadow-red-500 hover:ring-1 hover:ring-red-500 hover:ring-offset-2 hover:ring-offset-red-500",
+        2: "bg-red-500",
       },
       blue: {
         0: "shadow-xl shadow-blue-500 ring-1 ring-blue-500 ring-offset-2 ring-offset-blue-500",
         1: "hover:shadow-xl hover:shadow-blue-500 hover:ring-1 hover:ring-blue-500 hover:ring-offset-2 hover:ring-offset-blue-500",
+        2: "bg-blue-500",
       },
     },
   },
