@@ -33,6 +33,7 @@ export default function ({ prop1, prop2, prop3 }) {
               leaveTo={settings.headlessui.transition[1].leaveTo}
             >
               <Dialog.Panel
+                as="fieldset"
                 className={clsx(
                   [
                     "w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all",
@@ -40,22 +41,25 @@ export default function ({ prop1, prop2, prop3 }) {
                   [settings.style.background.dialog]
                 )}
               >
-                <Dialog.Title
-                  className={clsx(
-                    ["text-xl font-medium"],
-                    [settings.style.text.color[0]]
-                  )}
-                >
-                  <small
+                <legend className="font-medium">
+                  <span
                     className={clsx(
-                      ["select-all font-mono text-sm"],
+                      ["select-all font-mono text-xs"],
                       [settings.style.text.color[1]]
                     )}
                   >
-                    {`${id}`}.
-                  </small>{" "}
-                  <span className="select-all uppercase">{name}</span>
-                </Dialog.Title>
+                    {`${id}`}/
+                  </span>{" "}
+                  <span
+                    className={clsx(
+                      ["select-all text-xl uppercase"],
+                      [settings.style.text.color[0]]
+                    )}
+                  >
+                    {name}
+                  </span>
+                </legend>
+                {/* <Dialog.Title></Dialog.Title> */}
                 <Dialog.Description
                   className={clsx(
                     ["mt-2 text-sm"],

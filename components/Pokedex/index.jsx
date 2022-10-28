@@ -78,9 +78,9 @@ export default function () {
                               <Card response={response} />
                             </div>
 
-                            <small className="select-all font-mono font-medium">
+                            <span className="select-all font-mono text-xs font-medium">
                               {name}
-                            </small>
+                            </span>
                           </Transition>,
                         ],
                       };

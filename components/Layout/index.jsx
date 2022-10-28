@@ -16,22 +16,22 @@ export default function ({ children }) {
       >
         <Header>
           {settings.title}{" "}
-          <small
+          <span
             className={clsx(
               ["font-mono text-xs font-normal"],
               [settings.style.text.color[1]]
             )}
           >
             v{settings.version}
-          </small>
+          </span>
         </Header>
         <div className={`${settings.style.background.body} py-4`}>
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
-          <small className={settings.style.text.color[1]}>
+          <span className={clsx(["text-xs"], [settings.style.text.color[1]])}>
             {settings.footer}
-          </small>
+          </span>
         </Footer>
       </main>
     </>
