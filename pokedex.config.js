@@ -23,6 +23,7 @@ export const settings = {
     color: {
       green: {
         0: {
+          // test
           0: "transition-all transform-gpu shadow-xl shadow-red-500",
           1: "transition-all transform-gpu hover:shadow-xl hover:shadow-green-500 hover:ring-1 hover:ring-green-500 hover:ring-offset-2 hover:ring-offset-green-500",
         },

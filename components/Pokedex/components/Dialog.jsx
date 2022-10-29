@@ -2,10 +2,11 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
+import Stat from "./Stat";
 
 export default function ({ prop1, prop2, prop3 }) {
-  // console.log(prop3);
-  const { id, name, types = [] } = prop3;
+  console.log(prop3);
+  const { id, name, types, sprites, species, height, weight, stats } = prop3;
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -37,8 +38,9 @@ export default function ({ prop1, prop2, prop3 }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-md transform overflow-hidden rounded-md p-6 text-left align-middle",
+                    "w-full max-w-xl transform overflow-hidden rounded-lg p-6 text-left align-middle",
                   ],
+                  // test
                   [settings.style.color.green[0][0]],
                   [
                     settings.style.background.dialog,
@@ -47,42 +49,55 @@ export default function ({ prop1, prop2, prop3 }) {
                 )}
               >
                 <legend>
-                  <span
-                    className={clsx(
-                      ["select-all pl-1 font-mono text-xs"],
-                      [settings.style.text.color[1]]
-                    )}
-                  >
-                    {`${id}/`}
-                  </span>
-                  <span
-                    className={clsx(
-                      ["select-all px-1 text-xl font-medium uppercase"],
-                      [settings.style.text.color[0]]
-                    )}
-                  >
-                    {name}
-                  </span>
-                  {types.map((element, index) => (
-                    <span
-                      key={index}
-                      className={clsx(
-                        ["select-all pr-1 font-mono text-xs"],
-                        [settings.style.text.color[1]]
-                      )}
-                    >
-                      {`#${element.type.name}`}
-                    </span>
-                  ))}
+                  <img
+                    className="-scale-x-100 select-none"
+                    src={
+                      sprites?.versions["generation-v"]["black-white"].animated
+                        .front_default
+                    }
+                    alt={species?.name}
+                  />
                 </legend>
                 {/* <Dialog.Title></Dialog.Title> */}
                 <Dialog.Description
+                  as="div"
                   className={clsx(
                     ["mt-2 text-sm"],
-                    [settings.style.text.color[1]]
+                    [settings.style.text.color[0]]
                   )}
                 >
-                  description
+                  <div className="text-center">
+                    <h2 className="select-all text-2xl font-medium uppercase">
+                      {name}
+                    </h2>
+                    <small
+                      className={
+                        (["select-all font-mono text-xs"],
+                        [settings.style.text.color[1]])
+                      }
+                    >
+                      {`#${id}`}
+                    </small>
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="basis-1/4">1</div>
+                    <div className="basis-2/3">
+                      <Stat>{["dd", "bg-zinc-500", "10"]}</Stat>
+                      {height}
+                      {weight}
+                    </div>
+                  </div>
+                  <div
+                    className={clsx(
+                      [
+                        "cursor-pointer text-right font-mono text-xs italic underline",
+                      ],
+                      [settings.style.text.color[1]]
+                    )}
+                    onClick={() => prop1()}
+                  >
+                    Close
+                  </div>
                 </Dialog.Description>
               </Dialog.Panel>
             </Transition.Child>

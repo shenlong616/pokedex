@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { settings } from "../../../../pokedex.config.js";
+import { settings } from "../../../pokedex.config.js";
 
 export default function ({ children }) {
   return (
@@ -10,7 +10,7 @@ export default function ({ children }) {
           [settings.style.text.color[1]]
         )}
       >
-        <span className="text-xs">
+        <span className="select-all text-xs">
           <small>{children[0]}</small>
         </span>
       </div>

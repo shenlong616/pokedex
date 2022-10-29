@@ -2,7 +2,7 @@ import Image from "next/image";
 import Stat from "./Stat";
 import clsx from "clsx";
 import Tilt from "react-parallax-tilt";
-import { settings } from "../../../../pokedex.config";
+import { settings } from "../../../pokedex.config";
 
 export default function ({ response }) {
   const { stats, sprites, species } = response;
@@ -42,6 +42,7 @@ export default function ({ response }) {
           width={"100%"}
           height={"100%"}
           alt={species.name}
+          className="-scale-x-100"
           // onLoadingComplete={() => {}}
         />
         <div className="self-center">
