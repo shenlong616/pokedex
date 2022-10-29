@@ -37,7 +37,7 @@ export default function ({ prop1, prop2, prop3 }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-md transform overflow-hidden rounded-xl border p-6 text-left align-middle shadow-xl transition-all",
+                    "w-full max-w-md transform overflow-hidden rounded-md border p-6 text-left align-middle shadow-xl transition-all",
                   ],
                   [
                     settings.style.background.dialog,

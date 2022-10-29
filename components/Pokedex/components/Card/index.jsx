@@ -23,17 +23,17 @@ export default function ({ response }) {
       <div
         className={clsx(
           [
-            "grid scale-100 cursor-pointer select-none grid-cols-2 rounded-md border p-1 transition-all duration-150 ease-out hover:animate-pulse active:scale-90",
+            "grid scale-90 transform-gpu cursor-pointer select-none grid-cols-2 rounded-md border p-1 transition-all duration-150 ease-out hover:animate-pulse active:scale-75",
           ],
           [settings.style.background.card, settings.style.border.card],
           {
-            [settings.style.color.green[1]]: getHighestElement === 0,
+            [settings.style.color.green[0][1]]: getHighestElement === 0,
           },
           {
-            [settings.style.color.red[1]]: getHighestElement === 1,
+            [settings.style.color.red[0][1]]: getHighestElement === 1,
           },
           {
-            [settings.style.color.blue[1]]: getHighestElement === 2,
+            [settings.style.color.blue[0][1]]: getHighestElement === 2,
           }
         )}
       >
@@ -48,7 +48,7 @@ export default function ({ response }) {
           <Stat>
             {[
               array[0],
-              settings.style.color.green[2],
+              settings.style.color.green[1],
               (stats[0].base_stat / totalArray) * 100,
             ]}
           </Stat>
@@ -56,7 +56,7 @@ export default function ({ response }) {
             <Stat>
               {[
                 array[1],
-                settings.style.color.red[2],
+                settings.style.color.red[1],
                 (stats[1].base_stat / totalArray) * 100,
               ]}
             </Stat>
@@ -64,7 +64,7 @@ export default function ({ response }) {
           <Stat>
             {[
               array[2],
-              settings.style.color.blue[2],
+              settings.style.color.blue[1],
               (stats[2].base_stat / totalArray) * 100,
             ]}
           </Stat>

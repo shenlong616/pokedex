@@ -25,7 +25,7 @@ export default function ({ children }) {
             v{settings.version}
           </span>
         </Header>
-        <div className={`${settings.style.background.body} py-4`}>
+        <div className={`${settings.style.background.document} py-4`}>
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
