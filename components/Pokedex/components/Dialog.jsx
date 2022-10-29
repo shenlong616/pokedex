@@ -3,10 +3,11 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Stat from "./Stat";
+import Image from "next/image";
 
 export default function ({ prop1, prop2, prop3 }) {
   console.log(prop3);
-  const { id, name, sprites, species, height, weight } = prop3;
+  const { id, name, sprites, species } = prop3;
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -49,7 +50,9 @@ export default function ({ prop1, prop2, prop3 }) {
                 )}
               >
                 <legend>
-                  <img
+                  <Image
+                    width={"50%"}
+                    height={"50%"}
                     className="-scale-x-100 select-none"
                     src={
                       sprites?.versions["generation-v"]["black-white"].animated
@@ -83,8 +86,6 @@ export default function ({ prop1, prop2, prop3 }) {
                     <div className="basis-1/4">1</div>
                     <div className="basis-2/3">
                       <Stat>{["dd", "bg-zinc-500", "10"]}</Stat>
-                      {height}
-                      {weight}
                     </div>
                   </div>
                   <div
