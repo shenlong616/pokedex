@@ -46,9 +46,6 @@ export const settings = {
     },
   },
 
-  // https://github.com/mkosir/react-parallax-tilt
-  tilt: { tiltMaxAngleX: 6, tiltMaxAngleY: 3 },
-
   // https://headlessui.com/
   headlessui: {
     transition: {

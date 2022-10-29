@@ -64,10 +64,7 @@ export default function ({ prop1, prop2, prop3 }) {
                 {/* <Dialog.Title></Dialog.Title> */}
                 <Dialog.Description
                   as="div"
-                  className={clsx(
-                    ["mt-2 text-sm"],
-                    [settings.style.text.color[0]]
-                  )}
+                  className={settings.style.text.color[0]}
                 >
                   <div className="text-center">
                     <h2 className="select-all text-2xl font-medium uppercase">
