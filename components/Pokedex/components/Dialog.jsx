@@ -6,7 +6,7 @@ import Stat from "./Stat";
 
 export default function ({ prop1, prop2, prop3 }) {
   console.log(prop3);
-  const { id, name, types, sprites, species, height, weight, stats } = prop3;
+  const { id, name, sprites, species, height, weight } = prop3;
 
   return (
     <Transition appear show={prop2} as={Fragment}>
