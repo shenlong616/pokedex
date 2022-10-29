@@ -16,7 +16,7 @@ export default function ({ children }) {
       </div>
       <div className="h-1 w-full rounded-full bg-transparent">
         <div
-          className={`${children[1]} h-1 rounded-full`}
+          className={clsx(["h-1 rounded-full"], [children[1]])}
           style={{
             width: `${children[2]}%`,
           }}

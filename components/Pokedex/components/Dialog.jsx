@@ -37,8 +37,9 @@ export default function ({ prop1, prop2, prop3 }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-md transform overflow-hidden rounded-md border p-6 text-left align-middle shadow-xl transition-all",
+                    "w-full max-w-md transform overflow-hidden rounded-md p-6 text-left align-middle",
                   ],
+                  [settings.style.color.green[0][0]],
                   [
                     settings.style.background.dialog,
                     settings.style.border.dialog,
@@ -52,7 +53,7 @@ export default function ({ prop1, prop2, prop3 }) {
                       [settings.style.text.color[1]]
                     )}
                   >
-                    {`${id}`}/
+                    {`${id}/`}
                   </span>
                   <span
                     className={clsx(

@@ -26,7 +26,6 @@ components
  ┃ ┣ Footer.jsx
  ┃ ┣ Header.jsx
  ┃ ┣ index.jsx
- ┃ ┣ NoiseTexture.jsx
  ┃ ┗ Slideout.jsx
  ┣ Pokedex
  ┃ ┣ components
@@ -35,7 +34,7 @@ components
  ┃ ┃ ┃ ┗ Stat.jsx
  ┃ ┃ ┗ Dialog.jsx
  ┃ ┗ index.jsx
- ┗ Button.jsx
+ ┗ NoiseTexture.jsx
 
 pages
  ┣ index.jsx

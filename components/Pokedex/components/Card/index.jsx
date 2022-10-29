@@ -23,7 +23,7 @@ export default function ({ response }) {
       <div
         className={clsx(
           [
-            "grid scale-90 transform-gpu cursor-pointer select-none grid-cols-2 rounded-md border p-1 transition-all duration-150 ease-out hover:animate-pulse active:scale-75",
+            "grid scale-90 cursor-pointer select-none grid-cols-2 rounded-md p-1 duration-150 ease-out hover:animate-pulse active:scale-75",
           ],
           [settings.style.background.card, settings.style.border.card],
           {
