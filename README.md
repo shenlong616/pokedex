@@ -17,7 +17,7 @@
 - [ ] `Search bar` component.
 - [ ] `Filter` component.
 - [ ] [`swr`](https://swr.vercel.app/) thay cho`pokedex-promise-v2`
-- [ ] Component hóa.
+- [ ] Component hóa từng thành phần.
 - [ ] Layout `fill` cho [`Image`](https://nextjs.org/docs/api-reference/next/image#fill) component. => Để loại bỏ `height` và `weight`.
 
 ## Main files
