@@ -4,9 +4,11 @@ import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
 export default function ({ response }) {
-  const { stats, sprites, species } = response;
-
-  const array = [stats[0].base_stat, stats[1].base_stat, stats[2].base_stat];
+  const array = [
+    response.stats[0].base_stat,
+    response.stats[1].base_stat,
+    response.stats[2].base_stat,
+  ];
 
   const getHighestElement = array.findIndex(
     (element) => element === Math.max(...array)
@@ -33,10 +35,10 @@ export default function ({ response }) {
       )}
     >
       <Image
-        src={sprites.front_default}
+        src={response.sprites.front_default}
         width={"100%"}
         height={"100%"}
-        alt={species.name}
+        alt={response.species.name}
         className="-scale-x-100"
         // onLoadingComplete={() => {}}
       />
@@ -45,7 +47,7 @@ export default function ({ response }) {
           {[
             array[0],
             settings.style.color.green[1],
-            (stats[0].base_stat / totalArray) * 100,
+            (response.stats[0].base_stat / totalArray) * 100,
           ]}
         </Stat>
         <div className="my-0.5">
@@ -53,7 +55,7 @@ export default function ({ response }) {
             {[
               array[1],
               settings.style.color.red[1],
-              (stats[1].base_stat / totalArray) * 100,
+              (response.stats[1].base_stat / totalArray) * 100,
             ]}
           </Stat>
         </div>
@@ -61,7 +63,7 @@ export default function ({ response }) {
           {[
             array[2],
             settings.style.color.blue[1],
-            (stats[2].base_stat / totalArray) * 100,
+            (response.stats[2].base_stat / totalArray) * 100,
           ]}
         </Stat>
       </div>

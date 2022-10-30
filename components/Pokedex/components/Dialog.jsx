@@ -5,9 +5,8 @@ import { settings } from "../../../pokedex.config";
 import Stat from "./Stat";
 import Image from "next/image";
 
-export default function ({ prop1, prop2, prop3 }) {
-  console.log(prop3);
-  const { id, name, sprites, species } = prop3;
+export default function ({ prop1, prop2, response }) {
+  // console.log(response);
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -41,7 +40,6 @@ export default function ({ prop1, prop2, prop3 }) {
                   [
                     "w-full max-w-xl transform overflow-hidden rounded-lg p-6 text-left align-middle",
                   ],
-                  // test
                   [settings.style.color.green[0][0]],
                   [
                     settings.style.background.dialog,
@@ -55,10 +53,10 @@ export default function ({ prop1, prop2, prop3 }) {
                     height={"50%"}
                     className="-scale-x-100 select-none"
                     src={
-                      sprites?.versions["generation-v"]["black-white"].animated
-                        .front_default
+                      response.sprites?.versions["generation-v"]["black-white"]
+                        .animated.front_default
                     }
-                    alt={species?.name}
+                    alt={response.species?.name}
                   />
                 </legend>
                 {/* <Dialog.Title></Dialog.Title> */}
@@ -68,16 +66,16 @@ export default function ({ prop1, prop2, prop3 }) {
                 >
                   <div className="text-center">
                     <h2 className="select-all text-2xl font-medium uppercase">
-                      {name}
+                      {response.name}
                     </h2>
-                    <small
+                    <span
                       className={
                         (["select-all font-mono text-xs"],
                         [settings.style.text.color[1]])
                       }
                     >
-                      {`#${id}`}
-                    </small>
+                      <small>{`#${response.id}`}</small>
+                    </span>
                   </div>
                   <div className="flex flex-row">
                     <div className="basis-1/4">1</div>

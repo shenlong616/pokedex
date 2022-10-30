@@ -15,6 +15,8 @@
 - [ ] Khi cuộn trang đc một ít và `Dialog` component đc mở, thì thằng loz [`state1.render`](https://github.com/shenlong616/pokedex/blob/4efe2a0b9a39acbcbb3ac8387161a05743626275/components/Pokedex/index.jsx#L37) lại `re-render` nữa (vcl) => chớp nháy trên đt => `React.memo()`??
 - [ ] `Search bar` component.
 - [ ] `Filter` component.
+- [ ] [tRPC](https://trpc.io/)
+- [ ] [`swr` thay cho `pokedex-promise-v2`](https://swr.vercel.app/)
 
 ## Main files
 

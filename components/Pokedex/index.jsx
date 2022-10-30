@@ -31,7 +31,7 @@ export default function () {
           })
         }
         prop2={state2.boolean}
-        prop3={state2.response}
+        response={state2.response}
       />
 
       <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-5 md:gap-5 xl:grid-cols-7 xl:gap-5">
@@ -46,8 +46,6 @@ export default function () {
                 state1.index,
                 (response, error) => {
                   if (!error) {
-                    const { name } = response;
-
                     setState1((prevState) => {
                       return {
                         ...prevState,
@@ -64,6 +62,7 @@ export default function () {
                             }
                             enterTo={settings.headlessui.transition[0].enterTo}
                           >
+                            {/* Dialog */}
                             <div
                               onClick={() =>
                                 setState2((prevState) => {
@@ -79,7 +78,7 @@ export default function () {
                             </div>
 
                             <span className="select-all font-mono text-xs font-medium">
-                              {name}
+                              {response.name}
                             </span>
                           </Transition>,
                         ],
