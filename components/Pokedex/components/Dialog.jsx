@@ -2,7 +2,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
-import Stat from "./Stat";
 import Image from "next/image";
 
 export default function ({ prop1, prop2, response }) {
@@ -77,13 +76,18 @@ export default function ({ prop1, prop2, response }) {
                       <small>{`#${response.id}`}</small>
                     </span>
                   </div>
-                  <div className="flex flex-row">
-                    <div className="basis-1/4">1</div>
-                    <div className="basis-2/3">
-                      <Stat>{["dd", "bg-zinc-500", "10"]}</Stat>
-                    </div>
-                  </div>
-                  <div
+                  {response.types?.map((element, index) => (
+                    <span
+                      key={index}
+                      className={clsx(
+                        ["select-all pr-1 font-mono text-xs"],
+                        [settings.style.text.color[1]]
+                      )}
+                    >
+                      {`#${element.type.name}`}
+                    </span>
+                  ))}
+                  {/* <div
                     className={clsx(
                       [
                         "cursor-pointer text-right font-mono text-xs italic underline",
@@ -93,7 +97,7 @@ export default function ({ prop1, prop2, response }) {
                     onClick={() => prop1()}
                   >
                     Close
-                  </div>
+                  </div> */}
                 </Dialog.Description>
               </Dialog.Panel>
             </Transition.Child>
