@@ -25,9 +25,9 @@
 
 - [x] Tôi không biết tiếng Anh :)
 
-## Main files
+## Tree files
 
-### Tree
+### Main
 
 ```text
 components
@@ -40,7 +40,7 @@ components
  ┃ ┣ components
  ┃ ┃ ┣ Card.jsx
  ┃ ┃ ┣ Dialog.jsx
- ┃ ┃ ┗ Stat.jsx
+ ┃ ┃ ┗ ProgressBar.jsx
  ┃ ┗ index.jsx
  ┗ NoiseTexture.jsx
 
@@ -57,6 +57,17 @@ styles
  ┣ globals.scss
  ┣ _selectors.scss
  ┗ _tailwindcss.scss
+```
+
+### Configuration files
+
+```text
+pokedex
+ ┣ pokedex.config.js // Basic configuration! (style, animation,...)
+ ┣ next.config.js // Next.js
+ ┣ tailwind.config.js // Tailwind CSS
+ ┣ prettier.config.js // Prettier
+ ┗ ...
 ```
 
 ## Install command
