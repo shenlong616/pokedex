@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Stat from "./Stat";
+import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
@@ -43,29 +43,29 @@ export default function ({ response }) {
         // onLoadingComplete={() => {}}
       />
       <div className="self-center">
-        <Stat>
+        <ProgressBar>
           {[
             array[0],
             settings.style.color.green[1],
             (response.stats[0].base_stat / totalArray) * 100,
           ]}
-        </Stat>
+        </ProgressBar>
         <div className="my-0.5">
-          <Stat>
+          <ProgressBar>
             {[
               array[1],
               settings.style.color.red[1],
               (response.stats[1].base_stat / totalArray) * 100,
             ]}
-          </Stat>
+          </ProgressBar>
         </div>
-        <Stat>
+        <ProgressBar>
           {[
             array[2],
             settings.style.color.blue[1],
             (response.stats[2].base_stat / totalArray) * 100,
           ]}
-        </Stat>
+        </ProgressBar>
       </div>
     </div>
   );
