@@ -50,38 +50,37 @@ export default function () {
                       return {
                         ...prevState,
                         index: prevState.index + 1,
-                        render: [
-                          ...prevState.render,
+                        render: prevState.render.concat([
                           <Transition
-                            key={prevState.index}
-                            show={true}
-                            appear
-                            enter={settings.headlessui.transition[0].enter}
-                            enterFrom={
-                              settings.headlessui.transition[0].enterFrom
+                          key={prevState.index}
+                          show={true}
+                          appear
+                          enter={settings.headlessui.transition[0].enter}
+                          enterFrom={
+                            settings.headlessui.transition[0].enterFrom
+                          }
+                          enterTo={settings.headlessui.transition[0].enterTo}
+                        >
+                          {/* Dialog */}
+                          <div
+                            onClick={() =>
+                              setState2((prevState) => {
+                                return {
+                                  ...prevState,
+                                  boolean: true,
+                                  response: response,
+                                };
+                              })
                             }
-                            enterTo={settings.headlessui.transition[0].enterTo}
                           >
-                            {/* Dialog */}
-                            <div
-                              onClick={() =>
-                                setState2((prevState) => {
-                                  return {
-                                    ...prevState,
-                                    boolean: true,
-                                    response: response,
-                                  };
-                                })
-                              }
-                            >
-                              <Card response={response} />
-                            </div>
+                            <Card response={response} />
+                          </div>
 
-                            <span className="select-all font-mono text-xs font-medium">
-                              {response.name}
-                            </span>
-                          </Transition>,
-                        ],
+                          <span className="select-all font-mono text-xs font-medium">
+                            {response.name}
+                          </span>
+                        </Transition>
+                        ])
                       };
                     });
                   }
