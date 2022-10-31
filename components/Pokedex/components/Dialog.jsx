@@ -2,7 +2,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
-import Image from "next/image";
 
 export default function ({ prop1, prop2, response }) {
   // console.log(response);
@@ -47,9 +46,7 @@ export default function ({ prop1, prop2, response }) {
                 )}
               >
                 <legend>
-                  <Image
-                    width={"50%"}
-                    height={"50%"}
+                  <img
                     className="-scale-x-100 select-none"
                     src={
                       response.sprites?.versions["generation-v"]["black-white"]
