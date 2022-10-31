@@ -39,7 +39,7 @@ export default function () {
         response={state2.response}
       />
 
-      <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-5 md:gap-5 xl:grid-cols-7 xl:gap-5">
+      <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-4 md:gap-5 xl:grid-cols-6 xl:gap-5">
         {state1.render}
       </div>
 
