@@ -56,6 +56,7 @@ README
 
 styles
  ┣ globals.scss
+ ┣ _scrollbar.scss
  ┣ _selectors.scss
  ┗ _tailwindcss.scss
 ```
