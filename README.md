@@ -19,6 +19,7 @@
 - [ ] [`swr`](https://swr.vercel.app/) thay cho`pokedex-promise-v2`
 - [ ] Component hóa từng thành phần.
 - [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component. => Nhưng phải loại bỏ 2 props `height` và `weight`. => `https://nextjs.org/docs/api-reference/next/image#fill`
+- [x] Buộc dùng [`concat`]() method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa. => `https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat`
 
 ## Main files
 
