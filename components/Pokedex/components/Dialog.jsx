@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
-export default function ({ prop1, prop2, response }) {
+export default function ({ prop1, prop2, prop3, response }) {
   // console.log(response);
 
   return (
@@ -38,11 +38,19 @@ export default function ({ prop1, prop2, response }) {
                   [
                     "w-full max-w-xl transform overflow-hidden rounded-lg p-6 text-left align-middle",
                   ],
-                  [settings.style.color.green[0][0]],
                   [
                     settings.style.background.dialog,
                     settings.style.border.dialog,
-                  ]
+                  ],
+                  {
+                    [settings.style.color.green[0][0]]: prop3 === 0,
+                  },
+                  {
+                    [settings.style.color.red[0][0]]: prop3 === 1,
+                  },
+                  {
+                    [settings.style.color.blue[0][0]]: prop3 === 2,
+                  }
                 )}
               >
                 <legend>

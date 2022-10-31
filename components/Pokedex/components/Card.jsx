@@ -3,18 +3,12 @@ import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Image from "next/image";
 
-export default function ({ response }) {
-  const array = [
+export default function ({ prop1, response }) {
+  const reduceArray = [
     response.stats[0].base_stat,
     response.stats[1].base_stat,
     response.stats[2].base_stat,
-  ];
-
-  const getHighestElement = array.findIndex(
-    (element) => element === Math.max(...array)
-  );
-
-  const totalArray = array.reduce((a, b) => a + b, 0);
+  ].reduce((a, b) => a + b, 0);
 
   return (
     <div
@@ -24,13 +18,13 @@ export default function ({ response }) {
         ],
         [settings.style.background.card, settings.style.border.card],
         {
-          [settings.style.color.green[0][1]]: getHighestElement === 0,
+          [settings.style.color.green[0][1]]: prop1 === 0,
         },
         {
-          [settings.style.color.red[0][1]]: getHighestElement === 1,
+          [settings.style.color.red[0][1]]: prop1 === 1,
         },
         {
-          [settings.style.color.blue[0][1]]: getHighestElement === 2,
+          [settings.style.color.blue[0][1]]: prop1 === 2,
         }
       )}
     >
@@ -44,25 +38,25 @@ export default function ({ response }) {
       <div className="self-center">
         <ProgressBar>
           {[
-            array[0],
+            response.stats[0].base_stat,
             settings.style.color.green[1],
-            (response.stats[0].base_stat / totalArray) * 100,
+            (response.stats[0].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
         <div className="my-0.5">
           <ProgressBar>
             {[
-              array[1],
+              response.stats[1].base_stat,
               settings.style.color.red[1],
-              (response.stats[1].base_stat / totalArray) * 100,
+              (response.stats[1].base_stat / reduceArray) * 100,
             ]}
           </ProgressBar>
         </div>
         <ProgressBar>
           {[
-            array[2],
+            response.stats[2].base_stat,
             settings.style.color.blue[1],
-            (response.stats[2].base_stat / totalArray) * 100,
+            (response.stats[2].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
       </div>

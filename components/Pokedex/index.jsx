@@ -15,7 +15,11 @@ export default function () {
   });
 
   // Dialog
-  const [state2, setState2] = useState({ boolean: false, response: {} });
+  const [state2, setState2] = useState({
+    boolean: false,
+    response: {},
+    prop3: null,
+  });
 
   return (
     <>
@@ -31,6 +35,7 @@ export default function () {
           })
         }
         prop2={state2.boolean}
+        prop3={state2.prop3}
         response={state2.response}
       />
 
@@ -46,41 +51,55 @@ export default function () {
                 state1.index,
                 (response, error) => {
                   if (!error) {
+                    const array = [
+                      response.stats[0].base_stat,
+                      response.stats[1].base_stat,
+                      response.stats[2].base_stat,
+                    ];
+
+                    const getHighestElement = array.findIndex(
+                      (element) => element === Math.max(...array)
+                    );
+
                     setState1((prevState) => {
                       return {
                         ...prevState,
                         index: prevState.index + 1,
                         render: prevState.render.concat([
                           <Transition
-                          key={prevState.index}
-                          show={true}
-                          appear
-                          enter={settings.headlessui.transition[0].enter}
-                          enterFrom={
-                            settings.headlessui.transition[0].enterFrom
-                          }
-                          enterTo={settings.headlessui.transition[0].enterTo}
-                        >
-                          {/* Dialog */}
-                          <div
-                            onClick={() =>
-                              setState2((prevState) => {
-                                return {
-                                  ...prevState,
-                                  boolean: true,
-                                  response: response,
-                                };
-                              })
+                            key={prevState.index}
+                            show={true}
+                            appear
+                            enter={settings.headlessui.transition[0].enter}
+                            enterFrom={
+                              settings.headlessui.transition[0].enterFrom
                             }
+                            enterTo={settings.headlessui.transition[0].enterTo}
                           >
-                            <Card response={response} />
-                          </div>
+                            {/* Dialog */}
+                            <div
+                              onClick={() =>
+                                setState2((prevState) => {
+                                  return {
+                                    ...prevState,
+                                    boolean: true,
+                                    response: response,
+                                    prop3: getHighestElement,
+                                  };
+                                })
+                              }
+                            >
+                              <Card
+                                prop1={getHighestElement}
+                                response={response}
+                              />
+                            </div>
 
-                          <span className="select-all font-mono text-xs font-medium">
-                            {response.name}
-                          </span>
-                        </Transition>
-                        ])
+                            <span className="select-all font-mono text-xs font-medium">
+                              {response.name}
+                            </span>
+                          </Transition>,
+                        ]),
                       };
                     });
                   }
@@ -88,7 +107,7 @@ export default function () {
               );
             })();
           }
-          return <div ref={ref}></div>; // thang loz nay se quyet dinh co nen render hay ko
+          return <div ref={ref}></div>; // khi dang scroll ma gap thang loz nay, thi render them noi dung
         }}
       </InView>
     </>
