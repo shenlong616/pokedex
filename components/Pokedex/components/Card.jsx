@@ -1,6 +1,7 @@
 import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
+import Image from "next/image";
 
 export default function ({ response }) {
   const array = [
@@ -33,7 +34,9 @@ export default function ({ response }) {
         }
       )}
     >
-      <img
+      <Image
+        height="100%"
+        width="100%"
         src={response.sprites.front_default}
         alt={response.species.name}
         className="-scale-x-100"
