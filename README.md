@@ -18,7 +18,7 @@
 - [ ] `Filter` component.
 - [ ] [`swr`](https://swr.vercel.app/) thay cho`pokedex-promise-v2`
 - [ ] Component hóa từng thành phần.
-- [ ] Layout `fill` cho [`Image`](https://nextjs.org/docs/api-reference/next/image#fill) component. => Để loại bỏ `height` và `weight`.
+- [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component. => Nhưng phải loại bỏ 2 props `height` và `weight`. => `https://nextjs.org/docs/api-reference/next/image#fill`
 
 ## Main files
 

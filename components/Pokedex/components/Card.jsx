@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
@@ -34,13 +33,10 @@ export default function ({ response }) {
         }
       )}
     >
-      <Image
+      <img
         src={response.sprites.front_default}
-        width={"100%"}
-        height={"100%"}
         alt={response.species.name}
         className="-scale-x-100"
-        // onLoadingComplete={() => {}}
       />
       <div className="self-center">
         <ProgressBar>
