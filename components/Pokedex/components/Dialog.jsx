@@ -65,10 +65,10 @@ export default function ({ prop1, prop2, response }) {
                       {response.name}
                     </h2>
                     <span
-                      className={
-                        (["select-all font-mono text-xs"],
-                        [settings.style.text.color[1]])
-                      }
+                      className={clsx(
+                        ["select-all font-mono text-xs"],
+                        [settings.style.text.color[1]]
+                      )}
                     >
                       <span className="text-xs">{`#${response.id}`}</span>
                     </span>
