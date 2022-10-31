@@ -49,26 +49,26 @@ export const settings = {
   headlessui: {
     transition: {
       0: {
-        enter: "ease-out duration-300",
+        enter: "duration-300",
         enterFrom: "opacity-0 translate-y-full skew-y-12",
         enterTo: "opacity-100 translate-y-0 skew-y-0",
-        leave: "ease-out duration-300",
+        leave: "duration-200",
         leaveFrom: "opacity-100 translate-y-0 skew-y-0",
         leaveTo: "opacity-0 translate-y-full skew-y-12",
       },
       1: {
-        enter: "ease-out duration-300",
+        enter: "duration-300",
         enterFrom: "opacity-0 scale-90",
         enterTo: "opacity-100 scale-100",
-        leave: "ease-out duration-100",
+        leave: "duration-100",
         leaveFrom: "opacity-100 scale-100",
         leaveTo: "opacity-0 scale-75",
       },
       2: {
-        enter: "ease-out duration-200",
+        enter: "duration-200",
         enterFrom: "opacity-0 backdrop-blur-none",
         enterTo: "opacity-100 backdrop-blur-2xl",
-        leave: "ease-out duration-200",
+        leave: "duration-100",
         leaveFrom: "opacity-100 backdrop-blur-2xl",
         leaveTo: "opacity-0 backdrop-blur-none",
       },
