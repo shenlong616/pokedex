@@ -25,9 +25,9 @@
 
 - [x] Tôi không biết tiếng Anh :)
 
-## Tree files
+## Tree file
 
-### Main
+### Main files
 
 ```text
 components
