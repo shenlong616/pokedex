@@ -21,6 +21,10 @@
 - [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component. => Nhưng phải loại bỏ 2 props `height` và `weight`. => `https://nextjs.org/docs/api-reference/next/image#fill`
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa. => `https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat`
 
+### En
+
+- [x] Tôi không biết tiếng Anh :)
+
 ## Main files
 
 ### Tree
