@@ -70,7 +70,7 @@ export default function ({ prop1, prop2, response }) {
                         [settings.style.text.color[1]])
                       }
                     >
-                      <small>{`#${response.id}`}</small>
+                      <span className="text-xs">{`#${response.id}`}</span>
                     </span>
                   </div>
                   {response.types?.map((element, index) => (
