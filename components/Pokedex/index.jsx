@@ -8,23 +8,22 @@ import { Transition } from "@headlessui/react";
 import useSWR from "swr";
 
 export default function () {
-  // Card
+  // Card state
   const [state1, setState1] = useState({
     render: [],
     index: 1,
   });
 
-  // Dialog
+  // Dialog state
   const [state2, setState2] = useState({
     boolean: false,
     data: {},
     prop3: null,
   });
 
-  //
   const { data } = useSWR(
     `${settings.api}/pokemon/${state1.index}`,
-    (...args) => fetch(...args).then((response) => response.json())
+    (...args) => fetch(...args).then((res) => res.json())
   );
 
   return (
