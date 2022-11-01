@@ -52,8 +52,6 @@ export default function () {
         {({ inView, ref }) => {
           (async () => {
             await (() => {
-              // vi thich async
-              // thuc te thi ko can
               if (data && inView) {
                 const array = [
                   data.stats[0].base_stat,
