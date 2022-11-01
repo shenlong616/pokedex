@@ -3,11 +3,11 @@ import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Image from "next/image";
 
-export default function ({ prop1, response }) {
+export default function ({ prop1, data }) {
   const reduceArray = [
-    response.stats[0].base_stat,
-    response.stats[1].base_stat,
-    response.stats[2].base_stat,
+    data.stats[0].base_stat,
+    data.stats[1].base_stat,
+    data.stats[2].base_stat,
   ].reduce((a, b) => a + b, 0);
 
   return (
@@ -32,33 +32,33 @@ export default function ({ prop1, response }) {
         <Image
           height="100%"
           width="100%"
-          src={response.sprites.front_default}
-          alt={response.name}
+          src={data.sprites.front_default}
+          alt={data.name}
           className="-scale-x-100"
         />
       </div>
       <div className="w-28 flex-auto">
         <ProgressBar>
           {[
-            response.stats[0].base_stat,
+            data.stats[0].base_stat,
             settings.style.color.green[1],
-            (response.stats[0].base_stat / reduceArray) * 100,
+            (data.stats[0].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
         <div className="my-0.5">
           <ProgressBar>
             {[
-              response.stats[1].base_stat,
+              data.stats[1].base_stat,
               settings.style.color.red[1],
-              (response.stats[1].base_stat / reduceArray) * 100,
+              (data.stats[1].base_stat / reduceArray) * 100,
             ]}
           </ProgressBar>
         </div>
         <ProgressBar>
           {[
-            response.stats[2].base_stat,
+            data.stats[2].base_stat,
             settings.style.color.blue[1],
-            (response.stats[2].base_stat / reduceArray) * 100,
+            (data.stats[2].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
       </div>

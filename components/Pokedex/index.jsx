@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Pokedex from "pokedex-promise-v2";
 import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
 import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
+import useSWR from "swr";
 
 export default function () {
   // Card
@@ -17,9 +17,15 @@ export default function () {
   // Dialog
   const [state2, setState2] = useState({
     boolean: false,
-    response: {},
+    data: {},
     prop3: null,
   });
+
+  //
+  const { data } = useSWR(
+    `https://pokeapi.co/api/v2/pokemon/${state1.index}`,
+    (...args) => fetch(...args).then((response) => response.json())
+  );
 
   return (
     <>
@@ -36,7 +42,7 @@ export default function () {
         }
         prop2={state2.boolean}
         prop3={state2.prop3}
-        response={state2.response}
+        data={state2.data}
       />
 
       <div className="grid grid-cols-2 place-items-center gap-2 text-center sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
@@ -45,66 +51,52 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (inView) {
-            (async () => {
-              await new Pokedex().getPokemonByName(
-                state1.index,
-                (response, error) => {
-                  if (!error) {
-                    const array = [
-                      response.stats[0].base_stat,
-                      response.stats[1].base_stat,
-                      response.stats[2].base_stat,
-                    ];
+          if (data && inView) {
+            const array = [
+              data.stats[0].base_stat,
+              data.stats[1].base_stat,
+              data.stats[2].base_stat,
+            ];
 
-                    const getHighestElement = array.findIndex(
-                      (element) => element === Math.max(...array)
-                    );
+            const getHighestElement = array.findIndex(
+              (element) => element === Math.max(...array)
+            );
 
-                    setState1((prevState) => {
-                      return {
-                        ...prevState,
-                        index: prevState.index + 1,
-                        render: prevState.render.concat([
-                          <Transition
-                            key={prevState.index}
-                            show={true}
-                            appear
-                            enter={settings.headlessui.transition[0].enter}
-                            enterFrom={
-                              settings.headlessui.transition[0].enterFrom
-                            }
-                            enterTo={settings.headlessui.transition[0].enterTo}
-                          >
-                            <div
-                              onClick={() =>
-                                setState2((prevState) => {
-                                  return {
-                                    ...prevState,
-                                    boolean: true,
-                                    response: response,
-                                    prop3: getHighestElement,
-                                  };
-                                })
-                              }
-                            >
-                              <Card
-                                prop1={getHighestElement}
-                                response={response}
-                              />
-                            </div>
+            setState1((prevState) => {
+              return {
+                ...prevState,
+                index: prevState.index + 1,
+                render: prevState.render.concat([
+                  <Transition
+                    key={prevState.index}
+                    show={true}
+                    appear
+                    enter={settings.headlessui.transition[0].enter}
+                    enterFrom={settings.headlessui.transition[0].enterFrom}
+                    enterTo={settings.headlessui.transition[0].enterTo}
+                  >
+                    <div
+                      onClick={() =>
+                        setState2((prevState) => {
+                          return {
+                            ...prevState,
+                            boolean: true,
+                            data: data,
+                            prop3: getHighestElement,
+                          };
+                        })
+                      }
+                    >
+                      <Card prop1={getHighestElement} data={data} />
+                    </div>
 
-                            <span className="select-all font-mono text-xs font-medium">
-                              {response.name}
-                            </span>
-                          </Transition>,
-                        ]),
-                      };
-                    });
-                  }
-                }
-              );
-            })();
+                    <span className="select-all font-mono text-xs font-medium">
+                      {data.name}
+                    </span>
+                  </Transition>,
+                ]),
+              };
+            });
           }
           return <div ref={ref}></div>; // khi dang scroll ma gap thang loz nay, thi render them noi dung
         }}

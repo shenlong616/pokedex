@@ -3,8 +3,8 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
-export default function ({ prop1, prop2, prop3, response }) {
-  // console.log(response);
+export default function ({ prop1, prop2, prop3, data }) {
+  // console.log(data);
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -57,10 +57,10 @@ export default function ({ prop1, prop2, prop3, response }) {
                   <img
                     className="-scale-x-100 select-none"
                     src={
-                      response.sprites?.versions["generation-v"]["black-white"]
+                      data.sprites?.versions["generation-v"]["black-white"]
                         .animated.front_default
                     }
-                    alt={response.name}
+                    alt={data.name}
                   />
                 </legend>
                 {/* <Dialog.Title></Dialog.Title> */}
@@ -70,7 +70,7 @@ export default function ({ prop1, prop2, prop3, response }) {
                 >
                   <div className="text-center">
                     <h2 className="select-all text-2xl font-medium uppercase">
-                      {response.name}
+                      {data.name}
                     </h2>
                     <span
                       className={clsx(
@@ -78,10 +78,10 @@ export default function ({ prop1, prop2, prop3, response }) {
                         [settings.style.text.color[1]]
                       )}
                     >
-                      <span className="text-xs">{`#${response.id}`}</span>
+                      <span className="text-xs">{`#${data.id}`}</span>
                     </span>
                   </div>
-                  {response.types?.map((element, index) => (
+                  {data.types?.map((element, index) => (
                     <span
                       key={index}
                       className={clsx(
