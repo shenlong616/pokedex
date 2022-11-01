@@ -39,7 +39,7 @@ export default function () {
         response={state2.response}
       />
 
-      <div className="grid grid-cols-2 place-items-center gap-3 text-center sm:grid-cols-3 sm:gap-4 md:grid-cols-4 md:gap-5 xl:grid-cols-6 xl:gap-5">
+      <div className="grid grid-cols-2 place-items-center gap-2 text-center sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
         {state1.render}
       </div>
 
@@ -76,7 +76,6 @@ export default function () {
                             }
                             enterTo={settings.headlessui.transition[0].enterTo}
                           >
-                            {/* Dialog */}
                             <div
                               onClick={() =>
                                 setState2((prevState) => {

@@ -14,7 +14,7 @@ export default function ({ prop1, response }) {
     <div
       className={clsx(
         [
-          "grid scale-90 cursor-pointer select-none grid-cols-2 rounded-md p-1 duration-150 ease-out hover:animate-pulse active:scale-75",
+          "flex scale-90 cursor-pointer select-none flex-row flex-nowrap items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:scale-75",
         ],
         [settings.style.background.card, settings.style.border.card],
         {
@@ -28,14 +28,16 @@ export default function ({ prop1, response }) {
         }
       )}
     >
-      <Image
-        height="100%"
-        width="100%"
-        src={response.sprites.front_default}
-        alt={response.species.name}
-        className="-scale-x-100"
-      />
-      <div className="self-center">
+      <div>
+        <Image
+          height="100%"
+          width="100%"
+          src={response.sprites.front_default}
+          alt={response.species.name}
+          className="-scale-x-100"
+        />
+      </div>
+      <div className="w-28 flex-auto">
         <ProgressBar>
           {[
             response.stats[0].base_stat,
