@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import NoiseTexture from "../NoiseTexture";
-import { settings } from "../../pokedex.config.js";
+import { settings } from "../../pokedex.config";
 import clsx from "clsx";
 
 export default function ({ children }) {
@@ -25,7 +25,7 @@ export default function ({ children }) {
             v{settings.version}
           </span>
         </Header>
-        <div className={clsx(["py-4"], [settings.style.background.document])}>
+        <div className={clsx(["my-6"], [settings.style.background.document])}>
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>

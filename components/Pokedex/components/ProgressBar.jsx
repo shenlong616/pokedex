@@ -1,6 +1,6 @@
 // https://flowbite.com/docs/components/progress/
 import clsx from "clsx";
-import { settings } from "../../../pokedex.config.js";
+import { settings } from "../../../pokedex.config";
 
 export default function ({ children }) {
   return (

@@ -22,7 +22,7 @@ export default function ({ prop1, prop2, prop3, response }) {
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full items-center justify-center text-center">
             <Transition.Child
               as={Fragment}
               enter={settings.headlessui.transition[1].enter}
@@ -36,7 +36,7 @@ export default function ({ prop1, prop2, prop3, response }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-xl transform overflow-hidden rounded-xl p-6 text-left align-middle",
+                    "w-full max-w-xl transform overflow-hidden rounded-xl px-4 text-left align-middle",
                   ],
                   [
                     settings.style.background.dialog,
@@ -85,7 +85,7 @@ export default function ({ prop1, prop2, prop3, response }) {
                     <span
                       key={index}
                       className={clsx(
-                        ["select-all pr-1 font-mono text-xs"],
+                        ["mr-1 select-all font-mono text-xs"],
                         [settings.style.text.color[1]]
                       )}
                     >

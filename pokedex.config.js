@@ -15,6 +15,7 @@ export const settings = {
       document: "bg-zinc-900",
       card: "bg-zinc-800",
       dialog: "bg-zinc-800",
+      alert: "bg-black",
     },
     border: {
       card: "border border-zinc-700",
