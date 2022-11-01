@@ -60,7 +60,7 @@ export default function ({ prop1, prop2, prop3, response }) {
                       response.sprites?.versions["generation-v"]["black-white"]
                         .animated.front_default
                     }
-                    alt={response.species?.name}
+                    alt={response.name}
                   />
                 </legend>
                 {/* <Dialog.Title></Dialog.Title> */}

@@ -33,7 +33,7 @@ export default function ({ prop1, response }) {
           height="100%"
           width="100%"
           src={response.sprites.front_default}
-          alt={response.species.name}
+          alt={response.name}
           className="-scale-x-100"
         />
       </div>
