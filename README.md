@@ -45,6 +45,9 @@ components
  ┃ ┗ index.jsx
  ┗ NoiseTexture.jsx
 
+hooks
+ ┗ usePokemon.js
+
 pages
  ┣ index.jsx
  ┣ _app.jsx

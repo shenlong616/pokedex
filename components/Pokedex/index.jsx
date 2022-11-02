@@ -5,7 +5,7 @@ import { settings } from "../../pokedex.config";
 import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
-import useSWR from "swr";
+import usePokemon from "../../hooks/usePokemon";
 
 export default function () {
   // Card state
@@ -21,10 +21,7 @@ export default function () {
     prop3: null,
   });
 
-  const { data } = useSWR(
-    `${settings.api}/pokemon/${state1.index}`,
-    (...args) => fetch(...args).then((res) => res.json())
-  );
+  const { data } = usePokemon(state1.index);
 
   return (
     <>
