@@ -8,7 +8,7 @@ export default function usePokemon(parameter) {
   const { data, error } = useSWR(
     `${settings.api}/pokemon/${parameter}`,
     // https://swr.vercel.app/docs/data-fetching#axios
-    (parameter) => axios.get(parameter).then((res) => res.data)
+    (parameter) => axios.get(parameter).then((response) => response.data)
   );
 
   return {
