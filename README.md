@@ -69,9 +69,6 @@ styles
 ```text
 pokedex
  ┣ pokedex.config.js // Basic configuration! (style, animation,...)
- ┣ next.config.js // Next.js
- ┣ tailwind.config.js // Tailwind CSS
- ┣ prettier.config.js // Prettier
  ┗ ...
 ```
 
