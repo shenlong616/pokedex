@@ -50,58 +50,54 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          (async () => {
-            await (() => {
-              if (data && inView) {
-                const array = [
-                  data.stats[0].base_stat,
-                  data.stats[1].base_stat,
-                  data.stats[2].base_stat,
-                ];
+          if (data && inView) {
+            const array = [
+              data.stats[0].base_stat,
+              data.stats[1].base_stat,
+              data.stats[2].base_stat,
+            ];
 
-                const getHighestElement = array.findIndex(
-                  (element) => element === Math.max(...array)
-                );
+            const getHighestElement = array.findIndex(
+              (element) => element === Math.max(...array)
+            );
 
-                setState1((prevState) => {
-                  return {
-                    ...prevState,
-                    index: prevState.index + 1,
-                    render: prevState.render.concat([
-                      <Transition
-                        key={prevState.index}
-                        show={true}
-                        appear
-                        enter={settings.headlessui.transition[0].enter}
-                        enterFrom={settings.headlessui.transition[0].enterFrom}
-                        enterTo={settings.headlessui.transition[0].enterTo}
-                      >
-                        <div
-                          onClick={() =>
-                            setState2((prevState) => {
-                              return {
-                                ...prevState,
-                                boolean: true,
-                                data: data,
-                                prop3: getHighestElement,
-                              };
-                            })
-                          }
-                        >
-                          <Card prop1={getHighestElement} data={data} />
-                        </div>
+            setState1((prevState) => {
+              return {
+                ...prevState,
+                index: prevState.index + 1,
+                render: prevState.render.concat([
+                  <Transition
+                    key={prevState.index}
+                    show={true}
+                    appear
+                    enter={settings.headlessui.transition[0].enter}
+                    enterFrom={settings.headlessui.transition[0].enterFrom}
+                    enterTo={settings.headlessui.transition[0].enterTo}
+                  >
+                    <div
+                      onClick={() =>
+                        setState2((prevState) => {
+                          return {
+                            ...prevState,
+                            boolean: true,
+                            data: data,
+                            prop3: getHighestElement,
+                          };
+                        })
+                      }
+                    >
+                      <Card prop1={getHighestElement} data={data} />
+                    </div>
 
-                        <span className="select-all font-mono text-xs font-medium">
-                          {data.name}
-                        </span>
-                      </Transition>,
-                    ]),
-                  };
-                });
-              }
-            })();
-          })();
-          return <div ref={ref}></div>; // khi dang scroll ma gap thang loz nay, thi render them noi dung
+                    <span className="select-all font-mono text-xs font-medium">
+                      {data.name}
+                    </span>
+                  </Transition>,
+                ]),
+              };
+            });
+          }
+          return <div ref={ref}></div>;
         }}
       </InView>
     </>
