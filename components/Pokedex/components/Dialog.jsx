@@ -22,7 +22,7 @@ export default function ({ prop1, prop2, prop3, data }) {
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center text-center">
+          <div className="flex min-h-full items-center justify-center px-4 text-center">
             <Transition.Child
               as={Fragment}
               enter={settings.headlessui.transition[1].enter}
