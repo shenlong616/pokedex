@@ -62,7 +62,7 @@ export default function ({ prop1, prop2, data }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-xl transform overflow-hidden rounded-xl p-5 text-left align-middle",
+                    "w-full max-w-xl transform overflow-hidden rounded-md p-5 text-left align-middle",
                   ],
                   [
                     settings.style.background.dialog,
