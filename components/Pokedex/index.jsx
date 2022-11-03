@@ -18,7 +18,6 @@ export default function () {
   const [state2, setState2] = useState({
     boolean: false,
     data: {},
-    prop3: null,
   });
 
   const { data } = usePokemon(state1.index);
@@ -37,7 +36,6 @@ export default function () {
           })
         }
         prop2={state2.boolean}
-        prop3={state2.prop3}
         data={state2.data}
       />
 
@@ -53,10 +51,6 @@ export default function () {
               data.stats[1].base_stat,
               data.stats[2].base_stat,
             ];
-
-            const getHighestElement = array.findIndex(
-              (element) => element === Math.max(...array)
-            );
 
             setState1((prevState) => {
               return {
@@ -78,12 +72,16 @@ export default function () {
                             ...prevState,
                             boolean: true,
                             data: data,
-                            prop3: getHighestElement,
                           };
                         })
                       }
                     >
-                      <Card prop1={getHighestElement} data={data} />
+                      <Card
+                        prop1={array.findIndex(
+                          (element) => element === Math.max(...array)
+                        )}
+                        data={data}
+                      />
                     </div>
 
                     <span className="select-all font-mono text-xs font-medium">

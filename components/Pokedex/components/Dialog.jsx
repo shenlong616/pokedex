@@ -3,8 +3,34 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
-export default function ({ prop1, prop2, prop3, data }) {
-  // console.log(data);
+// https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
+import {
+  Chart,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Radar } from "react-chartjs-2";
+
+Chart.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
+
+export default function ({ prop1, prop2, data }) {
+  const object = { array: { 1: [], 2: [] } };
+
+  data.stats?.forEach((element) => {
+    object.array[1].push(element.base_stat);
+    object.array[2].push(element.stat.name);
+  });
 
   return (
     <Transition appear show={prop2} as={Fragment}>
@@ -22,7 +48,7 @@ export default function ({ prop1, prop2, prop3, data }) {
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center px-4 text-center">
+          <div className="flex min-h-full flex-col items-center justify-center p-5 text-center">
             <Transition.Child
               as={Fragment}
               enter={settings.headlessui.transition[1].enter}
@@ -36,24 +62,15 @@ export default function ({ prop1, prop2, prop3, data }) {
                 as="fieldset"
                 className={clsx(
                   [
-                    "w-full max-w-xl transform overflow-hidden rounded-xl px-4 text-left align-middle",
+                    "w-full max-w-xl transform overflow-hidden rounded-xl p-5 text-left align-middle",
                   ],
                   [
                     settings.style.background.dialog,
                     settings.style.border.dialog,
-                  ],
-                  {
-                    [settings.style.color.green[0][0]]: prop3 === 0,
-                  },
-                  {
-                    [settings.style.color.red[0][0]]: prop3 === 1,
-                  },
-                  {
-                    [settings.style.color.blue[0][0]]: prop3 === 2,
-                  }
+                  ]
                 )}
               >
-                <legend>
+                <legend className="flex flex-row items-end">
                   <img
                     className="-scale-x-100 select-none"
                     src={
@@ -62,47 +79,36 @@ export default function ({ prop1, prop2, prop3, data }) {
                     }
                     alt={data.name}
                   />
+
+                  <h2
+                    className={clsx(
+                      ["ml-1 select-all font-medium"],
+                      [settings.style.text.color[0]]
+                    )}
+                  >
+                    {data.name}
+                  </h2>
                 </legend>
+
                 {/* <Dialog.Title></Dialog.Title> */}
+
                 <Dialog.Description
                   as="div"
-                  className={settings.style.text.color[0]}
+                  className="flex flex-col text-center"
                 >
-                  <div className="text-center">
-                    <h2 className="select-all text-2xl font-medium uppercase">
-                      {data.name}
-                    </h2>
-                    <span
-                      className={clsx(
-                        ["select-all font-mono text-xs"],
-                        [settings.style.text.color[1]]
-                      )}
-                    >
-                      <span className="text-xs">{`#${data.id}`}</span>
-                    </span>
-                  </div>
-                  {data.types?.map((element, index) => (
-                    <span
-                      key={index}
-                      className={clsx(
-                        ["mr-1 select-all font-mono text-xs"],
-                        [settings.style.text.color[1]]
-                      )}
-                    >
-                      {`#${element.type.name}`}
-                    </span>
-                  ))}
-                  {/* <div
-                    className={clsx(
-                      [
-                        "cursor-pointer text-right font-mono text-xs italic underline",
+                  <Radar
+                    datasetIdKey={data.name}
+                    options={settings.chart}
+                    data={{
+                      labels: object.array[2],
+                      datasets: [
+                        {
+                          label: "base stat",
+                          data: object.array[1],
+                        },
                       ],
-                      [settings.style.text.color[1]]
-                    )}
-                    onClick={() => prop1()}
-                  >
-                    Close
-                  </div> */}
+                    }}
+                  />
                 </Dialog.Description>
               </Dialog.Panel>
             </Transition.Child>
