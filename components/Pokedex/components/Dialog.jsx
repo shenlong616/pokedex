@@ -70,7 +70,7 @@ export default function ({ prop1, prop2, data }) {
                   ]
                 )}
               >
-                <legend className="flex flex-row items-end">
+                <legend className="flex flex-row items-center">
                   <img
                     className="-scale-x-100 select-none"
                     src={
