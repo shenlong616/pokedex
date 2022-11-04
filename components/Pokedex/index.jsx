@@ -40,7 +40,7 @@ export default function () {
         data={state2.data}
       />
 
-      <div className="grid grid-cols-2 place-items-center gap-2 text-center sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
+      <div className="grid grid-cols-2 place-items-center gap-2 sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
         {state1.render}
       </div>
 
@@ -58,36 +58,33 @@ export default function () {
                 ...prevState,
                 index: prevState.index + 1,
                 render: prevState.render.concat([
-                  <div
+                  <Transition
+                    show={true}
+                    appear
+                    enter={settings.headlessui.transition[0].enter}
+                    enterFrom={settings.headlessui.transition[0].enterFrom}
+                    enterTo={settings.headlessui.transition[0].enterTo}
                     className="flex flex-col items-center"
                     key={prevState.index}
                   >
-                    <Transition
-                      show={true}
-                      appear
-                      enter={settings.headlessui.transition[0].enter}
-                      enterFrom={settings.headlessui.transition[0].enterFrom}
-                      enterTo={settings.headlessui.transition[0].enterTo}
-                    >
-                      <Card
-                        prop1={array.findIndex(
-                          (element) => element === Math.max(...array)
-                        )}
-                        onClick={() =>
-                          setState2((prevState) => {
-                            return {
-                              ...prevState,
-                              show: true,
-                              data: data,
-                            };
-                          })
-                        }
-                        data={data}
-                      />
+                    <Card
+                      prop1={array.findIndex(
+                        (element) => element === Math.max(...array)
+                      )}
+                      onClick={() =>
+                        setState2((prevState) => {
+                          return {
+                            ...prevState,
+                            show: true,
+                            data: data,
+                          };
+                        })
+                      }
+                      data={data}
+                    />
 
-                      <UI.pokemonName>{data.name}</UI.pokemonName>
-                    </Transition>
-                  </div>,
+                    <UI.pokemonName>{data.name}</UI.pokemonName>
+                  </Transition>,
                 ]),
               };
             });
