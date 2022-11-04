@@ -41,6 +41,9 @@ components
  ┃ ┗ Slideout.jsx
  ┣ Pokedex
  ┃ ┣ components
+ ┃ ┃ ┣ ui
+ ┃ ┃ ┃ ┣ Imagee.jsx
+ ┃ ┃ ┃ ┗ Title.jsx
  ┃ ┃ ┣ Card.jsx
  ┃ ┃ ┣ Dialog.jsx
  ┃ ┃ ┗ ProgressBar.jsx
