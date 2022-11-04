@@ -4,7 +4,7 @@ import { settings } from "../../../pokedex.config";
 import Image from "next/image";
 import UI from "./UI";
 
-export default function ({ prop1, data }) {
+export default function ({ prop1, data, onClick }) {
   const reduceArray = [
     data.stats[0].base_stat,
     data.stats[1].base_stat,
@@ -15,7 +15,7 @@ export default function ({ prop1, data }) {
     <div
       className={clsx(
         [
-          "flex scale-90 cursor-pointer flex-row flex-nowrap items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:scale-75",
+          "flex scale-90 cursor-pointer flex-row items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
         ],
         [settings.style.background.card, settings.style.border.card],
         {
@@ -28,6 +28,7 @@ export default function ({ prop1, data }) {
           [settings.style.color.blue[0][1]]: prop1 === 2,
         }
       )}
+      onClick={onClick}
     >
       <UI.pokemonImage>
         <Image
@@ -37,7 +38,7 @@ export default function ({ prop1, data }) {
           alt={data.name}
         />
       </UI.pokemonImage>
-      <div className="w-28 flex-auto">
+      <div className="w-28">
         <ProgressBar>
           {[
             data.stats[0].base_stat,

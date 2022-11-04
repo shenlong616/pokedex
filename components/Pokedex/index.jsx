@@ -17,7 +17,7 @@ export default function () {
 
   // Dialog state
   const [state2, setState2] = useState({
-    boolean: false,
+    show: false,
     data: {},
   });
 
@@ -31,12 +31,12 @@ export default function () {
       </Head>
 
       <Dialog
-        prop1={() =>
+        onClose={() =>
           setState2((prevState) => {
-            return { ...prevState, boolean: false };
+            return { ...prevState, show: false };
           })
         }
-        prop2={state2.boolean}
+        show={state2.show}
         data={state2.data}
       />
 
@@ -58,35 +58,36 @@ export default function () {
                 ...prevState,
                 index: prevState.index + 1,
                 render: prevState.render.concat([
-                  <Transition
+                  <div
+                    className="flex flex-col items-center"
                     key={prevState.index}
-                    show={true}
-                    appear
-                    enter={settings.headlessui.transition[0].enter}
-                    enterFrom={settings.headlessui.transition[0].enterFrom}
-                    enterTo={settings.headlessui.transition[0].enterTo}
                   >
-                    <div
-                      onClick={() =>
-                        setState2((prevState) => {
-                          return {
-                            ...prevState,
-                            boolean: true,
-                            data: data,
-                          };
-                        })
-                      }
+                    <Transition
+                      show={true}
+                      appear
+                      enter={settings.headlessui.transition[0].enter}
+                      enterFrom={settings.headlessui.transition[0].enterFrom}
+                      enterTo={settings.headlessui.transition[0].enterTo}
                     >
                       <Card
                         prop1={array.findIndex(
                           (element) => element === Math.max(...array)
                         )}
+                        onClick={() =>
+                          setState2((prevState) => {
+                            return {
+                              ...prevState,
+                              show: true,
+                              data: data,
+                            };
+                          })
+                        }
                         data={data}
                       />
-                    </div>
 
-                    <UI.pokemonName>{data.name}</UI.pokemonName>
-                  </Transition>,
+                      <UI.pokemonName>{data.name}</UI.pokemonName>
+                    </Transition>
+                  </div>,
                 ]),
               };
             });

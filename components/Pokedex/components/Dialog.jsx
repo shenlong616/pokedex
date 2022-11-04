@@ -25,7 +25,7 @@ Chart.register(
   Legend
 );
 
-export default function ({ prop1, prop2, data }) {
+export default function ({ show, data, onClose }) {
   const object = { array: { 1: [], 2: [] } };
 
   data.stats?.forEach((element) => {
@@ -34,8 +34,8 @@ export default function ({ prop1, prop2, data }) {
   });
 
   return (
-    <Transition appear show={prop2} as={Fragment}>
-      <Dialog as="div" className="relative z-40" onClose={prop1}>
+    <Transition appear show={show} as={Fragment}>
+      <Dialog as="div" className="relative z-40" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter={settings.headlessui.transition[2].enter}
