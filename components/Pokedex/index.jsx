@@ -6,6 +6,7 @@ import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
 import usePokemon from "../../hooks/usePokemon";
+import Name from "./components/ui/Name";
 
 export default function () {
   // Card state
@@ -84,9 +85,7 @@ export default function () {
                       />
                     </div>
 
-                    <span className="select-all font-mono text-xs font-medium">
-                      {data.name}
-                    </span>
+                    <Name>{data.name}</Name>
                   </Transition>,
                 ]),
               };

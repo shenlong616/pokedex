@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
+import Name from "./ui/Name";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -80,14 +81,13 @@ export default function ({ prop1, prop2, data }) {
                     alt={data.name}
                   />
 
-                  <h2
-                    className={clsx(
-                      ["ml-1 select-all font-medium"],
-                      [settings.style.text.color[0]]
-                    )}
-                  >
-                    {data.name}
-                  </h2>
+                  <Name>
+                    <span
+                      className={clsx(["ml-1"], [settings.style.text.color[0]])}
+                    >
+                      {data.name}
+                    </span>
+                  </Name>
                 </legend>
 
                 {/* <Dialog.Title></Dialog.Title> */}
