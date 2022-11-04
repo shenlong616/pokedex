@@ -2,6 +2,7 @@ import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Image from "next/image";
+import Imagee from "./ui/Imagee";
 
 export default function ({ prop1, data }) {
   const reduceArray = [
@@ -14,7 +15,7 @@ export default function ({ prop1, data }) {
     <div
       className={clsx(
         [
-          "flex scale-90 cursor-pointer select-none flex-row flex-nowrap items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:scale-75",
+          "flex scale-90 cursor-pointer flex-row flex-nowrap items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:scale-75",
         ],
         [settings.style.background.card, settings.style.border.card],
         {
@@ -28,15 +29,14 @@ export default function ({ prop1, data }) {
         }
       )}
     >
-      <div>
+      <Imagee>
         <Image
           height="100%"
           width="100%"
           src={data.sprites.front_default}
           alt={data.name}
-          className="-scale-x-100"
         />
-      </div>
+      </Imagee>
       <div className="w-28 flex-auto">
         <ProgressBar>
           {[

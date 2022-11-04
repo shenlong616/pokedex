@@ -6,7 +6,7 @@ import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
 import usePokemon from "../../hooks/usePokemon";
-import Name from "./components/ui/Name";
+import Title from "./components/ui/Title";
 
 export default function () {
   // Card state
@@ -85,7 +85,7 @@ export default function () {
                       />
                     </div>
 
-                    <Name>{data.name}</Name>
+                    <Title>{data.name}</Title>
                   </Transition>,
                 ]),
               };
