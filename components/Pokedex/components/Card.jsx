@@ -2,7 +2,7 @@ import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Image from "next/image";
-import Imagee from "./ui/Imagee";
+import UI from "./UI";
 
 export default function ({ prop1, data }) {
   const reduceArray = [
@@ -29,14 +29,14 @@ export default function ({ prop1, data }) {
         }
       )}
     >
-      <Imagee>
+      <UI.pokemonImage>
         <Image
           height="100%"
           width="100%"
           src={data.sprites.front_default}
           alt={data.name}
         />
-      </Imagee>
+      </UI.pokemonImage>
       <div className="w-28 flex-auto">
         <ProgressBar>
           {[

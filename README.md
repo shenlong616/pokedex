@@ -41,12 +41,10 @@ components
  ┃ ┗ Slideout.jsx
  ┣ Pokedex
  ┃ ┣ components
- ┃ ┃ ┣ ui
- ┃ ┃ ┃ ┣ Imagee.jsx
- ┃ ┃ ┃ ┗ Title.jsx
  ┃ ┃ ┣ Card.jsx
  ┃ ┃ ┣ Dialog.jsx
- ┃ ┃ ┗ ProgressBar.jsx
+ ┃ ┃ ┣ ProgressBar.jsx
+ ┃ ┃ ┗ UI.jsx
  ┃ ┗ index.jsx
  ┗ NoiseTexture.jsx
 

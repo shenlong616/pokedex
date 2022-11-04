@@ -2,8 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
-import Title from "./ui/Title";
-import Imagee from "./ui/Imagee";
+import UI from "./UI";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -73,7 +72,7 @@ export default function ({ prop1, prop2, data }) {
                 )}
               >
                 <legend className="flex flex-row items-center">
-                  <Imagee>
+                  <UI.pokemonImage>
                     <img
                       src={
                         data.sprites?.versions["generation-v"]["black-white"]
@@ -81,15 +80,11 @@ export default function ({ prop1, prop2, data }) {
                       }
                       alt={data.name}
                     />
-                  </Imagee>
+                  </UI.pokemonImage>
 
-                  <Title>
-                    <span
-                      className={clsx(["ml-1"], [settings.style.text.color[0]])}
-                    >
-                      {data.name}
-                    </span>
-                  </Title>
+                  <UI.pokemonName>
+                    <span className={"ml-1"}>{data.name}</span>
+                  </UI.pokemonName>
                 </legend>
 
                 {/* <Dialog.Title></Dialog.Title> */}
