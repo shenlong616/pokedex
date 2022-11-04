@@ -4,7 +4,7 @@ import { settings } from "../../../pokedex.config";
 
 export default function ({ children }) {
   return (
-    <>
+    <div className="flex flex-col items-start">
       <div
         className={clsx(
           ["text-left font-mono text-xs"],
@@ -23,6 +23,6 @@ export default function ({ children }) {
           }}
         ></div>
       </div>
-    </>
+    </div>
   );
 }
