@@ -31,7 +31,7 @@ export default function ({ children }) {
             [settings.style.background.document]
           )}
         >
-          <div className="container mx-auto h-full">{children}</div>
+          <div className="container self-center">{children}</div>
         </div>
         <Footer>
           <span className={clsx(["text-xs"], [settings.style.text.color[1]])}>
