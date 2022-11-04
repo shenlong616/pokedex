@@ -23,6 +23,8 @@
 - [x] Next.js v12.x latest.
 - [ ] Next.js v13.x
 - [ ] Tranh viet ES6
+- Flex cho content
+- Grid cho layout
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa. => `https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat`
 
 ### En
