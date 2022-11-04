@@ -10,7 +10,7 @@ export default function ({ children }) {
       <NoiseTexture />
       <main
         className={clsx(
-          ["inset-0 antialiased"],
+          ["inset-0 flex flex-col antialiased"],
           [settings.style.text.color[0]]
         )}
       >
@@ -25,7 +25,12 @@ export default function ({ children }) {
             v{settings.version}
           </span>
         </Header>
-        <div className={clsx(["my-6"], [settings.style.background.document])}>
+        <div
+          className={clsx(
+            ["my-6 flex flex-col"],
+            [settings.style.background.document]
+          )}
+        >
           <div className="container mx-auto h-full">{children}</div>
         </div>
         <Footer>
