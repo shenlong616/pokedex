@@ -15,10 +15,10 @@ export default function ({ children }) {
         )}
       >
         <Header>
-          {settings.title}{" "}
+          <h1>{settings.title}</h1>
           <span
             className={clsx(
-              ["font-mono text-xs font-normal"],
+              ["ml-1 font-mono text-xs font-normal"],
               [settings.style.text.color[1]]
             )}
           >

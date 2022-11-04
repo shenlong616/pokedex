@@ -5,14 +5,16 @@ import { settings } from "../../pokedex.config";
 export default function ({ children }) {
   return (
     <Slideout prop1="top">
-      <h1
+      <div
         className={clsx(
-          ["py-2 text-center text-2xl font-medium"],
+          [
+            "flex flex-row items-baseline justify-center py-2 text-center text-2xl font-medium",
+          ],
           [settings.style.background.header]
         )}
       >
         {children}
-      </h1>
+      </div>
     </Slideout>
   );
 }
