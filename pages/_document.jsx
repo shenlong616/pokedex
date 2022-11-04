@@ -4,7 +4,7 @@ import { settings } from "../pokedex.config";
 
 export default function () {
   return (
-    <Html>
+    <Html lang="en">
       <Head />
       <body className={settings.style.background.document}>
         <Main />
