@@ -14,7 +14,7 @@ export default function ({ prop1, data, onClick }) {
   return (
     <div
       className={clsx(
-        "flex scale-90 cursor-pointer flex-row items-center gap-1 rounded-md py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
+        "flex scale-90 cursor-pointer flex-row items-center gap-2 rounded-md py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
         settings.style.background.card,
         settings.style.border.card,
         {
