@@ -21,10 +21,7 @@
 - [x] `Flex`
 - [x] `Grid`
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa. => [tài liệu](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
-
-### En
-
-- [x] Upgrading `Next.js` from 12 to 13
+- [x] Cập nhật phiên bản `Next.js` từ 12 lên 13 (`13.0.2`)
 
 ## Tree file
 
