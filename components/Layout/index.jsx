@@ -34,9 +34,7 @@ export default function ({ children }) {
           <div className="container self-center">{children}</div>
         </div>
         <Footer>
-          <span className={clsx(["text-xs"], [settings.style.text.color[1]])}>
-            {settings.footer}
-          </span>
+          <span className="text-xs">{settings.footer}</span>
         </Footer>
       </main>
     </>
