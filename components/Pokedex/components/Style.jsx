@@ -1,15 +1,15 @@
 import { settings } from "../../../pokedex.config";
 import clsx from "clsx";
 
-function UI() {
+function Style() {
   return null;
 }
 
-UI.pokemonImage = function ({ children }) {
+Style.pokemonImage = function ({ children }) {
   return <div className="-scale-x-100 select-none">{children}</div>;
 };
 
-UI.pokemonName = function ({ children }) {
+Style.pokemonName = function ({ children }) {
   return (
     <div
       className={clsx(
@@ -22,4 +22,4 @@ UI.pokemonName = function ({ children }) {
   );
 };
 
-export default UI;
+export default Style;
