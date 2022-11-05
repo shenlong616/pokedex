@@ -37,6 +37,7 @@ export default function ({ prop1, data, onClick }) {
           alt={data.name}
         />
       </Style.pokemonImage>
+
       <div className="flex w-28 flex-col gap-y-1">
         <ProgressBar>
           {[
@@ -45,6 +46,7 @@ export default function ({ prop1, data, onClick }) {
             (data.stats[0].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
+
         <ProgressBar>
           {[
             data.stats[1].base_stat,
@@ -52,6 +54,7 @@ export default function ({ prop1, data, onClick }) {
             (data.stats[1].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
+
         <ProgressBar>
           {[
             data.stats[2].base_stat,

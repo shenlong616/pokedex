@@ -10,6 +10,7 @@ export default function () {
           stitchTiles="stitch"
         />
       </filter>
+
       <rect
         width="100%"
         height="100%"

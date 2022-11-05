@@ -10,6 +10,7 @@ export default function ({ children }) {
           <small>{children[0]}</small>
         </span>
       </div>
+
       <div className="h-1 w-full rounded-full bg-transparent">
         <div
           className={clsx("h-1 rounded-full", children[1])}

@@ -16,16 +16,16 @@ import {
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 
-Chart.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
-
 export default function ({ show, data, onClose }) {
+  Chart.register(
+    RadialLinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+    Tooltip,
+    Legend
+  );
+
   const object = { array: { 1: [], 2: [] } };
 
   data.stats?.forEach((element) => {
@@ -76,6 +76,7 @@ export default function ({ show, data, onClose }) {
                     alt={data.name}
                   />
                 </Style.pokemonImage>
+
                 <Style.pokemonName>{data.name}</Style.pokemonName>
               </legend>
 

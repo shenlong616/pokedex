@@ -27,6 +27,7 @@ export default function () {
     <>
       <Head>
         <title>{`${settings.title} v${settings.version}`}</title>
+
         <meta name="description" content={settings.description} />
       </Head>
 
@@ -82,6 +83,7 @@ export default function () {
                       }
                       data={data}
                     />
+
                     <Style.pokemonName>{data.name}</Style.pokemonName>
                   </Transition>,
                 ]),
