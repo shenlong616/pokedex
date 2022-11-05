@@ -45,7 +45,7 @@ export default function ({ show, data, onClose }) {
           leaveFrom={settings.headlessui.transition[2].leaveFrom}
           leaveTo={settings.headlessui.transition[2].leaveTo}
         >
-          <div className="fixed inset-0 bg-black/50" />
+          <div className="fixed inset-0 bg-black/0" />
         </Transition.Child>
 
         <div className="fixed inset-0 flex flex-col items-center justify-center overflow-y-auto p-5">
