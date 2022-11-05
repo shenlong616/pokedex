@@ -1,7 +1,7 @@
 import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import UI from "./UI";
 
 export default function ({ prop1, data, onClick }) {
