@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
@@ -6,6 +6,8 @@ import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
 import usePokemon from "../../hooks/usePokemon";
+import usePokemonCount from "../../hooks/usePokemonCount";
+
 import Style from "./components/Style";
 
 export default function () {
@@ -20,6 +22,8 @@ export default function () {
     show: false,
     data: {},
   });
+
+  const { count } = useMemo(() => usePokemonCount());
 
   const { data } = usePokemon(state1.index);
 
@@ -47,7 +51,7 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (data && inView) {
+          if (data && inView && state1.index < count + 1) {
             const array = [
               data.stats[0].base_stat,
               data.stats[1].base_stat,

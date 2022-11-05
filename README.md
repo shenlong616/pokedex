@@ -11,7 +11,7 @@
 
 - [x] Cuộn trang vô hạn
 - [ ] Phân trang
-- [ ] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
+- [x] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
 - [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => cân nhắc dùng [react-window](https://www.npmjs.com/package/react-window)
 - [ ] `Search bar` component.
 - [ ] `Filter` component.
