@@ -7,8 +7,8 @@ export default function ({ children }) {
     <div className="flex flex-col items-start">
       <div
         className={clsx(
-          ["text-left font-mono text-xs"],
-          [settings.style.text.color[1]]
+          "text-left font-mono text-xs",
+          settings.style.text.color[1]
         )}
       >
         <span className="select-all text-xs">
@@ -17,7 +17,7 @@ export default function ({ children }) {
       </div>
       <div className="h-1 w-full rounded-full bg-transparent">
         <div
-          className={clsx(["h-1 rounded-full"], [children[1]])}
+          className={clsx("h-1 rounded-full", children[1])}
           style={{
             width: `${children[2]}%`,
           }}

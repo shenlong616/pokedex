@@ -13,8 +13,8 @@ UI.pokemonName = function ({ children }) {
   return (
     <div
       className={clsx(
-        ["select-all text-xs font-medium"],
-        [settings.style.text.color[0]]
+        "select-all text-xs font-medium",
+        settings.style.text.color[0]
       )}
     >
       {children}

@@ -7,8 +7,8 @@ export default function ({ children }) {
     <Slideout prop1="bottom">
       <footer
         className={clsx(
-          ["flex flex-row justify-center font-mono font-medium"],
-          [settings.style.background.footer]
+          "flex flex-row justify-center font-mono font-medium",
+          settings.style.background.footer
         )}
       >
         {children}
