@@ -2,8 +2,8 @@
 
 ## Screenshot
 
-![](./README/img/1.png)
-![](./README/img/2.png)
+![](./README/img/3.png)
+![](./README/img/4.png)
 
 ## To do
 
@@ -58,7 +58,8 @@ pages
 
 README
  ┗ img
- ┃ ┗ 0.png
+ ┃ ┣ 3.png
+ ┃ ┗ 4.png
 
 styles
  ┣ globals.scss
