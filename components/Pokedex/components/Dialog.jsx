@@ -35,7 +35,7 @@ export default function ({ show, data, onClose }) {
 
   return (
     <Transition appear show={show} as={Fragment}>
-      <Dialog as="div" className="relative z-40" onClose={onClose}>
+      <Dialog as="div" className="z-40 flex flex-col" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter={settings.headlessui.transition[2].enter}
@@ -48,64 +48,56 @@ export default function ({ show, data, onClose }) {
           <div className="fixed inset-0 bg-black/50" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full flex-col items-center justify-center p-5 text-center">
-            <Transition.Child
-              as={Fragment}
-              enter={settings.headlessui.transition[1].enter}
-              enterFrom={settings.headlessui.transition[1].enterFrom}
-              enterTo={settings.headlessui.transition[1].enterTo}
-              leave={settings.headlessui.transition[1].leave}
-              leaveFrom={settings.headlessui.transition[1].leaveFrom}
-              leaveTo={settings.headlessui.transition[1].leaveTo}
+        <div className="fixed inset-0 flex flex-col items-center justify-center overflow-y-auto p-5">
+          <Transition.Child
+            as={Fragment}
+            enter={settings.headlessui.transition[1].enter}
+            enterFrom={settings.headlessui.transition[1].enterFrom}
+            enterTo={settings.headlessui.transition[1].enterTo}
+            leave={settings.headlessui.transition[1].leave}
+            leaveFrom={settings.headlessui.transition[1].leaveFrom}
+            leaveTo={settings.headlessui.transition[1].leaveTo}
+          >
+            <Dialog.Panel
+              as="fieldset"
+              className={clsx(
+                "w-full max-w-xl transform overflow-hidden rounded-md p-5 align-middle",
+                settings.style.background.dialog,
+                settings.style.border.dialog
+              )}
             >
-              <Dialog.Panel
-                as="fieldset"
-                className={clsx(
-                  "w-full max-w-xl transform overflow-hidden rounded-md p-5 text-left align-middle",
-                  settings.style.background.dialog,
-                  settings.style.border.dialog
-                )}
-              >
-                <legend className="flex flex-row items-center">
-                  <Style.pokemonImage>
-                    <img
-                      src={
-                        data.sprites?.versions["generation-v"]["black-white"]
-                          .animated.front_default
-                      }
-                      alt={data.name}
-                    />
-                  </Style.pokemonImage>
-
-                  <Style.pokemonName>
-                    <span className={"ml-1"}>{data.name}</span>
-                  </Style.pokemonName>
-                </legend>
-
-                {/* <Dialog.Title></Dialog.Title> */}
-
-                <Dialog.Description
-                  as="div"
-                  className="flex flex-col text-center"
-                >
-                  <Radar
-                    datasetIdKey={data.name}
-                    options={settings.chart}
-                    data={{
-                      labels: object.array[2],
-                      datasets: [
-                        {
-                          label: "base stat",
-                          data: object.array[1],
-                        },
-                      ],
-                    }}
+              <legend className="flex flex-row items-center gap-x-1">
+                <Style.pokemonImage>
+                  <img
+                    src={
+                      data.sprites?.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt={data.name}
                   />
-                </Dialog.Description>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
+                </Style.pokemonImage>
+                <Style.pokemonName>{data.name}</Style.pokemonName>
+              </legend>
+
+              {/* <Dialog.Title></Dialog.Title> */}
+
+              <Dialog.Description as="div" className="flex flex-col gap-y-12">
+                <Radar
+                  datasetIdKey={data.name}
+                  options={settings.chart}
+                  data={{
+                    labels: object.array[2],
+                    datasets: [
+                      {
+                        label: "base stat",
+                        data: object.array[1],
+                      },
+                    ],
+                  }}
+                />
+              </Dialog.Description>
+            </Dialog.Panel>
+          </Transition.Child>
         </div>
       </Dialog>
     </Transition>

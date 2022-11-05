@@ -5,12 +5,7 @@ import { settings } from "../../../pokedex.config";
 export default function ({ children }) {
   return (
     <div className="flex flex-col items-start">
-      <div
-        className={clsx(
-          "text-left font-mono text-xs",
-          settings.style.text.color[1]
-        )}
-      >
+      <div className={clsx("font-mono text-xs", settings.style.text.color[1])}>
         <span className="select-all text-xs">
           <small>{children[0]}</small>
         </span>
