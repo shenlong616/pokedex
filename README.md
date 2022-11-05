@@ -12,19 +12,19 @@
 - [x] Cuộn trang vô hạn
 - [ ] Phân trang
 - [ ] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
-- [ ] Dữ liệu qá lớn `state1.render` => gây ra tình trạng `lag` => cân nhắc dùng [react-window](https://www.npmjs.com/package/react-window)
+- [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => cân nhắc dùng [react-window](https://www.npmjs.com/package/react-window)
 - [ ] `Search bar` component.
 - [ ] `Filter` component.
 - [x] Sử dụng [`swr`](https://swr.vercel.app/) thay cho [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
-- [ ] Component hóa từng thành phần.
-- [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component. => Nhưng phải loại bỏ 2 props `height` và `weight`. => `https://nextjs.org/docs/api-reference/next/image#fill`
+- [ ] Component hóa từng phần.
+- [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component. => Nhưng phải loại bỏ 2 props `height` và `weight`
 - [ ] `Flex` dùng cho `content`
 - [ ] `Grid` dùng cho `layout`
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa. => [tài liệu](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
 
-#### Next.js
+### En
 
-- [x] Upgrading from 12 to 13
+- [x] Upgrading `Next.js` from 12 to 13
 
 ## Tree file
 
