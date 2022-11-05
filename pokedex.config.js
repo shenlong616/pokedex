@@ -7,18 +7,17 @@ export const settings = {
 
   // https://tailwindcss.com/
   style: {
-    text: { color: { 0: "text-slate-100", 1: "text-slate-400" } },
+    text: { color: { 0: "text-slate-200", 1: "text-slate-400" } },
     background: {
-      header: "bg-zinc-900",
-      document: "bg-zinc-900",
-      footer: "bg-zinc-900",
-      card: "bg-zinc-800",
-      dialog: "bg-zinc-800",
-      alert: "bg-black",
+      header: "bg-black",
+      document: "bg-black",
+      footer: "bg-black",
+      card: "bg-zinc-900",
+      dialog: "bg-zinc-900",
     },
     border: {
-      card: "border border-zinc-700",
-      dialog: "border border-zinc-700",
+      card: "border border-zinc-800",
+      dialog: "border border-zinc-800",
     },
     color: {
       green: {
