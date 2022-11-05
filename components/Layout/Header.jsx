@@ -8,7 +8,7 @@ export default function ({ children }) {
       <div
         className={clsx(
           [
-            "flex flex-row items-baseline justify-center py-2 text-2xl font-medium",
+            "flex flex-row items-baseline justify-center gap-x-1 py-2 text-2xl font-medium",
           ],
           [settings.style.background.header]
         )}

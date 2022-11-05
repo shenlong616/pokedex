@@ -15,7 +15,7 @@ export default function ({ prop1, data, onClick }) {
     <div
       className={clsx(
         [
-          "flex scale-90 cursor-pointer flex-row items-center rounded-md py-0.5 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
+          "flex scale-90 cursor-pointer flex-row items-center gap-1 rounded-md py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
         ],
         [settings.style.background.card, settings.style.border.card],
         {
@@ -38,7 +38,7 @@ export default function ({ prop1, data, onClick }) {
           alt={data.name}
         />
       </UI.pokemonImage>
-      <div className="w-28">
+      <div className="flex w-28 flex-col gap-y-1">
         <ProgressBar>
           {[
             data.stats[0].base_stat,
@@ -46,15 +46,13 @@ export default function ({ prop1, data, onClick }) {
             (data.stats[0].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
-        <div className="my-0.5">
-          <ProgressBar>
-            {[
-              data.stats[1].base_stat,
-              settings.style.color.red[1],
-              (data.stats[1].base_stat / reduceArray) * 100,
-            ]}
-          </ProgressBar>
-        </div>
+        <ProgressBar>
+          {[
+            data.stats[1].base_stat,
+            settings.style.color.red[1],
+            (data.stats[1].base_stat / reduceArray) * 100,
+          ]}
+        </ProgressBar>
         <ProgressBar>
           {[
             data.stats[2].base_stat,

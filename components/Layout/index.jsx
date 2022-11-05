@@ -18,7 +18,7 @@ export default function ({ children }) {
           <h1>{settings.title}</h1>
           <span
             className={clsx(
-              ["ml-1 font-mono text-xs font-normal"],
+              ["font-mono text-xs font-normal"],
               [settings.style.text.color[1]]
             )}
           >
