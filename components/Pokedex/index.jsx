@@ -40,7 +40,7 @@ export default function () {
         data={state2.data}
       />
 
-      <div className="grid grid-cols-2 place-items-center gap-2 sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-2 md:grid-cols-4 md:gap-3 xl:grid-cols-6 xl:gap-3">
         {state1.render}
       </div>
 
@@ -82,7 +82,6 @@ export default function () {
                       }
                       data={data}
                     />
-
                     <Style.pokemonName>{data.name}</Style.pokemonName>
                   </Transition>,
                 ]),
