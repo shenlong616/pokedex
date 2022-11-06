@@ -68,7 +68,7 @@ export default function ({ show, data, onClose }) {
                 settings.style.border.dialog
               )}
             >
-              <legend className="flex w-full flex-row justify-center">
+              <legend className="flex flex-row">
                 <Style.pokemonImage>
                   <img
                     src={
