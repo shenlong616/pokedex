@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
@@ -23,7 +23,7 @@ export default function () {
     data: {},
   });
 
-  const { count } = useMemo(() => usePokemonCount());
+  const { count } = usePokemonCount();
 
   const { data } = usePokemon(state1.index);
 
