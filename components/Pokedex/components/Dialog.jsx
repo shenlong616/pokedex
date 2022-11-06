@@ -3,6 +3,13 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Style from "./Style";
+import AsciiTable from "ascii-table";
+
+// https://github.com/uiwjs/react-codemirror#markdown-example
+import CodeMirror from "@uiw/react-codemirror";
+import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
+import { languages } from "@codemirror/language-data";
+import { dracula } from "@uiw/codemirror-theme-dracula";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -83,6 +90,28 @@ export default function ({ show, data, onClose }) {
               {/* <Dialog.Title></Dialog.Title> */}
 
               <Dialog.Description as="div" className="flex flex-col gap-y-12">
+                <CodeMirror
+                  value={new AsciiTable(
+                    `#${data.id} ${data.name?.toUpperCase()}`
+                  )
+                    .addRow("height", `${data.height}dm`)
+                    .addRow("weight", `${data.weight}hg`)
+                    .addRow(
+                      "type",
+                      data.types?.map((element) => element.type.name).join(", ")
+                    )
+                    .toString()}
+                  placeholder="Nứng loz hay j mà xóa hết nội dung của ng ta!?"
+                  theme={dracula}
+                  autoFocus
+                  extensions={[
+                    markdown({
+                      base: markdownLanguage,
+                      codeLanguages: languages,
+                    }),
+                  ]}
+                />
+
                 <Radar
                   datasetIdKey={data.name}
                   options={settings.chart}

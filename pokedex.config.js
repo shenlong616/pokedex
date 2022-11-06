@@ -39,6 +39,8 @@ export const settings = {
         },
         1: "bg-blue-500",
       },
+
+      // blue:["",""]
     },
   },
 
@@ -54,7 +56,7 @@ export const settings = {
         leaveTo: "opacity-0 translate-y-full skew-y-12",
       },
       1: {
-        enter: "duration-200",
+        enter: "duration-300",
         enterFrom: "opacity-0 scale-95",
         enterTo: "opacity-100 scale-100",
         leave: "duration-300",
