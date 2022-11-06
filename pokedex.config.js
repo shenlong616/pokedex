@@ -82,8 +82,8 @@ export const settings = {
     pointStyle: "cross",
     pointRadius: 3,
     pointHoverRadius: 3,
-    backgroundColor: "rgb(63 63 70 / 30%)", // bg-zinc-700
-    borderColor: "rgb(82 82 91)", // border-zinc-600
+    backgroundColor: "rgb(39 39 42 / 30%)", // bg-zinc-800
+    borderColor: "rgb(63 63 70)", // border-zinc-700
     pointBorderColor: "rgb(241 245 249)", // text-slate-100
     scales: {
       r: {
@@ -93,6 +93,36 @@ export const settings = {
           callback: () => {},
         },
       },
+    },
+  },
+
+  // https://www.npmjs.com/package/table
+  table: {
+    // https://www.npmjs.com/package/ascii-table
+    border: {
+      topBody: "-",
+      topJoin: "-",
+      topLeft: ".",
+      topRight: ".",
+
+      bottomBody: "-",
+      bottomJoin: "-",
+      bottomLeft: "˙",
+      bottomRight: "˙",
+
+      bodyLeft: "|",
+      bodyRight: "|",
+      bodyJoin: "|",
+
+      joinBody: "-",
+      joinLeft: "|",
+      joinRight: "|",
+      joinJoin: "-",
+    },
+
+    // https://github.com/gajus/table#configdrawhorizontalline
+    drawHorizontalLine: (lineIndex, rowCount) => {
+      return lineIndex === 0 || lineIndex === rowCount;
     },
   },
 };

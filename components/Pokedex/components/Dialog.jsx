@@ -3,8 +3,8 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Style from "./Style";
-import AsciiTable from "ascii-table";
 import CodeMirror from "./CodeMirror";
+import { table } from "table";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -84,16 +84,19 @@ export default function ({ show, data, onClose }) {
 
               <Dialog.Description as="div" className="flex flex-col gap-y-12">
                 <CodeMirror>
-                  {`# ${data.name?.toUpperCase()} (${
-                    data.id
-                  })\n${new AsciiTable()
-                    .addRow("height", `${data.height}dm`)
-                    .addRow("weight", `${data.weight}hg`)
-                    .addRow(
-                      "type",
-                      data.types?.map((element) => element.type.name).join(", ")
-                    )
-                    .toString()}`}
+                  {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
+                    [
+                      ["height", `${data.height}dm`],
+                      ["weight", `${data.weight}hg`],
+                      [
+                        "type",
+                        data.types
+                          ?.map((element) => element.type.name)
+                          .join(", "),
+                      ],
+                    ],
+                    settings.table
+                  )}`}
                 </CodeMirror>
 
                 <Radar
