@@ -68,7 +68,7 @@ export default function ({ show, data, onClose }) {
                 settings.style.border.dialog
               )}
             >
-              <legend className="flex flex-col">
+              <legend className="flex flex-col text-center">
                 <Style.pokemonImage>
                   <img
                     src={

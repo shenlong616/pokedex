@@ -5,7 +5,7 @@ export default function () {
       <filter id="pedroduarteisalegend">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency=".9"
+          baseFrequency="1"
           numOctaves="1"
           stitchTiles="stitch"
         />
