@@ -63,12 +63,12 @@ export default function ({ show, data, onClose }) {
             <Dialog.Panel
               as="fieldset"
               className={clsx(
-                "w-full max-w-xl rounded-md p-5",
+                "w-full max-w-6xl rounded-md p-5",
                 settings.style.background.dialog,
                 settings.style.border.dialog
               )}
             >
-              <legend className="flex flex-row">
+              <legend className="flex flex-col">
                 <Style.pokemonImage>
                   <img
                     src={
@@ -82,36 +82,40 @@ export default function ({ show, data, onClose }) {
 
               {/* <Dialog.Title></Dialog.Title> */}
 
-              <Dialog.Description as="div" className="flex flex-col gap-y-12">
-                <CodeMirror>
-                  {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
-                    [
-                      ["height", `${data.height}dm`],
-                      ["weight", `${data.weight}hg`],
+              <Dialog.Description as="div" className="flex flex-row gap-x-5">
+                <div className="w-full">
+                  <CodeMirror>
+                    {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
                       [
-                        "type",
-                        data.types
-                          ?.map((element) => element.type.name)
-                          .join(", "),
+                        ["height", `${data.height}dm`],
+                        ["weight", `${data.weight}hg`],
+                        [
+                          "type",
+                          data.types
+                            ?.map((element) => element.type.name)
+                            .join(", "),
+                        ],
                       ],
-                    ],
-                    settings.table
-                  )}`}
-                </CodeMirror>
+                      settings.table
+                    )}`}
+                  </CodeMirror>
+                </div>
 
-                <Radar
-                  datasetIdKey={data.name}
-                  options={settings.chart}
-                  data={{
-                    labels: object.array[2],
-                    datasets: [
-                      {
-                        label: "base stat",
-                        data: object.array[1],
-                      },
-                    ],
-                  }}
-                />
+                <div className="w-full">
+                  <Radar
+                    datasetIdKey={data.name}
+                    options={settings.chart}
+                    data={{
+                      labels: object.array[2],
+                      datasets: [
+                        {
+                          label: "base stat",
+                          data: object.array[1],
+                        },
+                      ],
+                    }}
+                  />
+                </div>
               </Dialog.Description>
             </Dialog.Panel>
           </Transition.Child>
