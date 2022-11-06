@@ -63,7 +63,7 @@ export default function ({ show, data, onClose }) {
             <Dialog.Panel
               as="fieldset"
               className={clsx(
-                "w-full max-w-6xl rounded-md p-5",
+                "w-full max-w-6xl rounded-xl p-5",
                 settings.style.background.dialog,
                 settings.style.border.dialog
               )}

@@ -66,9 +66,9 @@ export const settings = {
       2: {
         enter: "duration-75",
         enterFrom: "opacity-0 backdrop-blur-none",
-        enterTo: "opacity-100 backdrop-blur-2xl",
+        enterTo: "opacity-100 backdrop-blur-md",
         leave: "duration-75",
-        leaveFrom: "opacity-100 backdrop-blur-2xl",
+        leaveFrom: "opacity-100 backdrop-blur-md",
         leaveTo: "opacity-0 backdrop-blur-none",
       },
     },
