@@ -85,7 +85,7 @@ export default function ({ show, data, onClose }) {
               <Dialog.Description as="div" className="flex flex-row gap-x-5">
                 <div className="w-full">
                   <CodeMirror>
-                    {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
+                    {`# ${data.name?.toUpperCase()} (#${data.id})\n${table(
                       [
                         ["height", `${data.height}dm`],
                         ["weight", `${data.weight}hg`],
