@@ -12,7 +12,7 @@
     "@codemirror/lang-markdown": "^6.0.4",
     "@codemirror/language-data": "^6.1.0",
     "@headlessui/react": "^1.7.3",
-    "@uiw/codemirror-theme-dracula": "^4.12.4",
+    "@uiw/codemirror-theme-github": "^4.12.4",
     "@uiw/react-codemirror": "^4.12.4",
     "ascii-table": "^0.0.9",
     "chart.js": "^3.9.1",

@@ -9,7 +9,7 @@ import AsciiTable from "ascii-table";
 import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
-import { dracula } from "@uiw/codemirror-theme-dracula";
+import { githubDark } from "@uiw/codemirror-theme-github";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -68,12 +68,12 @@ export default function ({ show, data, onClose }) {
             <Dialog.Panel
               as="fieldset"
               className={clsx(
-                "w-full max-w-xl transform overflow-hidden rounded-md p-5 align-middle",
+                "w-full max-w-2xl transform overflow-hidden rounded-md p-5 align-middle",
                 settings.style.background.dialog,
                 settings.style.border.dialog
               )}
             >
-              <legend className="flex flex-row items-center gap-x-1">
+              <legend className="flex w-full flex-row justify-center">
                 <Style.pokemonImage>
                   <img
                     src={
@@ -83,26 +83,24 @@ export default function ({ show, data, onClose }) {
                     alt={data.name}
                   />
                 </Style.pokemonImage>
-
-                <Style.pokemonName>{data.name}</Style.pokemonName>
               </legend>
 
               {/* <Dialog.Title></Dialog.Title> */}
 
               <Dialog.Description as="div" className="flex flex-col gap-y-12">
                 <CodeMirror
-                  value={new AsciiTable(
-                    `#${data.id} ${data.name?.toUpperCase()}`
-                  )
+                  value={`# ${data.name?.toUpperCase()} (${
+                    data.id
+                  })\n${new AsciiTable()
                     .addRow("height", `${data.height}dm`)
                     .addRow("weight", `${data.weight}hg`)
                     .addRow(
                       "type",
                       data.types?.map((element) => element.type.name).join(", ")
                     )
-                    .toString()}
+                    .toString()}`}
                   placeholder="Nứng loz hay j mà xóa hết nội dung của ng ta!?"
-                  theme={dracula}
+                  theme={githubDark}
                   autoFocus
                   extensions={[
                     markdown({

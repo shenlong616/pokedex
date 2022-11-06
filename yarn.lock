@@ -509,9 +509,9 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/codemirror-theme-dracula@^4.12.4":
-  "integrity" "sha512-ObvT3bZpDCxzphYncvbiYcKX4dpT7T/uKumxFnM5VRkQA75/pTug92rDJfyQe9LYv2hQA20kkeemxQ/xjf1+CQ=="
-  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-dracula/-/codemirror-theme-dracula-4.12.4.tgz"
+"@uiw/codemirror-theme-github@^4.12.4":
+  "integrity" "sha512-ni5/u6aqv+4Nq5i7BaQiDFmZGu/+BhoptjxvNBlqJjVuYeUfv27zFTdcaFf2GKVL7mPMX4Q4MltVGKDYoWe14Q=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.12.4.tgz"
   "version" "4.12.4"
   dependencies:
     "@uiw/codemirror-themes" "4.12.4"
