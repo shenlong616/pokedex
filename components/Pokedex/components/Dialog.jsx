@@ -4,12 +4,7 @@ import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 import Style from "./Style";
 import AsciiTable from "ascii-table";
-
-// https://github.com/uiwjs/react-codemirror#markdown-example
-import CodeMirror from "@uiw/react-codemirror";
-import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
-import { languages } from "@codemirror/language-data";
-import { githubDark } from "@uiw/codemirror-theme-github";
+import CodeMirror from "./CodeMirror";
 
 // https://react-chartjs-2.js.org/docs/migration-to-v4#tree-shaking
 import {
@@ -88,8 +83,8 @@ export default function ({ show, data, onClose }) {
               {/* <Dialog.Title></Dialog.Title> */}
 
               <Dialog.Description as="div" className="flex flex-col gap-y-12">
-                <CodeMirror
-                  value={`# ${data.name?.toUpperCase()} (${
+                <CodeMirror>
+                  {`# ${data.name?.toUpperCase()} (${
                     data.id
                   })\n${new AsciiTable()
                     .addRow("height", `${data.height}dm`)
@@ -99,16 +94,7 @@ export default function ({ show, data, onClose }) {
                       data.types?.map((element) => element.type.name).join(", ")
                     )
                     .toString()}`}
-                  placeholder="Nứng loz hay j mà xóa hết nội dung của ng ta!?"
-                  theme={githubDark}
-                  autoFocus
-                  extensions={[
-                    markdown({
-                      base: markdownLanguage,
-                      codeLanguages: languages,
-                    }),
-                  ]}
-                />
+                </CodeMirror>
 
                 <Radar
                   datasetIdKey={data.name}
