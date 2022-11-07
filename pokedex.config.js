@@ -57,7 +57,7 @@ export const settings = {
       },
       1: {
         enter: "duration-300",
-        enterFrom: "opacity-0 scale-95",
+        enterFrom: "opacity-0 scale-75",
         enterTo: "opacity-100 scale-100",
         leave: "duration-300",
         leaveFrom: "opacity-100 scale-100",
