@@ -32,22 +32,6 @@ export default function ({ data }) {
   return (
     <div className="flex flex-row gap-x-5">
       <div className="w-full">
-        <CodeMirror>
-          {`# ${data.name?.toUpperCase()} (#${data.id})\n${table(
-            [
-              ["height", `${data.height}dm`],
-              ["weight", `${data.weight}hg`],
-              [
-                "type",
-                data.types?.map((element) => element.type.name).join(", "),
-              ],
-            ],
-            settings.table
-          )}`}
-        </CodeMirror>
-      </div>
-
-      <div className="w-full">
         <Radar
           datasetIdKey={data.name}
           options={settings.chart}
@@ -61,6 +45,22 @@ export default function ({ data }) {
             ],
           }}
         />
+      </div>
+
+      <div className="w-full">
+        <CodeMirror>
+          {`# ${data.name?.toUpperCase()} (#${data.id})\n${table(
+            [
+              ["height", `${data.height}dm`],
+              ["weight", `${data.weight}hg`],
+              [
+                "type",
+                data.types?.map((element) => element.type.name).join(", "),
+              ],
+            ],
+            settings.table
+          )}`}
+        </CodeMirror>
       </div>
     </div>
   );
