@@ -24,8 +24,6 @@ export const settings = {
     border: {
       width: { card: "border", dialog: "border" },
       color: { card: "border-zinc-800", dialog: "border-zinc-800" },
-      card: "border border-zinc-800",
-      dialog: "border border-zinc-800",
     },
 
     groupColor: {
