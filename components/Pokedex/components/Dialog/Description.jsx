@@ -49,7 +49,7 @@ export default function ({ data }) {
 
       <div className="w-full">
         <CodeMirror>
-          {`# ${data.name?.toUpperCase()} (#${data.id})\n${table(
+          {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
             [
               ["height", `${data.height}dm`],
               ["weight", `${data.weight}hg`],
