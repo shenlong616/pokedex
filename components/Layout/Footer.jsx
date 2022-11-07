@@ -8,7 +8,7 @@ export default function ({ children }) {
       <footer
         className={clsx(
           "flex flex-col py-1 font-mono font-medium",
-          settings.style.background.footer
+          settings.tailwindcss.background.color.footer
         )}
       >
         {children}

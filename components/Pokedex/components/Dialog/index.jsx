@@ -33,8 +33,9 @@ export default function ({ show, data, onClose }) {
             as="fieldset"
             className={clsx(
               "w-full max-w-6xl rounded-xl p-5",
-              settings.style.background.dialog,
-              settings.style.border.dialog
+              settings.tailwindcss.background.color.dialog,
+              settings.tailwindcss.border.width.dialog,
+              settings.tailwindcss.border.color.dialog
             )}
           >
             <Legend data={data} />

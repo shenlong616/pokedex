@@ -12,7 +12,7 @@ export default function ({ children }) {
       <main
         className={clsx(
           "inset-0 flex flex-col items-center gap-y-5 antialiased",
-          settings.style.text.color[0]
+          settings.tailwindcss.text.color[0]
         )}
       >
         <Header>
@@ -21,14 +21,19 @@ export default function ({ children }) {
           <span
             className={clsx(
               "font-mono text-xs font-normal",
-              settings.style.text.color[1]
+              settings.tailwindcss.text.color[1]
             )}
           >
             v{settings.version}
           </span>
         </Header>
 
-        <div className={clsx("container", settings.style.background.document)}>
+        <div
+          className={clsx(
+            "container",
+            settings.tailwindcss.background.color.document
+          )}
+        >
           {children}
         </div>
 

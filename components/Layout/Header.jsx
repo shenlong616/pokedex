@@ -8,7 +8,7 @@ export default function ({ children }) {
       <div
         className={clsx(
           "flex flex-row items-baseline gap-x-1 py-3 text-2xl font-medium",
-          settings.style.background.header
+          settings.tailwindcss.background.color.header
         )}
       >
         {children}

@@ -15,16 +15,17 @@ export default function ({ prop1, data, onClick }) {
     <div
       className={clsx(
         "flex scale-90 cursor-pointer flex-row items-center gap-x-2 rounded-md py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
-        settings.style.background.card,
-        settings.style.border.card,
+        settings.tailwindcss.background.color.card,
+        settings.tailwindcss.border.width.card,
+        settings.tailwindcss.border.color.card,
         {
-          [settings.style.color.green[0][1]]: prop1 === 0,
+          [settings.tailwindcss.groupColor.green[1]]: prop1 === 0,
         },
         {
-          [settings.style.color.red[0][1]]: prop1 === 1,
+          [settings.tailwindcss.groupColor.red[1]]: prop1 === 1,
         },
         {
-          [settings.style.color.blue[0][1]]: prop1 === 2,
+          [settings.tailwindcss.groupColor.blue[1]]: prop1 === 2,
         }
       )}
       onClick={onClick}
@@ -42,7 +43,7 @@ export default function ({ prop1, data, onClick }) {
         <ProgressBar>
           {[
             data.stats[0].base_stat,
-            settings.style.color.green[1],
+            settings.tailwindcss.groupColor.green[0],
             (data.stats[0].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
@@ -50,7 +51,7 @@ export default function ({ prop1, data, onClick }) {
         <ProgressBar>
           {[
             data.stats[1].base_stat,
-            settings.style.color.red[1],
+            settings.tailwindcss.groupColor.red[0],
             (data.stats[1].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>
@@ -58,7 +59,7 @@ export default function ({ prop1, data, onClick }) {
         <ProgressBar>
           {[
             data.stats[2].base_stat,
-            settings.style.color.blue[1],
+            settings.tailwindcss.groupColor.blue[0],
             (data.stats[2].base_stat / reduceArray) * 100,
           ]}
         </ProgressBar>

@@ -6,7 +6,7 @@ export default function () {
   return (
     <Html lang="en">
       <Head />
-      <body className={settings.style.background.document}>
+      <body className={settings.tailwindcss.background.color.document}>
         <Main />
         <NextScript />
       </body>

@@ -14,7 +14,7 @@ Style.pokemonName = function ({ children }) {
     <div
       className={clsx(
         "select-all text-xs font-medium",
-        settings.style.text.color[0]
+        settings.tailwindcss.text.color[0]
       )}
     >
       {children}
