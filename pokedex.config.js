@@ -125,4 +125,10 @@ export const settings = {
       return lineIndex === 0 || lineIndex === rowCount;
     },
   },
+
+  // https://swr.vercel.app/
+  swr: {
+    // https://swr.vercel.app/docs/getting-started#quick-start
+    fetcher: (...args) => fetch(...args).then((res) => res.json()),
+  },
 };

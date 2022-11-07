@@ -5,7 +5,7 @@ import { settings } from "../pokedex.config";
 export default function usePokemon(parameter) {
   const { data, error } = useSWR(
     `${settings.api}/pokemon/${parameter}`,
-    (url) => fetch(url).then((response) => response.json())
+    settings.swr.fetcher
   );
 
   return {
