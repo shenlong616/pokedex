@@ -30,7 +30,7 @@ export default function ({ data }) {
   });
 
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row md:gap-x-1">
       <div className="w-full">
         <Radar
           datasetIdKey={data.name}

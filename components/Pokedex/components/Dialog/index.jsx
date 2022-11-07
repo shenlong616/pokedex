@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { settings } from "../../../../pokedex.config";
 import Description from "./Description";
 import Legend from "./Legend";
+import CloseButton from "./CloseButton";
 
 export default function ({ show, data, onClose }) {
   return (
@@ -26,7 +27,7 @@ export default function ({ show, data, onClose }) {
           leave={settings.headlessui.transition[1].leave}
           leaveFrom={settings.headlessui.transition[1].leaveFrom}
           leaveTo={settings.headlessui.transition[1].leaveTo}
-          className="fixed inset-0 flex flex-col items-center justify-center overflow-y-auto p-5"
+          className="fixed inset-0 flex flex-col items-center justify-center gap-y-2 overflow-y-auto p-5"
         >
           <Dialog.Panel
             as="fieldset"
@@ -44,6 +45,8 @@ export default function ({ show, data, onClose }) {
               <Description data={data} />
             </Dialog.Description>
           </Dialog.Panel>
+
+          <CloseButton onClose={onClose} />
         </Transition.Child>
       </Dialog>
     </Transition>
