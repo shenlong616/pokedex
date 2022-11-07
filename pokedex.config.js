@@ -5,6 +5,13 @@ export const settings = {
   version: "0.0.2",
   footer: "footer",
 
+  text: {
+    CloseButtonText: [
+      "Click here to close the dialog.",
+      "Or click outside the dialog to close.",
+    ],
+  },
+
   // https://tailwindcss.com/
   tailwindcss: {
     text: {
