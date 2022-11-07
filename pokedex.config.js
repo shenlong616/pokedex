@@ -7,8 +7,13 @@ export const settings = {
 
   text: {
     CloseButtonText: [
-      "Click here to close the dialog.",
-      "Or click outside the dialog to close.",
+      <span>
+        Click <span className="text-slate-200">here</span> to close the dialog.
+      </span>,
+      <span>
+        Or click <span className="text-slate-200">outside</span> the dialog to
+        close it.
+      </span>,
     ],
   },
 
