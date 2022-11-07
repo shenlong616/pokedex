@@ -17,10 +17,7 @@ export default function ({ show, data, onClose }) {
           leave={settings.headlessui.transition[2].leave}
           leaveFrom={settings.headlessui.transition[2].leaveFrom}
           leaveTo={settings.headlessui.transition[2].leaveTo}
-          className={clsx(
-            "fixed inset-0",
-            settings.tailwindcss.background.color.document
-          )}
+          className="fixed inset-0 bg-black/25"
         />
 
         <Transition.Child
