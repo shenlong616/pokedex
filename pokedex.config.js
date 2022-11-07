@@ -89,8 +89,7 @@ export const settings = {
       r: {
         beginAtZero: true,
         ticks: {
-          // empty callback de xoa ticks
-          callback: () => {},
+          callback: () => undefined,
         },
       },
     },
