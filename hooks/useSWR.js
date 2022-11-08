@@ -7,7 +7,7 @@ export default function usePokemon(parameter) {
 
   return {
     data: data,
-    // isLoading: !error && !data,
-    // isError: error,
+    isLoading: !error && !data,
+    isError: error,
   };
 }

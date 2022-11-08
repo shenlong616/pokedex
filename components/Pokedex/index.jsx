@@ -23,7 +23,7 @@ export default function () {
   });
 
   // SWR
-  const { data: pokedex } = useSWR(`${settings.api}/pokemon`);
+  const { data: p0kemon } = useSWR(`${settings.api}/pokemon`);
   const { data: pokemon } = useSWR(`${settings.api}/pokemon/${state1.index}`);
 
   return (
@@ -49,7 +49,7 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (pokemon && inView && state1.index < pokedex.count + 1) {
+          if (pokemon && inView && state1.index < p0kemon?.count + 1) {
             const array = [
               pokemon.stats[0].base_stat,
               pokemon.stats[1].base_stat,
