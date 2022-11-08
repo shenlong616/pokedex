@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { settings } from "../../../pokedex.config";
 
-export default function ({ children }) {
+export default function ({ text, bgColor, width }) {
   return (
     <div className="flex flex-col items-start">
       <div
@@ -12,15 +12,15 @@ export default function ({ children }) {
         )}
       >
         <span className="select-all text-xs">
-          <small>{children[0]}</small>
+          <small>{text}</small>
         </span>
       </div>
 
       <div className="h-1 w-full rounded-full bg-transparent">
         <div
-          className={clsx("h-1 rounded-full", children[1])}
+          className={clsx("h-1 rounded-full", bgColor)}
           style={{
-            width: `${children[2]}%`,
+            width: `${width}%`,
           }}
         ></div>
       </div>

@@ -40,29 +40,23 @@ export default function ({ prop1, data, onClick }) {
       </Style.pokemonImage>
 
       <div className="flex w-28 flex-col gap-y-1">
-        <ProgressBar>
-          {[
-            data.stats[0].base_stat,
-            settings.tailwindcss.groupColor.green[0],
-            (data.stats[0].base_stat / reduceArray) * 100,
-          ]}
-        </ProgressBar>
+        <ProgressBar
+          text={data.stats[0].base_stat}
+          bgColor={settings.tailwindcss.groupColor.green[0]}
+          width={(data.stats[0].base_stat / reduceArray) * 100}
+        />
 
-        <ProgressBar>
-          {[
-            data.stats[1].base_stat,
-            settings.tailwindcss.groupColor.red[0],
-            (data.stats[1].base_stat / reduceArray) * 100,
-          ]}
-        </ProgressBar>
+        <ProgressBar
+          text={data.stats[1].base_stat}
+          bgColor={settings.tailwindcss.groupColor.red[0]}
+          width={(data.stats[1].base_stat / reduceArray) * 100}
+        />
 
-        <ProgressBar>
-          {[
-            data.stats[2].base_stat,
-            settings.tailwindcss.groupColor.blue[0],
-            (data.stats[2].base_stat / reduceArray) * 100,
-          ]}
-        </ProgressBar>
+        <ProgressBar
+          text={data.stats[2].base_stat}
+          bgColor={settings.tailwindcss.groupColor.blue[0]}
+          width={(data.stats[2].base_stat / reduceArray) * 100}
+        />
       </div>
     </div>
   );
