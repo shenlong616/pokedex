@@ -22,15 +22,13 @@ export default function () {
     data: {},
   });
 
-  const { data: pokemon } = useSWR(`${settings.api}/pokemon`);
-
-  const { data } = useSWR(`${settings.api}/pokemon/${state1.index}`);
+  const { data: pokedex } = useSWR(`${settings.api}/pokemon`);
+  const { data: pokemon } = useSWR(`${settings.api}/pokemon/${state1.index}`);
 
   return (
     <>
       <Head>
         <title>{`${settings.title} v${settings.version}`}</title>
-
         <meta name="description" content={settings.description} />
       </Head>
 
@@ -50,11 +48,11 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (data && inView && state1.index < pokemon.count + 1) {
+          if (pokemon && inView && state1.index < pokedex.count + 1) {
             const array = [
-              data.stats[0].base_stat,
-              data.stats[1].base_stat,
-              data.stats[2].base_stat,
+              pokemon.stats[0].base_stat,
+              pokemon.stats[1].base_stat,
+              pokemon.stats[2].base_stat,
             ];
 
             setState1((prevState) => {
@@ -80,14 +78,14 @@ export default function () {
                           return {
                             ...prevState,
                             show: true,
-                            data: data,
+                            data: pokemon,
                           };
                         })
                       }
-                      data={data}
+                      data={pokemon}
                     />
 
-                    <Style.pokemonName>{data.name}</Style.pokemonName>
+                    <Style.pokemonName>{pokemon.name}</Style.pokemonName>
                   </Transition>,
                 ]),
               };
