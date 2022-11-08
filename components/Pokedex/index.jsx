@@ -6,7 +6,6 @@ import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
 import useSWR from "../../hooks/useSWR";
-
 import Style from "./components/Style";
 
 export default function () {
