@@ -3,10 +3,7 @@ import useSWR from "swr";
 import { settings } from "../pokedex.config";
 
 export default function usePokemon(parameter) {
-  const { data, error } = useSWR(
-    `${settings.api}/pokemon/${parameter}`,
-    settings.swr.fetcher
-  );
+  const { data, error } = useSWR(parameter, settings.swr.fetcher);
 
   return {
     data: data,

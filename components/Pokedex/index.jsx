@@ -5,8 +5,7 @@ import { settings } from "../../pokedex.config";
 import Card from "./components/Card";
 import Dialog from "./components/Dialog";
 import { Transition } from "@headlessui/react";
-import usePokemon from "../../hooks/usePokemon";
-import usePokemonCount from "../../hooks/usePokemonCount";
+import useSWR from "../../hooks/useSWR";
 
 import Style from "./components/Style";
 
@@ -23,9 +22,9 @@ export default function () {
     data: {},
   });
 
-  const { count } = usePokemonCount();
+  const { data: pokemon } = useSWR(`${settings.api}/pokemon`);
 
-  const { data } = usePokemon(state1.index);
+  const { data } = useSWR(`${settings.api}/pokemon/${state1.index}`);
 
   return (
     <>
@@ -51,7 +50,7 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (data && inView && state1.index < count + 1) {
+          if (data && inView && state1.index < pokemon.count + 1) {
             const array = [
               data.stats[0].base_stat,
               data.stats[1].base_stat,
