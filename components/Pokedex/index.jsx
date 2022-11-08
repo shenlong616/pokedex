@@ -10,18 +10,19 @@ import useSWR from "../../hooks/useSWR";
 import Style from "./components/Style";
 
 export default function () {
-  // Card state
+  // `Card` state
   const [state1, setState1] = useState({
     render: [],
     index: 1,
   });
 
-  // Dialog state
+  // `Dialog` state
   const [state2, setState2] = useState({
     show: false,
     data: {},
   });
 
+  // SWR
   const { data: pokedex } = useSWR(`${settings.api}/pokemon`);
   const { data: pokemon } = useSWR(`${settings.api}/pokemon/${state1.index}`);
 
