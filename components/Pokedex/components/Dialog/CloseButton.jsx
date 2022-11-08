@@ -8,7 +8,7 @@ export default function ({ onClose }) {
   return (
     <div
       className={clsx(
-        "cursor-pointer text-xs",
+        "flex cursor-pointer flex-col text-xs",
         settings.tailwindcss.text.color[1]
       )}
       onClick={onClose}
