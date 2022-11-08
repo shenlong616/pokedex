@@ -16,11 +16,11 @@ export default function ({ children }) {
         )}
       >
         <Header>
-          <h1>{settings.title}</h1>
+          <h1 className="self-baseline">{settings.title}</h1>
 
           <span
             className={clsx(
-              "font-mono text-xs font-normal",
+              "self-baseline font-mono text-xs font-normal",
               settings.tailwindcss.text.color[1]
             )}
           >

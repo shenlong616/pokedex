@@ -7,7 +7,7 @@ export default function ({ children }) {
     <Slideout position="top">
       <div
         className={clsx(
-          "flex flex-row items-baseline gap-x-1 py-3 text-2xl font-medium",
+          "flex flex-row gap-x-1 py-3 text-2xl font-medium",
           settings.tailwindcss.background.color.header
         )}
       >
