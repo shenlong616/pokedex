@@ -23,6 +23,8 @@ export default function ({ data }) {
     Legend
   );
 
+  const _Is = (parameter) => (parameter ? "✔️" : "❌");
+
   const { data: pokemonSpecies } = useSWR(
     `${settings.api}/pokemon-species/${data.id}`
   );
@@ -44,7 +46,7 @@ export default function ({ data }) {
             labels: object.array[2],
             datasets: [
               {
-                label: "base stat",
+                label: "Base stat",
                 data: object.array[1],
               },
             ],
@@ -74,9 +76,9 @@ export default function ({ data }) {
             settings.table
           )}\n## Base score\n${table(
             [
-              ["base_experience", `${data.base_experience}`],
+              ["experience", `${data.base_experience}`],
               [
-                "base_happiness",
+                "happiness",
                 `${pokemonSpecies?.base_happiness} (${Math.round(
                   (pokemonSpecies?.base_happiness / 255) * 100
                 )}%)`,
@@ -87,6 +89,13 @@ export default function ({ data }) {
                   (pokemonSpecies?.capture_rate / 255) * 100
                 )}%)`,
               ],
+            ],
+            settings.table
+          )}\n## Is\n${table(
+            [
+              ["baby", `${_Is(pokemonSpecies?.is_baby)}`],
+              ["legendary", `${_Is(pokemonSpecies?.is_legendary)}`],
+              ["mythical", `${_Is(pokemonSpecies?.is_mythical)}`],
             ],
             settings.table
           )}`}
