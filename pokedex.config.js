@@ -142,4 +142,14 @@ export const settings = {
     // https://swr.vercel.app/docs/getting-started#quick-start
     fetcher: (...args) => fetch(...args).then((res) => res.json()),
   },
+
+  // https://uiwjs.github.io/react-codemirror/
+  codemirror: {
+    placeholder: "Nứng loz hay j mà xóa hết nội dung của ng ta!?",
+    // https://uiwjs.github.io/react-codemirror/#/extensions/basic-setup
+    basicSetup: {
+      lineNumbers: false,
+      foldGutter: false,
+    },
+  },
 };

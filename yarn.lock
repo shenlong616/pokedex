@@ -511,9 +511,9 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/codemirror-theme-github@^4.13.0":
-  "integrity" "sha512-DgpIrZVvM+/rnFHxUQQAaYpyljdXdHnT0c2PqDuL3oeVl08kwPA2WXwKC41trDbZP3gYdGTLfSDN9o91G48RjA=="
-  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.13.0.tgz"
+"@uiw/codemirror-theme-duotone@^4.13.0":
+  "integrity" "sha512-JlF9oUMdRYlUQIT4OkFPPZ/qpUZSWC7l1fcByxNDN0lNbROBjWzfAHY7oyfFIv1xFN2BY6PT3kQaNluFaLblYQ=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-duotone/-/codemirror-theme-duotone-4.13.0.tgz"
   "version" "4.13.0"
   dependencies:
     "@uiw/codemirror-themes" "4.13.0"

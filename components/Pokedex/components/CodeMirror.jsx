@@ -2,15 +2,16 @@
 import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
-import { githubDark } from "@uiw/codemirror-theme-github";
+import { duotoneDark } from "@uiw/codemirror-theme-duotone";
+import { settings } from "../../../pokedex.config";
 
 export default function ({ children }) {
   return (
     <CodeMirror
       value={children}
-      placeholder="Nứng loz hay j mà xóa hết nội dung của ng ta!?"
-      theme={githubDark}
-      autoFocus
+      placeholder={settings.codemirror.placeholder}
+      theme={duotoneDark}
+      basicSetup={settings.codemirror.basicSetup}
       extensions={[
         markdown({
           base: markdownLanguage,
