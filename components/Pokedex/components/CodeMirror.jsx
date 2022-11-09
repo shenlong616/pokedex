@@ -2,7 +2,7 @@
 import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
-import { duotoneDark } from "@uiw/codemirror-theme-duotone";
+import { duotoneDark } from "@uiw/codemirror-themes-all";
 import { settings } from "../../../pokedex.config";
 
 export default function ({ children }) {

@@ -511,11 +511,115 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/codemirror-theme-duotone@^4.13.0":
+"@uiw/codemirror-theme-abcdef@4.13.0":
+  "integrity" "sha512-7pZ0msUjLhLO4d4xPb7pwlSb9ubOU6sBpBDJ9g3WxKOtDdnUrVoznP/nHeLQlz8PPcq3IbgP9rkZXCgDymCotw=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-abcdef/-/codemirror-theme-abcdef-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-androidstudio@4.13.0":
+  "integrity" "sha512-x6OgVzvbWf2++OWxF+rYpIRdUGRknjLiWvtEGXHMQ01bqQXaDlRp/lgVz2RlFZQkdY0kKksDV8XMKBioUI1CpQ=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-androidstudio/-/codemirror-theme-androidstudio-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-atomone@4.13.0":
+  "integrity" "sha512-/6GFKZJuoOTxftQNqgiEzCrykIFuEPK0o/CqHadQV6JnaU72UxLhNU3m2qVXUY7k7oIDy+k2BSazuCGgbIWs/g=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-atomone/-/codemirror-theme-atomone-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-bbedit@4.13.0":
+  "integrity" "sha512-8n09XX1X6fqAbKNxpKkdrjknMA5Qmc1DAMt4LK2gm4sADn3sroj5J+uxewaLMCxlHA6aIuPkzc1QLz/Mk5BTAA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-bbedit/-/codemirror-theme-bbedit-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-bespin@4.13.0":
+  "integrity" "sha512-gOSPUd19iZDijZA5oSEydOxFe6ahGWF6I3OMbIsJ89+VaZ6wLRgVsQTwHglfFx0zHcEAuz07C8o+l3s7ZeeSwA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-bespin/-/codemirror-theme-bespin-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-darcula@4.13.0":
+  "integrity" "sha512-96jNChV0QlQsUwgLy/JRJCUSe4537DlV2QaPKfD2ehfcf1p6mvm8GLwhjO1uwfvAp+g1fxT57dJLccT7u5Ft+w=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-darcula/-/codemirror-theme-darcula-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-dracula@4.13.0":
+  "integrity" "sha512-GTyDzoJ8QrliyF3pONP8oBvx9/dlK2LS+hNcHd3l2YR6oF4yWcrtQy6M3R7DoTl4atPMICzMjGb8pQoZRP1K9Q=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-dracula/-/codemirror-theme-dracula-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-duotone@4.13.0":
   "integrity" "sha512-JlF9oUMdRYlUQIT4OkFPPZ/qpUZSWC7l1fcByxNDN0lNbROBjWzfAHY7oyfFIv1xFN2BY6PT3kQaNluFaLblYQ=="
   "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-duotone/-/codemirror-theme-duotone-4.13.0.tgz"
   "version" "4.13.0"
   dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-eclipse@4.13.0":
+  "integrity" "sha512-uGoU6rI63xxxR28AZ5TK3yDA0eMeBOqSWWZ81jjs8jPaamaGAtnBkxGxOBxAmxTyx1CqtQBDkfxFCNfayeEoOg=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-eclipse/-/codemirror-theme-eclipse-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-github@4.13.0":
+  "integrity" "sha512-DgpIrZVvM+/rnFHxUQQAaYpyljdXdHnT0c2PqDuL3oeVl08kwPA2WXwKC41trDbZP3gYdGTLfSDN9o91G48RjA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-okaidia@4.13.0":
+  "integrity" "sha512-VVEVJ9sG2kLDnIqMvhBBqQr7JUIJ5kxmwv9dW1PpPdDkEoncySUunGUEPNER9J0x73uHmmtIBgm+BnzNpuA6XA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-okaidia/-/codemirror-theme-okaidia-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-sublime@4.13.0":
+  "integrity" "sha512-rbwbq7GH6f5gn+ljPYRbAZE5lxcD21bKnvdv26TGgoXEu9EmxgWnUdFB7Nd81ijUfWZK1kKDYl44FOKVn5Bnrw=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-sublime/-/codemirror-theme-sublime-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-theme-xcode@4.13.0":
+  "integrity" "sha512-RlgZXiOn0lpzPhY1CL3HZWlkC/4cptBZ5vGKS8howO+HQOuq3CHt4D8HffXEzOtUA5JzlHTYKGkQK+kCrdPetA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-xcode/-/codemirror-theme-xcode-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-themes" "4.13.0"
+
+"@uiw/codemirror-themes-all@^4.13.0":
+  "integrity" "sha512-I0LuylZF4tyHs9+ViL2nAZrAmKDxEBfqALlRoioB4PrStiiYrYlnO3boPauRNAwp5yKSE5JG8wZ3SZbFG5QNGg=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-themes-all/-/codemirror-themes-all-4.13.0.tgz"
+  "version" "4.13.0"
+  dependencies:
+    "@uiw/codemirror-theme-abcdef" "4.13.0"
+    "@uiw/codemirror-theme-androidstudio" "4.13.0"
+    "@uiw/codemirror-theme-atomone" "4.13.0"
+    "@uiw/codemirror-theme-bbedit" "4.13.0"
+    "@uiw/codemirror-theme-bespin" "4.13.0"
+    "@uiw/codemirror-theme-darcula" "4.13.0"
+    "@uiw/codemirror-theme-dracula" "4.13.0"
+    "@uiw/codemirror-theme-duotone" "4.13.0"
+    "@uiw/codemirror-theme-eclipse" "4.13.0"
+    "@uiw/codemirror-theme-github" "4.13.0"
+    "@uiw/codemirror-theme-okaidia" "4.13.0"
+    "@uiw/codemirror-theme-sublime" "4.13.0"
+    "@uiw/codemirror-theme-xcode" "4.13.0"
     "@uiw/codemirror-themes" "4.13.0"
 
 "@uiw/codemirror-themes@4.13.0":
