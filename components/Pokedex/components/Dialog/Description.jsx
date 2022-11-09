@@ -11,6 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
+import useSWR from "../../../../hooks/useSWR";
 
 export default function ({ data }) {
   Chart.register(
@@ -20,6 +21,10 @@ export default function ({ data }) {
     Filler,
     Tooltip,
     Legend
+  );
+
+  const { data: pokemonSpecies } = useSWR(
+    `${settings.api}/pokemon-species/${data.id}`
   );
 
   const object = { array: { 1: [], 2: [] } };
@@ -49,13 +54,38 @@ export default function ({ data }) {
 
       <div className="w-full">
         <CodeMirror>
-          {`# ${data.name?.toUpperCase()} (${data.id})\n${table(
+          {`# ${data.name?.toUpperCase()} (${
+            data.id
+          })\n## Basic information\n${table(
             [
-              ["height", `${data.height}dm`],
-              ["weight", `${data.weight}hg`],
+              ["height", `${data.height / 10}m`],
+              ["weight", `${data.weight / 10}kg`],
               [
                 "type",
                 data.types?.map((element) => element.type.name).join(", "),
+              ],
+              [
+                "egg_groups",
+                `${pokemonSpecies?.egg_groups
+                  ?.map((element) => element.name)
+                  .join(", ")}`,
+              ],
+            ],
+            settings.table
+          )}\n## Base score\n${table(
+            [
+              ["base_experience", `${data.base_experience}`],
+              [
+                "base_happiness",
+                `${pokemonSpecies?.base_happiness} (${Math.round(
+                  (pokemonSpecies?.base_happiness / 255) * 100
+                )}%)`,
+              ],
+              [
+                "capture_rate",
+                `${pokemonSpecies?.capture_rate} (${Math.round(
+                  (pokemonSpecies?.capture_rate / 255) * 100
+                )}%)`,
               ],
             ],
             settings.table
