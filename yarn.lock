@@ -265,10 +265,12 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
-"@headlessui/react@^1.7.3":
-  "integrity" "sha512-LGp06SrGv7BMaIQlTs8s2G06moqkI0cb0b8stgq7KZ3xcHdH3qMP+cRyV7qe5x4XEW/IGY48BW4fLesD6NQLng=="
-  "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-1.7.3.tgz"
-  "version" "1.7.3"
+"@headlessui/react@^1.7.4":
+  "integrity" "sha512-D8n5yGCF3WIkPsjEYeM8knn9jQ70bigGGb5aUvN6y4BGxcT3OcOQOKcM3zRGllRCZCFxCZyQvYJF6ZE7bQUOyQ=="
+  "resolved" "https://registry.npmjs.org/@headlessui/react/-/react-1.7.4.tgz"
+  "version" "1.7.4"
+  dependencies:
+    "client-only" "^0.0.1"
 
 "@humanwhocodes/config-array@^0.11.6":
   "integrity" "sha512-jJr+hPTJYKyDILJfhNSHsjiwXYf26Flsz8DvNndOsHs5pwSnpGUEy8yzF0JYhCEvTDdV2vuOK5tt8BVhwO5/hg=="
@@ -496,10 +498,10 @@
     "@typescript-eslint/types" "5.40.0"
     "eslint-visitor-keys" "^3.3.0"
 
-"@uiw/codemirror-extensions-basic-setup@4.12.4":
-  "integrity" "sha512-owSCcRBtS2wYjxgBFkuIjfjWJHsR8AxgsQtqPpHB/6U0zCLuzKS/OM5ZRS2T3rdOizg0hCPztVvmshWeKjF+qw=="
-  "resolved" "https://registry.npmjs.org/@uiw/codemirror-extensions-basic-setup/-/codemirror-extensions-basic-setup-4.12.4.tgz"
-  "version" "4.12.4"
+"@uiw/codemirror-extensions-basic-setup@4.13.0":
+  "integrity" "sha512-AR7/VMBjC2S0UJhKXQRNhehDX8O0mRfC1f4VZqQ8SaO2YXThjjBG8czZrEGOG1tmqpeUXgQR3x32A51R5OYcnQ=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-extensions-basic-setup/-/codemirror-extensions-basic-setup-4.13.0.tgz"
+  "version" "4.13.0"
   dependencies:
     "@codemirror/autocomplete" "^6.0.0"
     "@codemirror/commands" "^6.0.0"
@@ -509,32 +511,32 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/codemirror-theme-github@^4.12.4":
-  "integrity" "sha512-ni5/u6aqv+4Nq5i7BaQiDFmZGu/+BhoptjxvNBlqJjVuYeUfv27zFTdcaFf2GKVL7mPMX4Q4MltVGKDYoWe14Q=="
-  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.12.4.tgz"
-  "version" "4.12.4"
+"@uiw/codemirror-theme-github@^4.13.0":
+  "integrity" "sha512-DgpIrZVvM+/rnFHxUQQAaYpyljdXdHnT0c2PqDuL3oeVl08kwPA2WXwKC41trDbZP3gYdGTLfSDN9o91G48RjA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-theme-github/-/codemirror-theme-github-4.13.0.tgz"
+  "version" "4.13.0"
   dependencies:
-    "@uiw/codemirror-themes" "4.12.4"
+    "@uiw/codemirror-themes" "4.13.0"
 
-"@uiw/codemirror-themes@4.12.4":
-  "integrity" "sha512-ekySMFlXaJ4u0TCz/caHG8HqJPT0+viUA2ZQ4yZ+F1z2Lk9HgMS/1YfRj8vHuEUPNXc9Fsy5qxwTp7I1hEanEg=="
-  "resolved" "https://registry.npmjs.org/@uiw/codemirror-themes/-/codemirror-themes-4.12.4.tgz"
-  "version" "4.12.4"
+"@uiw/codemirror-themes@4.13.0":
+  "integrity" "sha512-wYSc7eccNAaWZYIKr6ncWhlZw99qOaNFCTgz3bbQhYgoqMXzYhImICkLo7iNvMhJe+rR4tl2HnRj8Tstb6rZTA=="
+  "resolved" "https://registry.npmjs.org/@uiw/codemirror-themes/-/codemirror-themes-4.13.0.tgz"
+  "version" "4.13.0"
   dependencies:
     "@codemirror/language" "^6.0.0"
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/react-codemirror@^4.12.4":
-  "integrity" "sha512-92TAvN2z5snPjPtJDLmbqrqsXXYFYlBnWraXZuDc1XGaw80tB26ZkdEW79CD2QM4Y9LhFIt+sauwlmiAVDs/5A=="
-  "resolved" "https://registry.npmjs.org/@uiw/react-codemirror/-/react-codemirror-4.12.4.tgz"
-  "version" "4.12.4"
+"@uiw/react-codemirror@^4.13.0":
+  "integrity" "sha512-M7GHI8aRVsu2qPfuVpYuGp5iBsLzeJxoSx1zLC630zINTSaxRO2xJsptKKupuWXi855yCxGMJMhUo/FFs+Nydw=="
+  "resolved" "https://registry.npmjs.org/@uiw/react-codemirror/-/react-codemirror-4.13.0.tgz"
+  "version" "4.13.0"
   dependencies:
     "@babel/runtime" "^7.18.6"
     "@codemirror/commands" "^6.1.0"
     "@codemirror/state" "^6.1.1"
     "@codemirror/theme-one-dark" "^6.0.0"
-    "@uiw/codemirror-extensions-basic-setup" "4.12.4"
+    "@uiw/codemirror-extensions-basic-setup" "4.13.0"
     "codemirror" "^6.0.0"
 
 "acorn-jsx@^5.3.2":
@@ -778,7 +780,7 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
-"client-only@0.0.1":
+"client-only@^0.0.1", "client-only@0.0.1":
   "integrity" "sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA=="
   "resolved" "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
   "version" "0.0.1"
@@ -1126,10 +1128,10 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz"
   "version" "3.3.0"
 
-"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@^8.26.0", "eslint@>=5":
-  "integrity" "sha512-kzJkpaw1Bfwheq4VXUezFriD1GxszX6dUekM7Z3aC2o4hju+tsR/XyTC3RcoSD7jmy9VkPU3+N6YjVU2e96Oyg=="
-  "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.26.0.tgz"
-  "version" "8.26.0"
+"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.23.0 || ^8.0.0", "eslint@^8.27.0", "eslint@>=5":
+  "integrity" "sha512-0y1bfG2ho7mty+SiILVf9PfuRA49ek4Nc60Wmmu62QlobNR+CeXa4xXIJgcuwSQgZiWaPH+5BDsctpIW0PR/wQ=="
+  "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.27.0.tgz"
+  "version" "8.27.0"
   dependencies:
     "@eslint/eslintrc" "^1.3.3"
     "@humanwhocodes/config-array" "^0.11.6"
@@ -1968,7 +1970,7 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.17", "postcss@^8.4.18", "postcss@>=8.0.9":
+"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.18", "postcss@>=8.0.9":
   "integrity" "sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.18.tgz"
   "version" "8.4.18"
@@ -2144,10 +2146,10 @@
     "get-intrinsic" "^1.1.3"
     "is-regex" "^1.1.4"
 
-"sass@^1.3.0", "sass@^1.55.0":
-  "integrity" "sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.55.0.tgz"
-  "version" "1.55.0"
+"sass@^1.3.0", "sass@^1.56.1":
+  "integrity" "sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.56.1.tgz"
+  "version" "1.56.1"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
     "immutable" "^4.0.0"
@@ -2310,10 +2312,10 @@
     "string-width" "^4.2.3"
     "strip-ansi" "^6.0.1"
 
-"tailwindcss@^3.2.1":
-  "integrity" "sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg=="
-  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.1.tgz"
-  "version" "3.2.1"
+"tailwindcss@^3.2.2":
+  "integrity" "sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q=="
+  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.2.tgz"
+  "version" "3.2.2"
   dependencies:
     "arg" "^5.0.2"
     "chokidar" "^3.5.3"
@@ -2329,7 +2331,7 @@
     "normalize-path" "^3.0.0"
     "object-hash" "^3.0.0"
     "picocolors" "^1.0.0"
-    "postcss" "^8.4.17"
+    "postcss" "^8.4.18"
     "postcss-import" "^14.1.0"
     "postcss-js" "^4.0.0"
     "postcss-load-config" "^3.1.4"
