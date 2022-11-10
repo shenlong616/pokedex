@@ -37,10 +37,6 @@
 
 ```text
 components
- ┣ FileName.{jsx} // Component declaration
- ┗ {_}FileName.{jsx} // Function declaration
-
-components
  ┣ Layout
  ┃ ┣ Footer.jsx
  ┃ ┣ Header.jsx

@@ -12,8 +12,8 @@ import {
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 import useSWR from "../../../../../hooks/useSWR";
-import _Check from "./_Check";
-import _Percent from "./_Percent";
+import _function1 from "./function/_function1";
+import _function2 from "./function/_function2";
 import convert from "convert";
 
 export default function ({ data }) {
@@ -78,15 +78,15 @@ export default function ({ data }) {
           )}\n## Base score\n${table(
             [
               ["experience", data.base_experience],
-              ["happiness", _Percent(pokemonSpecies?.base_happiness, 255)],
-              ["capture_rate", _Percent(pokemonSpecies?.capture_rate, 255)],
+              ["happiness", _function2(pokemonSpecies?.base_happiness, 255)],
+              ["capture_rate", _function2(pokemonSpecies?.capture_rate, 255)],
             ],
             settings.table
           )}\n## Is\n${table(
             [
-              ["baby", _Check(pokemonSpecies?.is_baby)],
-              ["legendary", _Check(pokemonSpecies?.is_legendary)],
-              ["mythical", _Check(pokemonSpecies?.is_mythical)],
+              ["baby", _function1(pokemonSpecies?.is_baby)],
+              ["legendary", _function1(pokemonSpecies?.is_legendary)],
+              ["mythical", _function1(pokemonSpecies?.is_mythical)],
             ],
             settings.table
           )}`}
