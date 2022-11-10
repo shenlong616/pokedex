@@ -3,7 +3,7 @@ import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
 import { androidstudio } from "@uiw/codemirror-themes-all";
-import { settings } from "../../../pokedex.config";
+import { settings } from "../pokedex.config";
 
 export default function ({ children }) {
   return (

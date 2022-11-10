@@ -1,4 +1,4 @@
-import CodeMirror from "../CodeMirror";
+import CodeMirror from "../../../CodeMirror";
 import { table } from "table";
 import { settings } from "../../../../pokedex.config";
 import {

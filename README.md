@@ -50,10 +50,10 @@ components
  ┃ ┃ ┃ ┣ index.jsx
  ┃ ┃ ┃ ┗ Legend.jsx
  ┃ ┃ ┣ Card.jsx
- ┃ ┃ ┣ CodeMirror.jsx
  ┃ ┃ ┣ ProgressBar.jsx
  ┃ ┃ ┗ Style.jsx
  ┃ ┗ index.jsx
+ ┣ CodeMirror.jsx
  ┗ NoiseTexture.jsx
 
 hooks
