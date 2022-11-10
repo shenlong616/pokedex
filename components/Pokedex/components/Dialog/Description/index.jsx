@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
 import useSWR from "../../../../../hooks/useSWR";
-import _Is from "./_Is";
+import _Check from "./_Check";
 import _Percent from "./_Percent";
 import convert from "convert";
 
@@ -84,9 +84,9 @@ export default function ({ data }) {
             settings.table
           )}\n## Is\n${table(
             [
-              ["baby", `${_Is(pokemonSpecies?.is_baby)}`],
-              ["legendary", `${_Is(pokemonSpecies?.is_legendary)}`],
-              ["mythical", `${_Is(pokemonSpecies?.is_mythical)}`],
+              ["baby", `${_Check(pokemonSpecies?.is_baby)}`],
+              ["legendary", `${_Check(pokemonSpecies?.is_legendary)}`],
+              ["mythical", `${_Check(pokemonSpecies?.is_mythical)}`],
             ],
             settings.table
           )}`}
