@@ -24,6 +24,10 @@ export default function ({ data }) {
   );
 
   const _Is = (parameter) => (parameter ? "✔️" : "❌");
+  const _Percent = (parameter1, parameter2) =>
+    `${parameter1}/${parameter2} (${Math.round(
+      (parameter1 / parameter2) * 100
+    )}%)`;
 
   const { data: pokemonSpecies } = useSWR(
     `${settings.api}/pokemon-species/${data.id}`
@@ -77,18 +81,8 @@ export default function ({ data }) {
           )}\n## Base score\n${table(
             [
               ["experience", `${data.base_experience}`],
-              [
-                "happiness",
-                `${pokemonSpecies?.base_happiness} (${Math.round(
-                  (pokemonSpecies?.base_happiness / 255) * 100
-                )}%)`,
-              ],
-              [
-                "capture_rate",
-                `${pokemonSpecies?.capture_rate} (${Math.round(
-                  (pokemonSpecies?.capture_rate / 255) * 100
-                )}%)`,
-              ],
+              ["happiness", _Percent(pokemonSpecies?.base_happiness, 255)],
+              ["capture_rate", _Percent(pokemonSpecies?.capture_rate, 255)],
             ],
             settings.table
           )}\n## Is\n${table(
