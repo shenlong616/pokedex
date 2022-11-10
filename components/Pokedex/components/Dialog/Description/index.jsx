@@ -14,6 +14,7 @@ import { Radar } from "react-chartjs-2";
 import useSWR from "../../../../../hooks/useSWR";
 import _Is from "./_Is";
 import _Percent from "./_Percent";
+import convert from "convert";
 
 export default function ({ data }) {
   Chart.register(
@@ -60,8 +61,8 @@ export default function ({ data }) {
             data.id
           })\n## Basic information\n${table(
             [
-              ["height", `${data.height / 10}m`],
-              ["weight", `${data.weight / 10}kg`],
+              ["height", `${convert(data.height, "decimetres").to("best")}`],
+              ["weight", `${convert(data.weight, "hectograms").to("best")}`],
               [
                 "type",
                 data.types?.map((element) => element.type.name).join(", "),

@@ -924,6 +924,11 @@
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   "version" "0.0.1"
 
+"convert@^4.7.0":
+  "integrity" "sha512-gNw8PJT4d15V2W9GZe55PrWarBFVUI1j6JdL0dqSyIw6lYjGzuF1J+p/djW30mao/qySpU7A2eN2wa2JBbm8jw=="
+  "resolved" "https://registry.npmjs.org/convert/-/convert-4.7.0.tgz"
+  "version" "4.7.0"
+
 "core-js-pure@^3.25.1":
   "integrity" "sha512-oml3M22pHM+igfWHDfdLVq2ShWmjM2V4L+dQEBs0DWVIqEm9WHCwGAlZ6BmyBQGy5sFrJmcx+856D9lVKyGWYg=="
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.25.5.tgz"
@@ -2416,10 +2421,10 @@
     "string-width" "^4.2.3"
     "strip-ansi" "^6.0.1"
 
-"tailwindcss@^3.2.2":
-  "integrity" "sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q=="
-  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.2.tgz"
-  "version" "3.2.2"
+"tailwindcss@^3.2.3":
+  "integrity" "sha512-Xt9D4PK4zuuQCEB8bwK9JUCKmTgUwyac/6b0/42Vqhgl6YJkep+Wf5wq+5uXYfmrupdAD0YY2NY1hyZp1HjRrg=="
+  "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.3.tgz"
+  "version" "3.2.3"
   dependencies:
     "arg" "^5.0.2"
     "chokidar" "^3.5.3"
