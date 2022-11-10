@@ -22,8 +22,10 @@ export default function () {
   });
 
   // SWR
-  const { data: p0kemon } = useSWR(`${settings.api}/pokemon`);
-  const { data: pokemon } = useSWR(`${settings.api}/pokemon/${state1.index}`);
+  const { data: pokemon1 } = useSWR(settings.pokedex.endpoint.pokemon);
+  const { data: pokemon2 } = useSWR(
+    `${settings.pokedex.endpoint.pokemon}/${state1.index}`
+  );
 
   return (
     <>
@@ -48,11 +50,11 @@ export default function () {
 
       <InView>
         {({ inView, ref }) => {
-          if (pokemon && inView && state1.index < p0kemon?.count + 1) {
+          if (pokemon2 && inView && state1.index < pokemon1?.count + 1) {
             const array = [
-              pokemon.stats[0].base_stat,
-              pokemon.stats[1].base_stat,
-              pokemon.stats[2].base_stat,
+              pokemon2.stats[0].base_stat,
+              pokemon2.stats[1].base_stat,
+              pokemon2.stats[2].base_stat,
             ];
 
             setState1((prevState) => {
@@ -78,14 +80,14 @@ export default function () {
                           return {
                             ...prevState,
                             show: true,
-                            data: pokemon,
+                            data: pokemon2,
                           };
                         })
                       }
-                      data={pokemon}
+                      data={pokemon2}
                     />
 
-                    <Style.pokemonName>{pokemon.name}</Style.pokemonName>
+                    <Style.pokemonName>{pokemon2.name}</Style.pokemonName>
                   </Transition>,
                 ]),
               };

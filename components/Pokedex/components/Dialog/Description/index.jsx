@@ -27,7 +27,7 @@ export default function ({ data }) {
   );
 
   const { data: pokemonSpecies } = useSWR(
-    `${settings.api}/pokemon-species/${data.id}`
+    `${settings.pokedex.endpoint["pokemon-species"]}/${data.id}`
   );
 
   const object = { array: { 1: [], 2: [] } };
@@ -61,32 +61,32 @@ export default function ({ data }) {
             data.id
           })\n## Basic information\n${table(
             [
-              ["height", `${convert(data.height, "decimetres").to("best")}`],
-              ["weight", `${convert(data.weight, "hectograms").to("best")}`],
+              ["height", convert(data.height, "decimetres").to("best")],
+              ["weight", convert(data.weight, "hectograms").to("best")],
               [
                 "type",
                 data.types?.map((element) => element.type.name).join(", "),
               ],
               [
                 "egg_groups",
-                `${pokemonSpecies?.egg_groups
+                pokemonSpecies?.egg_groups
                   ?.map((element) => element.name)
-                  .join(", ")}`,
+                  .join(", "),
               ],
             ],
             settings.table
           )}\n## Base score\n${table(
             [
-              ["experience", `${data.base_experience}`],
+              ["experience", data.base_experience],
               ["happiness", _Percent(pokemonSpecies?.base_happiness, 255)],
               ["capture_rate", _Percent(pokemonSpecies?.capture_rate, 255)],
             ],
             settings.table
           )}\n## Is\n${table(
             [
-              ["baby", `${_Check(pokemonSpecies?.is_baby)}`],
-              ["legendary", `${_Check(pokemonSpecies?.is_legendary)}`],
-              ["mythical", `${_Check(pokemonSpecies?.is_mythical)}`],
+              ["baby", _Check(pokemonSpecies?.is_baby)],
+              ["legendary", _Check(pokemonSpecies?.is_legendary)],
+              ["mythical", _Check(pokemonSpecies?.is_mythical)],
             ],
             settings.table
           )}`}
