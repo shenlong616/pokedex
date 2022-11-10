@@ -1,6 +1,6 @@
-import CodeMirror from "../../../CodeMirror";
+import CodeMirror from "../../../../CodeMirror";
 import { table } from "table";
-import { settings } from "../../../../pokedex.config";
+import { settings } from "../../../../../pokedex.config";
 import {
   Chart,
   RadialLinearScale,
@@ -11,7 +11,9 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import useSWR from "../../../../hooks/useSWR";
+import useSWR from "../../../../../hooks/useSWR";
+import _Is from "./_Is";
+import _Percent from "./_Percent";
 
 export default function ({ data }) {
   Chart.register(
@@ -22,12 +24,6 @@ export default function ({ data }) {
     Tooltip,
     Legend
   );
-
-  const _Is = (parameter) => (parameter ? "✔️" : "❌");
-  const _Percent = (parameter1, parameter2) =>
-    `${parameter1}/${parameter2} (${Math.round(
-      (parameter1 / parameter2) * 100
-    )}%)`;
 
   const { data: pokemonSpecies } = useSWR(
     `${settings.api}/pokemon-species/${data.id}`

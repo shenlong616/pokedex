@@ -37,6 +37,10 @@
 
 ```text
 components
+ ┣ FileName.{jsx} // Component declaration
+ ┗ {_}FileName.{jsx} // Function declaration
+
+components
  ┣ Layout
  ┃ ┣ Footer.jsx
  ┃ ┣ Header.jsx
@@ -45,8 +49,11 @@ components
  ┣ Pokedex
  ┃ ┣ components
  ┃ ┃ ┣ Dialog
+ ┃ ┃ ┃ ┣ Description
+ ┃ ┃ ┃ ┃ ┣ index.jsx
+ ┃ ┃ ┃ ┃ ┣ _Is.jsx
+ ┃ ┃ ┃ ┃ ┗ _Percent.jsx
  ┃ ┃ ┃ ┣ CloseButton.jsx
- ┃ ┃ ┃ ┣ Description.jsx
  ┃ ┃ ┃ ┣ index.jsx
  ┃ ┃ ┃ ┗ Legend.jsx
  ┃ ┃ ┣ Card.jsx
