@@ -102,7 +102,7 @@ export const settings = {
     pointHoverRadius: 3,
     backgroundColor: "rgb(39 39 42 / 30%)", // bg-zinc-800
     borderColor: "rgb(63 63 70)", // border-zinc-700
-    pointBorderColor: "rgb(241 245 249)", // text-slate-100
+    pointBorderColor: "rgb(248 250 252)", // text-slate-50
     scales: {
       r: {
         beginAtZero: true,
