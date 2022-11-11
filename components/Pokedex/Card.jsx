@@ -2,7 +2,7 @@ import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../pokedex.config";
 import Image from "next/legacy/image";
-import Style from "./Style";
+import UI from "./UI";
 
 export default function ({ prop1, data, onClick }) {
   const reduceArray = [
@@ -30,14 +30,14 @@ export default function ({ prop1, data, onClick }) {
       )}
       onClick={onClick}
     >
-      <Style.pokemonImage>
+      <UI.pokemonImage>
         <Image
           height="100%"
           width="100%"
           src={data.sprites.front_default}
           alt={data.name}
         />
-      </Style.pokemonImage>
+      </UI.pokemonImage>
 
       <div className="flex w-28 flex-col gap-y-1">
         <ProgressBar

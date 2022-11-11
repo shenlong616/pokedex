@@ -1,9 +1,9 @@
-import Style from "../Style";
+import UI from "../UI";
 
 export default function ({ data }) {
   return (
     <legend className="flex flex-col text-center">
-      <Style.pokemonImage>
+      <UI.pokemonImage>
         <img
           src={
             data.sprites?.versions["generation-v"]["black-white"].animated
@@ -11,7 +11,7 @@ export default function ({ data }) {
           }
           alt={data.name}
         />
-      </Style.pokemonImage>
+      </UI.pokemonImage>
     </legend>
   );
 }
