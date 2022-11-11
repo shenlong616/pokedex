@@ -1,6 +1,6 @@
-import CodeMirror from "../../../CodeMirror";
+import CodeMirror from "../../CodeMirror";
 import { table } from "table";
-import { settings } from "../../../../pokedex.config";
+import { settings } from "../../../pokedex.config";
 import {
   Chart,
   RadialLinearScale,
@@ -11,9 +11,9 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import useSWR from "../../../../hooks/useSWR";
-import _function1 from "../../../../function/_function1";
-import _function2 from "../../../../function/_function2";
+import useSWR from "../../../hooks/useSWR";
+import _function1 from "../../../function/_function1";
+import _function2 from "../../../function/_function2";
 import convert from "convert";
 
 export default function ({ data }) {

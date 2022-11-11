@@ -1,6 +1,6 @@
 import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
-import { settings } from "../../../pokedex.config";
+import { settings } from "../../pokedex.config";
 import Image from "next/legacy/image";
 import Style from "./Style";
 

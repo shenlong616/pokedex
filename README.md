@@ -43,19 +43,15 @@ components
  ┃ ┣ index.jsx
  ┃ ┗ Slideout.jsx
  ┣ Pokedex
- ┃ ┣ components
- ┃ ┃ ┣ Dialog
- ┃ ┃ ┃ ┣ Description
- ┃ ┃ ┃ ┃ ┣ index.jsx
- ┃ ┃ ┃ ┃ ┣ _Is.jsx
- ┃ ┃ ┃ ┃ ┗ _Percent.jsx
- ┃ ┃ ┃ ┣ CloseButton.jsx
- ┃ ┃ ┃ ┣ index.jsx
- ┃ ┃ ┃ ┗ Legend.jsx
- ┃ ┃ ┣ Card.jsx
- ┃ ┃ ┣ ProgressBar.jsx
- ┃ ┃ ┗ Style.jsx
- ┃ ┗ index.jsx
+ ┃ ┣ Dialog
+ ┃ ┃ ┣ CloseButton.jsx
+ ┃ ┃ ┣ Description.jsx
+ ┃ ┃ ┣ index.jsx
+ ┃ ┃ ┗ Legend.jsx
+ ┃ ┣ Card.jsx
+ ┃ ┣ index.jsx
+ ┃ ┣ ProgressBar.jsx
+ ┃ ┗ Style.jsx
  ┣ CodeMirror.jsx
  ┗ NoiseTexture.jsx
 

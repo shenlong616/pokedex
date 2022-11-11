@@ -1,4 +1,4 @@
-import { settings } from "../../../pokedex.config";
+import { settings } from "../../pokedex.config";
 import clsx from "clsx";
 
 function Style() {

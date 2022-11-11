@@ -2,11 +2,11 @@ import { useState } from "react";
 import { InView } from "react-intersection-observer";
 import Head from "next/head";
 import { settings } from "../../pokedex.config";
-import Card from "./components/Card";
-import Dialog from "./components/Dialog";
+import Card from "./Card";
+import Dialog from "./Dialog";
 import { Transition } from "@headlessui/react";
 import useSWR from "../../hooks/useSWR";
-import Style from "./components/Style";
+import Style from "./Style";
 
 export default function () {
   // `Card` state

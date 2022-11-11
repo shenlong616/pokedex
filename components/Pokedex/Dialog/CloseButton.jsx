@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { settings } from "../../../../pokedex.config";
+import { settings } from "../../../pokedex.config";
 import clsx from "clsx";
 
 export default function ({ onClose }) {
