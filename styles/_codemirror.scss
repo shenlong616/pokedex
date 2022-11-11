@@ -1,0 +1,20 @@
+.cm- {
+  &editor {
+    background-color: theme("backgroundColor.zinc.800");
+    color: theme("colors.slate.400");
+  }
+
+  &activeLine {
+    background-color: theme("backgroundColor.zinc.700") !important;
+    color: theme("colors.slate.200");
+  }
+
+  &selectionBackground {
+    background-color: theme("backgroundColor.zinc.600") !important;
+  }
+
+  &cursor,
+  &dropCursor {
+    border-left-color: lime !important;
+  }
+}
