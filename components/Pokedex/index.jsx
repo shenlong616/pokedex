@@ -6,7 +6,7 @@ import Card from "./Card";
 import Dialog from "./Dialog";
 import { Transition } from "@headlessui/react";
 import useSWR from "../../hooks/useSWR";
-import UI from "./UI";
+import UI from "../UI";
 
 export default function () {
   // `Card` state
@@ -87,7 +87,7 @@ export default function () {
                       data={pokemon2}
                     />
 
-                    <UI.pokemonName>{pokemon2.name}</UI.pokemonName>
+                    <UI.Heading>{pokemon2.name}</UI.Heading>
                   </Transition>,
                 ]),
               };

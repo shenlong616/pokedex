@@ -1,15 +1,15 @@
-import { settings } from "../../pokedex.config";
+import { settings } from "../pokedex.config";
 import clsx from "clsx";
 
 function UI() {
   return null;
 }
 
-UI.pokemonImage = function ({ children }) {
+UI.Image = function ({ children }) {
   return <div className="-scale-x-100 select-none">{children}</div>;
 };
 
-UI.pokemonName = function ({ children }) {
+UI.Heading = function ({ children }) {
   return (
     <div
       className={clsx(
