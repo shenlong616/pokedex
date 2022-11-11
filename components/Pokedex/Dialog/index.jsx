@@ -30,7 +30,7 @@ export default function ({ show, data, onClose }) {
           className="fixed inset-0 flex flex-col items-center justify-center gap-y-2 overflow-y-auto p-5"
         >
           <Dialog.Panel className="w-full max-w-6xl">
-            <UI.Dialog className="p-5">
+            <UI.Fieldset className="p-5">
               <Legend data={data} />
 
               {/* <Dialog.Title></Dialog.Title> */}
@@ -38,7 +38,7 @@ export default function ({ show, data, onClose }) {
               <Dialog.Description as={Fragment}>
                 <Description data={data} />
               </Dialog.Description>
-            </UI.Dialog>
+            </UI.Fieldset>
           </Dialog.Panel>
 
           <CloseButton onClick={onClose} />

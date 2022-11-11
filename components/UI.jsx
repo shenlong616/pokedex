@@ -36,7 +36,7 @@ UI.Card = function ({ children, className, ...rest }) {
   );
 };
 
-UI.Dialog = function ({ children, className }) {
+UI.Fieldset = function ({ children, className }) {
   return (
     <fieldset
       className={clsx(
