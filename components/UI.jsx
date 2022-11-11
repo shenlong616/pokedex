@@ -36,14 +36,13 @@ UI.Card = function ({ children, className, ...rest }) {
   );
 };
 
-UI.Dialog = function ({ children, className, ...rest }) {
+UI.Dialog = function ({ children, className }) {
   return (
     <fieldset
       className={clsx(
         "rounded-md border border-zinc-800 bg-zinc-900",
         className
       )}
-      {...rest}
     >
       {children}
     </fieldset>

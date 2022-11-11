@@ -41,7 +41,7 @@ export default function ({ show, data, onClose }) {
             </UI.Dialog>
           </Dialog.Panel>
 
-          <CloseButton onClose={onClose} />
+          <CloseButton onClick={onClose} />
         </Transition.Child>
       </Dialog>
     </Transition>
