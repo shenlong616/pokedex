@@ -36,15 +36,13 @@ export const settings = {
         header: "bg-black",
         document: "bg-black",
         footer: "bg-black",
-        card: "bg-zinc-900",
-        dialog: "bg-zinc-900",
       },
     },
 
-    border: {
-      width: { card: "border", dialog: "border" },
-      color: { card: "border-zinc-800", dialog: "border-zinc-800" },
-    },
+    // border: {
+    //   width: {},
+    //   color: {},
+    // },
 
     groupColor: {
       green: [
@@ -77,11 +75,11 @@ export const settings = {
       },
       1: {
         enter: "duration-300",
-        enterFrom: "opacity-0 scale-75",
+        enterFrom: "opacity-0 scale-95",
         enterTo: "opacity-100 scale-100",
-        leave: "duration-300",
+        leave: "duration-200",
         leaveFrom: "opacity-100 scale-100",
-        leaveTo: "opacity-0 scale-50",
+        leaveTo: "opacity-0 scale-95",
       },
       2: {
         enter: "duration-75",

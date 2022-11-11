@@ -12,12 +12,9 @@ export default function ({ prop1, data, onClick }) {
   ].reduce((a, b) => a + b, 0);
 
   return (
-    <div
+    <UI.Card
       className={clsx(
-        "flex scale-90 cursor-pointer flex-row items-center gap-x-2 rounded-md py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
-        settings.tailwindcss.background.color.card,
-        settings.tailwindcss.border.width.card,
-        settings.tailwindcss.border.color.card,
+        "flex scale-90 cursor-pointer flex-row items-center gap-x-2 py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
         {
           [settings.tailwindcss.groupColor.green[1]]: prop1 === 0,
         },
@@ -58,6 +55,6 @@ export default function ({ prop1, data, onClick }) {
           width={(data.stats[2].base_stat / reduceArray) * 100}
         />
       </div>
-    </div>
+    </UI.Card>
   );
 }

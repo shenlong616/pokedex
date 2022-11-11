@@ -22,4 +22,32 @@ UI.Heading = function ({ children }) {
   );
 };
 
+UI.Card = function ({ children, className, ...rest }) {
+  return (
+    <div
+      className={clsx(
+        "rounded-md border border-zinc-800 bg-zinc-900",
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
+};
+
+UI.Dialog = function ({ children, className, ...rest }) {
+  return (
+    <fieldset
+      className={clsx(
+        "rounded-md border border-zinc-800 bg-zinc-900",
+        className
+      )}
+      {...rest}
+    >
+      {children}
+    </fieldset>
+  );
+};
+
 export default UI;
