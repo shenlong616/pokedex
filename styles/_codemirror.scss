@@ -5,6 +5,8 @@
 
   &content {
     padding: theme("padding.0") !important;
+    font-family: theme("fontFamily.mono");
+    font-size: theme("fontSize.sm");
   }
 
   &activeLine {
