@@ -32,7 +32,7 @@ export default function ({ data }) {
 
   const object = { array: { 1: [], 2: [] } };
 
-  data.stats?.forEach((element) => {
+  data.stats.forEach((element) => {
     object.array[1].push(element.base_stat);
     object.array[2].push(element.stat.name);
   });
@@ -41,18 +41,24 @@ export default function ({ data }) {
     <div className="flex flex-col md:flex-row md:gap-x-1">
       <div className="w-full">
         <CodeMirror>
-          {`# ${data.name?.toUpperCase()} (${data.id})\n## Information\n${table(
+          {`# ${data.name.toUpperCase()} (${data.id})\n## Information\n${table(
             [
               ["Height", convert(data.height, "decimetres").to("best")],
               ["Weight", convert(data.weight, "hectograms").to("best")],
               [
                 "Type",
-                data.types?.map((element) => element.type.name).join(", "),
+                data.types.map((element) => element.type.name).join(", "),
               ],
               [
                 "Egg groups",
                 pokemonSpecies?.egg_groups
-                  ?.map((element) => element.name)
+                  .map((element) => element.name)
+                  .join(", "),
+              ],
+              [
+                "Abilities",
+                data.abilities
+                  .map((element) => element.ability.name)
                   .join(", "),
               ],
             ],

@@ -6,7 +6,7 @@ export default function ({ data }) {
       <UI.Image>
         <img
           src={
-            data.sprites?.versions["generation-v"]["black-white"].animated
+            data.sprites.versions["generation-v"]["black-white"].animated
               .front_default
           }
           alt={data.name}
