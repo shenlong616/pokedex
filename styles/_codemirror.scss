@@ -14,15 +14,10 @@
   &selectionBackground {
     background-color: theme("backgroundColor.zinc.600") !important;
   }
-
-  &cursor,
-  &dropCursor {
-    border-left-color: lime !important;
-  }
 }
 
 .ͼ {
   &63 {
-    color: limegreen;
+    color: aqua;
   }
 }
