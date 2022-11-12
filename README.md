@@ -21,6 +21,7 @@
 - [x] `Flex`
 - [x] `Grid`
 - [ ] Dùng [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) cho việc truyền `data` giữa các `component`
+- [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi)
 
 ## Note
 
