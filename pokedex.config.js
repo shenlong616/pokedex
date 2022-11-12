@@ -152,6 +152,8 @@ export const settings = {
   // https://uiwjs.github.io/react-codemirror/
   codemirror: {
     placeholder: "Nứng loz hay j mà xóa hết nội dung của ng ta!?",
+    height: "400px",
+    width: "600px",
     // https://uiwjs.github.io/react-codemirror/#/extensions/basic-setup
     basicSetup: {
       lineNumbers: false,

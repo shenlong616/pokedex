@@ -1,2 +1,6 @@
 @use "tailwindcss";
 @use "codemirror";
+
+html {
+  color-scheme: dark;
+}

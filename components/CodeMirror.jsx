@@ -10,6 +10,8 @@ export default function ({ children }) {
     <CodeMirror
       value={children}
       placeholder={settings.codemirror.placeholder}
+      height={settings.codemirror.height}
+      width={settings.codemirror.width}
       theme={xcodeDark}
       basicSetup={settings.codemirror.basicSetup}
       extensions={[
