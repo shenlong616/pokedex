@@ -15,9 +15,9 @@
 - [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => tìm hiểu [`react-window`](https://www.npmjs.com/package/react-window)
 - [ ] `Search bar` component
 - [ ] `Filter` component
-- [x] Sử dụng [`swr`](https://swr.vercel.app/) thay cho [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
+- [x] Dùng [`swr`](https://swr.vercel.app/) thay cho [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
 - [ ] Component hóa từng phần.
-- [ ] Sử dụng [`Image`](https://nextjs.org/docs/api-reference/next/image) component => Nhưng phải loại bỏ 2 props `height` và `weight`
+- [ ] Dùng [`Image`](https://nextjs.org/docs/api-reference/next/image) component => Nhưng phải loại bỏ 2 props `height` và `weight`
 - [x] `Flex`
 - [x] `Grid`
 - [ ] Dùng [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) cho việc truyền `data` giữa các `component`

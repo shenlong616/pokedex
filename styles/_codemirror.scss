@@ -1,16 +1,14 @@
 .cm- {
   &editor {
-    background-color: theme("backgroundColor.zinc.900");
-    color: theme("colors.slate.400");
+    background-color: theme("backgroundColor.zinc.800");
   }
 
   &content {
-    padding: 0 !important;
+    padding: theme("padding.0") !important;
   }
 
   &activeLine {
-    background-color: theme("backgroundColor.zinc.800") !important;
-    color: theme("colors.slate.50");
+    background-color: theme("backgroundColor.zinc.900") !important;
   }
 
   &selectionBackground {
@@ -20,5 +18,11 @@
   &cursor,
   &dropCursor {
     border-left-color: lime !important;
+  }
+}
+
+.ͼ {
+  &63 {
+    color: limegreen;
   }
 }

@@ -43,14 +43,14 @@ export default function ({ data }) {
         <CodeMirror>
           {`# ${data.name?.toUpperCase()} (${data.id})\n## Information\n${table(
             [
-              ["height", convert(data.height, "decimetres").to("best")],
-              ["weight", convert(data.weight, "hectograms").to("best")],
+              ["Height", convert(data.height, "decimetres").to("best")],
+              ["Weight", convert(data.weight, "hectograms").to("best")],
               [
-                "type",
+                "Type",
                 data.types?.map((element) => element.type.name).join(", "),
               ],
               [
-                "egg_groups",
+                "Egg groups",
                 pokemonSpecies?.egg_groups
                   ?.map((element) => element.name)
                   .join(", "),
@@ -59,16 +59,16 @@ export default function ({ data }) {
             settings.table
           )}\n## Base score\n${table(
             [
-              ["experience", data.base_experience],
-              ["happiness", _function2(pokemonSpecies?.base_happiness, 255)],
-              ["capture_rate", _function2(pokemonSpecies?.capture_rate, 255)],
+              ["Experience", data.base_experience],
+              ["Happiness", _function2(pokemonSpecies?.base_happiness, 255)],
+              ["Capture rate", _function2(pokemonSpecies?.capture_rate, 255)],
             ],
             settings.table
-          )}\n## Is\n${table(
+          )}\n## I am\n${table(
             [
-              ["baby", _function1(pokemonSpecies?.is_baby)],
-              ["legendary", _function1(pokemonSpecies?.is_legendary)],
-              ["mythical", _function1(pokemonSpecies?.is_mythical)],
+              ["Baby", _function1(pokemonSpecies?.is_baby)],
+              ["Legendary", _function1(pokemonSpecies?.is_legendary)],
+              ["Mythical", _function1(pokemonSpecies?.is_mythical)],
             ],
             settings.table
           )}`}
