@@ -15,6 +15,7 @@ import useSWR from "../../../hooks/useSWR";
 import _function1 from "../../../function/_function1";
 import _function2 from "../../../function/_function2";
 import convert from "convert";
+import capitalize from "lodash/fp/capitalize";
 
 export default function ({ data }) {
   Chart.register(
@@ -47,18 +48,20 @@ export default function ({ data }) {
               ["Weight", convert(data.weight, "hectograms").to("best")],
               [
                 "Type",
-                data.types.map((element) => element.type.name).join(", "),
+                data.types
+                  .map((element) => capitalize(element.type.name))
+                  .join(", "),
               ],
               [
                 "Egg groups",
                 pokemonSpecies?.egg_groups
-                  .map((element) => element.name)
+                  .map((element) => capitalize(element.name))
                   .join(", "),
               ],
               [
                 "Abilities",
                 data.abilities
-                  .map((element) => element.ability.name)
+                  .map((element) => capitalize(element.ability.name))
                   .join(", "),
               ],
             ],
