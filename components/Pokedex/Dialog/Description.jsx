@@ -63,7 +63,7 @@ export default function ({ data }) {
                 data.abilities
                   .map((element) => {
                     return element.is_hidden
-                      ? `(${capitalize(element.ability.name)} [^1])`
+                      ? `[^${capitalize(element.ability.name)}]`
                       : capitalize(element.ability.name);
                   })
                   .join(", "),
@@ -72,13 +72,13 @@ export default function ({ data }) {
             settings.table
           )}\n## Base score\n${table(
             [
-              ["Experience [^2]", data.base_experience],
+              ["Experience [^1]", data.base_experience],
               [
-                "Happiness [^3]",
+                "Happiness [^2]",
                 _function2(pokemonSpecies?.base_happiness, 255),
               ],
               [
-                "Capture rate [^4]",
+                "Capture rate [^3]",
                 _function2(pokemonSpecies?.capture_rate, 255),
               ],
             ],
@@ -90,7 +90,7 @@ export default function ({ data }) {
               ["Mythical", _function1(pokemonSpecies?.is_mythical)],
             ],
             settings.table
-          )}\n# Footnotes\n[^1]: Hidden ability.\n[^2]: The base experience gained for defeating this Pokémon.\n[^3]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^4]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
+          )}\n# Footnotes\n[^Ability name]: Hidden ability.\n[^2]: The base experience gained for defeating this Pokémon.\n[^3]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^4]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
         </CodeMirror>
       </div>
 
