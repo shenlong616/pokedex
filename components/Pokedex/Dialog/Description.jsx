@@ -15,7 +15,7 @@ import useSWR from "../../../hooks/useSWR";
 import _function1 from "../../../function/_function1";
 import _function2 from "../../../function/_function2";
 import convert from "convert";
-import capitalize from "lodash/fp/capitalize";
+import capitalize from "lodash/capitalize";
 
 export default function ({ data }) {
   Chart.register(
