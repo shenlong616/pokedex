@@ -76,7 +76,7 @@ export default function ({ data }) {
               ],
             ],
             settings.table
-          )}\n## I'm a\n${table(
+          )}\n## This Pokémon is\n${table(
             [
               ["Baby", _function1(pokemonSpecies?.is_baby)],
               ["Legendary", _function1(pokemonSpecies?.is_legendary)],
