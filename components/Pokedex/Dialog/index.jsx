@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { settings } from "../../../pokedex.config";
 import Description from "./Description";
 import Legend from "./Legend";
-import CloseButton from "./CloseButton";
+import CloseText from "./CloseText";
 import UI from "../../UI";
 
 export default function ({ show, data, onClose }) {
@@ -41,7 +41,7 @@ export default function ({ show, data, onClose }) {
             </UI.Fieldset>
           </Dialog.Panel>
 
-          <CloseButton onClick={onClose} />
+          <CloseText onClick={onClose} />
         </Transition.Child>
       </Dialog>
     </Transition>

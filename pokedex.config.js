@@ -5,7 +5,7 @@ export const settings = {
   footer: "footer",
 
   text: {
-    CloseButtonText: [
+    CloseText: [
       <span>
         <span className="text-slate-200">Click here</span> to close the dialog
       </span>,
