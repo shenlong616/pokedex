@@ -70,7 +70,7 @@ export default function ({ data }) {
               ],
             ],
             settings.table
-          )}\n## I am\n${table(
+          )}\n## I'm a\n${table(
             [
               ["Baby", _function1(pokemonSpecies?.is_baby)],
               ["Legendary", _function1(pokemonSpecies?.is_legendary)],
