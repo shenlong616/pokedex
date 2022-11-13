@@ -28,7 +28,7 @@ export default function ({ data }) {
   );
 
   const { data: pokemonSpecies } = useSWR(
-    `${settings.pokedex.endpoint["pokemon-species"]}/${data.id}`
+    `${settings.pokeapi.endpoint.pokemonSpecies}/${data.id}`
   );
 
   const object = { array: { 1: [], 2: [] } };

@@ -22,9 +22,9 @@ export default function () {
   });
 
   // SWR
-  const { data: pokemon1 } = useSWR(settings.pokedex.endpoint.pokemon);
+  const { data: pokemon1 } = useSWR(settings.pokeapi.endpoint.pokemon);
   const { data: pokemon2 } = useSWR(
-    `${settings.pokedex.endpoint.pokemon}/${state1.index}`
+    `${settings.pokeapi.endpoint.pokemon}/${state1.index}`
   );
 
   return (

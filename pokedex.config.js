@@ -17,11 +17,10 @@ export const settings = {
   },
 
   // https://pokeapi.co/
-  pokedex: {
-    api: "https://pokeapi.co/api/v2",
+  pokeapi: {
     endpoint: {
       pokemon: "https://pokeapi.co/api/v2/pokemon",
-      "pokemon-species": "https://pokeapi.co/api/v2/pokemon-species",
+      pokemonSpecies: "https://pokeapi.co/api/v2/pokemon-species",
     },
   },
 
