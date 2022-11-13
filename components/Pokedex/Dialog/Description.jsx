@@ -90,7 +90,7 @@ export default function ({ data }) {
               ["Mythical", _function1(pokemonSpecies?.is_mythical)],
             ],
             settings.table
-          )}\n# Footnotes\n[^Ability name]: Hidden ability.\n[^2]: The base experience gained for defeating this Pokémon.\n[^3]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^4]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
+          )}\n# Footnotes\n[^Ability name]: Hidden ability.\n[^1]: The base experience gained for defeating this Pokémon.\n[^2]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^3]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
         </CodeMirror>
       </div>
 
