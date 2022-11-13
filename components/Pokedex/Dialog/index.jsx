@@ -29,7 +29,7 @@ export default function ({ show, data, onClose }) {
           leaveTo={settings.headlessui.transition[1].leaveTo}
           className="fixed inset-0 flex flex-col items-center justify-center gap-y-2 overflow-y-auto p-5"
         >
-          <Dialog.Panel className="w-full max-w-6xl">
+          <Dialog.Panel className="max-w-full">
             <UI.Fieldset className="p-5">
               <Legend data={data} />
 
