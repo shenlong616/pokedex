@@ -2,8 +2,8 @@
 
 ## Screenshot
 
-![](./README/img/1.png)
-![](./README/img/2.png)
+![](./README/img/screenshots/1.png)
+![](./README/img/screenshots/2.png)
 
 ## To do
 
@@ -37,6 +37,10 @@
 ### Main files
 
 ```text
+📦pokedex
+ ┣ pokedex.config.js // Basic configuration! (style, animation,...)
+ ┗ ...
+
 📦components
  ┣ 📂Layout
  ┃ ┣ Footer.jsx
@@ -70,13 +74,23 @@
  ┗ _tailwindcss.scss
 ```
 
-### Configuration files
+## Known bugs 🐛
 
-```text
-pokedex
- ┣ pokedex.config.js // Basic configuration! (style, animation,...)
- ┗ ...
-```
+### Mobile
+
+> Each `card` has no `background color`
+
+![](./README/img/bugs/1.png)
+
+> Component `Dialog` not responsive
+
+![](./README/img/bugs/2.png)
+
+> Component `NoiseTexture` not working well
+
+![](./README/img/bugs/3.png)
+
+![](./README/img/bugs/4.png)
 
 ## Install command
 
