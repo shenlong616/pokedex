@@ -6,7 +6,6 @@ import Card from "./Card";
 import Dialog from "./Dialog";
 import { Transition } from "@headlessui/react";
 import useSWR from "../../hooks/useSWR";
-import UI from "../UI";
 
 export default function () {
   // `Card` state
@@ -87,7 +86,9 @@ export default function () {
                       data={pokemon2}
                     />
 
-                    <UI.Heading>{pokemon2.name}</UI.Heading>
+                    <span className="select-all text-xs font-medium">
+                      {pokemon2.name}
+                    </span>
                   </Transition>,
                 ]),
               };

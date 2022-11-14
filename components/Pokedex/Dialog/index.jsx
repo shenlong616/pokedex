@@ -4,7 +4,7 @@ import { settings } from "../../../pokedex.config";
 import Description from "./Description";
 import Legend from "./Legend";
 import CloseText from "./CloseText";
-import UI from "../../UI";
+import clsx from "clsx";
 
 export default function ({ show, data, onClose }) {
   return (
@@ -29,16 +29,17 @@ export default function ({ show, data, onClose }) {
           leaveTo={settings.headlessui.transition[1].leaveTo}
           className="fixed inset-0 flex flex-col items-center justify-center gap-y-2 overflow-y-auto p-5"
         >
-          <Dialog.Panel className="max-w-full">
-            <UI.Fieldset className="p-5">
-              <Legend data={data} />
+          <Dialog.Panel
+            className={clsx("max-w-full p-5", settings.tailwindcss.card)}
+            as="fieldset"
+          >
+            <Legend data={data} />
 
-              {/* <Dialog.Title></Dialog.Title> */}
+            {/* <Dialog.Title></Dialog.Title> */}
 
-              <Dialog.Description as={Fragment}>
-                <Description data={data} />
-              </Dialog.Description>
-            </UI.Fieldset>
+            <Dialog.Description as={Fragment}>
+              <Description data={data} />
+            </Dialog.Description>
           </Dialog.Panel>
 
           <CloseText onClick={onClose} />

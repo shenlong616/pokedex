@@ -2,7 +2,6 @@ import ProgressBar from "./ProgressBar";
 import clsx from "clsx";
 import { settings } from "../../pokedex.config";
 import Image from "next/legacy/image";
-import UI from "../UI";
 
 export default function ({ prop1, data, onClick }) {
   const reduceArray = [
@@ -12,9 +11,10 @@ export default function ({ prop1, data, onClick }) {
   ].reduce((a, b) => a + b, 0);
 
   return (
-    <UI.Card
+    <div
       className={clsx(
         "flex scale-90 cursor-pointer flex-row items-center gap-x-2 py-2 duration-75 ease-in-out hover:animate-pulse active:translate-y-1",
+        settings.tailwindcss.card,
         {
           [settings.tailwindcss.groupColor.green[1]]: prop1 === 0,
         },
@@ -27,14 +27,13 @@ export default function ({ prop1, data, onClick }) {
       )}
       onClick={onClick}
     >
-      <UI.Image>
-        <Image
-          height="100%"
-          width="100%"
-          src={data.sprites.front_default}
-          alt={data.name}
-        />
-      </UI.Image>
+      <Image
+        height="100%"
+        width="100%"
+        src={data.sprites.front_default}
+        alt={data.name}
+        className={settings.tailwindcss.image}
+      />
 
       <div className="flex w-28 flex-col gap-y-1">
         <ProgressBar
@@ -55,6 +54,6 @@ export default function ({ prop1, data, onClick }) {
           width={(data.stats[2].base_stat / reduceArray) * 100}
         />
       </div>
-    </UI.Card>
+    </div>
   );
 }

@@ -37,39 +37,33 @@
 ### Main files
 
 ```text
-components
- ┣ Layout
+📦components
+ ┣ 📂Layout
  ┃ ┣ Footer.jsx
  ┃ ┣ Header.jsx
  ┃ ┣ index.jsx
  ┃ ┗ Slideout.jsx
- ┣ Pokedex
- ┃ ┣ Dialog
- ┃ ┃ ┣ CloseButton.jsx
+ ┣ 📂Pokedex
+ ┃ ┣ 📂Dialog
+ ┃ ┃ ┣ CloseText.jsx
  ┃ ┃ ┣ Description.jsx
  ┃ ┃ ┣ index.jsx
  ┃ ┃ ┗ Legend.jsx
  ┃ ┣ Card.jsx
  ┃ ┣ index.jsx
- ┃ ┣ ProgressBar.jsx
- ┃ ┗ Style.jsx
+ ┃ ┗ ProgressBar.jsx
  ┣ CodeMirror.jsx
  ┗ NoiseTexture.jsx
 
-hooks
+📦hooks
  ┗ useSWR.js
 
-pages
+📦pages
  ┣ index.jsx
  ┣ _app.jsx
  ┗ _document.jsx
 
-README
- ┗ img
- ┃ ┣ 1.png
- ┃ ┗ 2.png
-
-styles
+📦styles
  ┣ globals.scss
  ┣ _scrollbar.scss
  ┣ _selectors.scss

@@ -1,17 +1,16 @@
-import UI from "../../UI";
+import { settings } from "../../../pokedex.config";
 
 export default function ({ data }) {
   return (
     <legend className="flex flex-col text-center">
-      <UI.Image>
-        <img
-          src={
-            data.sprites.versions["generation-v"]["black-white"].animated
-              .front_default
-          }
-          alt={data.name}
-        />
-      </UI.Image>
+      <img
+        src={
+          data.sprites.versions["generation-v"]["black-white"].animated
+            .front_default
+        }
+        alt={data.name}
+        className={settings.tailwindcss.image}
+      />
     </legend>
   );
 }

@@ -12,7 +12,7 @@ export default function ({ children }) {
       <main
         className={clsx(
           "inset-0 flex flex-col items-center gap-y-5 antialiased",
-          settings.tailwindcss.text.color[0]
+          settings.tailwindcss.text.color.main
         )}
       >
         <Header>
@@ -21,7 +21,7 @@ export default function ({ children }) {
           <span
             className={clsx(
               "self-baseline font-mono text-xs font-normal",
-              settings.tailwindcss.text.color[1]
+              settings.tailwindcss.text.color.subMain
             )}
           >
             v{settings.version}

@@ -8,7 +8,7 @@ export default function ({ text, bgColor, width }) {
       <span
         className={clsx(
           "font-mono text-xs",
-          settings.tailwindcss.text.color[1]
+          settings.tailwindcss.text.color.subMain
         )}
       >
         <small>{text}</small>

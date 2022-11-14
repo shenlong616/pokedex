@@ -7,11 +7,12 @@ export const settings = {
   text: {
     CloseText: [
       <span>
-        <span className="text-slate-200">Click here</span> to close the dialog
+        <span className="text-slate-200">Click here</span>{" "}
+        <span className="text-slate-400">to close the dialog</span>
       </span>,
       <span>
-        <span className="text-slate-200">Or click outside</span> the dialog to
-        close it
+        <span className="text-slate-200">Or click outside</span>{" "}
+        <span className="text-slate-400">the dialog to close it</span>
       </span>,
     ],
   },
@@ -27,7 +28,7 @@ export const settings = {
   // https://tailwindcss.com/
   tailwindcss: {
     text: {
-      color: { 0: "text-slate-200", 1: "text-slate-400" },
+      color: { main: "text-slate-200", subMain: "text-slate-400" },
     },
 
     background: {
@@ -38,10 +39,10 @@ export const settings = {
       },
     },
 
-    // border: {
-    //   width: {},
-    //   color: {},
-    // },
+    // other
+    image: "-scale-x-100 select-none",
+
+    card: "rounded-md border border-zinc-800 bg-zinc-900",
 
     groupColor: {
       green: [
