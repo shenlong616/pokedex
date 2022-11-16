@@ -30,7 +30,7 @@ export default function ({ show, data, onClose }) {
           className="fixed inset-0 m-2 flex flex-col items-center justify-center gap-y-2 overflow-y-auto"
         >
           <Dialog.Panel
-            className={clsx("p-5", settings.tailwindcss.card)}
+            className={clsx("px-6 py-3", settings.tailwindcss.card)}
             as="fieldset"
           >
             <Legend data={data} />
