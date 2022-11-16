@@ -13,7 +13,7 @@
 - [ ] Phân trang
 - [x] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
 - [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => tìm hiểu [`react-window`](https://www.npmjs.com/package/react-window)
-- [ ] `Search bar` component
+- [ ] `Search` component
 - [ ] `Filter` component
 - [x] Dùng [`swr`](https://swr.vercel.app/) thay cho [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
 - [ ] Component hóa từng phần.
@@ -31,6 +31,15 @@
 - [x] Khi dùng `swr` thì ko cần `async function(await function() {})`
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa => [tài liệu](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
 - [x] Cập nhật phiên bản `Next.js` từ 12 lên 13
+
+## Known bugs 🐛
+
+### Mobile
+
+#### Vi
+
+- [ ] Component `Card` ko có `background color`
+- [ ] Component `Dialog` và `NoiseTexture` ko chuẩn
 
 ## Tree file
 
@@ -73,24 +82,6 @@
  ┣ _selectors.scss
  ┗ _tailwindcss.scss
 ```
-
-## Known bugs 🐛
-
-### Mobile
-
-> Each `card` has no `background color`
-
-![](./README/img/bugs/1.png)
-
-> Component `Dialog` not responsive
-
-![](./README/img/bugs/2.png)
-
-> Component `NoiseTexture` not working well
-
-![](./README/img/bugs/3.png)
-
-![](./README/img/bugs/4.png)
 
 ## Install command
 
