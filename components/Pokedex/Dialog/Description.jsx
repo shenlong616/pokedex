@@ -39,10 +39,10 @@ export default function ({ data }) {
   });
 
   return (
-    <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-2">
-      <div className="w-full max-w-xl">
+    <div className="flex flex-col gap-y-2 sm:flex-row sm:gap-x-2">
+      <div className="w-full max-w-xs sm:max-w-xl">
         <CodeMirror>
-          {`# ${data.name.toUpperCase()} (${data.id})\n## Information\n${table(
+          {`# ${data.name.toUpperCase()} (${data.id})\n${table(
             [
               ["Height", convert(data.height, "decimetres").to("best")],
               ["Weight", convert(data.weight, "hectograms").to("best")],
@@ -70,7 +70,7 @@ export default function ({ data }) {
               ],
             ],
             settings.table
-          )}\n## Base score\n${table(
+          )}\n${table(
             [
               ["Experience [^1]", data.base_experience],
               [
@@ -83,14 +83,14 @@ export default function ({ data }) {
               ],
             ],
             settings.table
-          )}\n## This Pokémon is\n${table(
+          )}\n${table(
             [
               ["Baby", _function1(pokemonSpecies?.is_baby)],
               ["Legendary", _function1(pokemonSpecies?.is_legendary)],
               ["Mythical", _function1(pokemonSpecies?.is_mythical)],
             ],
             settings.table
-          )}\n# Footnotes\n[^Ability name]: Hidden ability.\n[^1]: The base experience gained for defeating this Pokémon.\n[^2]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^3]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
+          )}\n[^Ability name]: Hidden ability.\n[^1]: The base experience gained for defeating this Pokémon.\n[^2]: The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.\n[^3]: The base capture rate; up to 255. The higher the number, the easier the catch.`}
         </CodeMirror>
       </div>
 

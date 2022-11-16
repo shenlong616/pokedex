@@ -27,10 +27,10 @@ export default function ({ show, data, onClose }) {
           leave={settings.headlessui.transition[1].leave}
           leaveFrom={settings.headlessui.transition[1].leaveFrom}
           leaveTo={settings.headlessui.transition[1].leaveTo}
-          className="fixed inset-0 flex flex-col items-center justify-center gap-y-2 overflow-y-auto p-5"
+          className="fixed inset-0 m-2 flex flex-col items-center justify-center gap-y-2 overflow-y-auto"
         >
           <Dialog.Panel
-            className={clsx("max-w-full p-5", settings.tailwindcss.card)}
+            className={clsx("w-fit p-5", settings.tailwindcss.card)}
             as="fieldset"
           >
             <Legend data={data} />
