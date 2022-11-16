@@ -40,7 +40,7 @@ export default function ({ data }) {
 
   return (
     <div className="flex flex-col gap-y-2 sm:flex-row sm:gap-x-2">
-      <div className="w-full max-w-xs sm:max-w-xl">
+      <div className="w-full max-w-xs sm:max-w-lg">
         <CodeMirror>
           {`# ${data.name.toUpperCase()} (${data.id})\n\n${table(
             [
