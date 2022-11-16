@@ -39,8 +39,8 @@ export default function ({ data }) {
   });
 
   return (
-    <div className="flex flex-col md:flex-row md:gap-x-1">
-      <div className="w-3/5">
+    <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-2">
+      <div className="w-full max-w-xl">
         <CodeMirror>
           {`# ${data.name.toUpperCase()} (${data.id})\n## Information\n${table(
             [
@@ -94,7 +94,7 @@ export default function ({ data }) {
         </CodeMirror>
       </div>
 
-      <div className="w-2/5">
+      <div className="w-96">
         <Radar
           datasetIdKey={data.name}
           options={settings.chart}
