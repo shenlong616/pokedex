@@ -9,8 +9,8 @@
 
 ### Vi
 
-- [x] Infinite page scroll
-- [ ] Pagination
+- [x] Cuộn trang vô hạn
+- [ ] Phân trang
 - [x] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
 - [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => tìm hiểu [`react-window`](https://www.npmjs.com/package/react-window)
 - [ ] `Search` component
