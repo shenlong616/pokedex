@@ -42,7 +42,7 @@ export default function ({ data }) {
     <div className="flex flex-col gap-y-2 sm:flex-row sm:gap-x-2">
       <div className="w-full max-w-xs sm:max-w-xl">
         <CodeMirror>
-          {`# ${data.name.toUpperCase()} (${data.id})\n${table(
+          {`# ${data.name.toUpperCase()} (${data.id})\n\n${table(
             [
               ["Height", convert(data.height, "decimetres").to("best")],
               ["Weight", convert(data.weight, "hectograms").to("best")],
