@@ -1,12 +1,12 @@
 # Pokédex
 
-## Screenshot
+## Screenshots
 
 ![](./README/img/screenshots/3.png)
 ![](./README/img/screenshots/4.png)
 ![](./README/img/screenshots/5.png)
 
-## To do
+## To do lists
 
 - [x] Infinite page scroll
 - [ ] Pagination
@@ -23,11 +23,11 @@
 - [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi) 🤡
 - [ ] [`Dynamic`](https://nextjs.org/docs/routing/dynamic-routes) routes
 
-## Tasks
+## Notes
 
 - [x] Limit creation of unnecessary html tags `div, span,...`
 - [x] When using `swr` there is no need for `async function(await function() {})`
-- [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa => [tài liệu](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
+- [x] Forced to use [`concat method`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) instead of `spread operator` => because it's faster :) => [document](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
 - [x] Update `Next.js` version from 12 to 13
 
 ## Known bugs 🐛
@@ -35,7 +35,7 @@
 ### Mobile
 
 - [ ] Component `Card` has no `background color`
-- [ ] Component `Dialog` and `NoiseTexture` not standard 😣
+- [ ] Component `Dialog` and `NoiseTexture` not good 😣
 
 ## Tree file
 
@@ -78,7 +78,7 @@
  ┗ _tailwindcss.scss
 ```
 
-## Install command
+## For developers
 
 ```text
  _______________
