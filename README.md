@@ -2,44 +2,40 @@
 
 ## Screenshot
 
-![](./README/img/screenshots/1.png)
-![](./README/img/screenshots/2.png)
+![](./README/img/screenshots/3.png)
+![](./README/img/screenshots/4.png)
+![](./README/img/screenshots/5.png)
 
 ## To do
 
-### Vi
-
-- [x] Cuộn trang vô hạn
-- [ ] Phân trang
-- [x] Chỉ render khi `state1.index` bé hơn hoặc bằng [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
-- [ ] Dữ liệu `state1.render` qá lớn => gây ra tình trạng `lag` => tìm hiểu [`react-window`](https://www.npmjs.com/package/react-window)
+- [x] Infinite page scroll
+- [ ] Pagination
+- [x] Render only when `state1.index` is less than or equal to [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
+- [ ] Data `state1.render` is too large => causing `lag` => learn about [`react-window`](https://www.npmjs.com/package/react-window)
 - [ ] `Search` component
 - [ ] `Filter` component
-- [x] Dùng [`swr`](https://swr.vercel.app/) thay cho [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
-- [ ] Component hóa từng phần.
-- [ ] Dùng [`Image`](https://nextjs.org/docs/api-reference/next/image) component => Nhưng phải loại bỏ 2 props `height` và `weight`
-- [x] `Flex`
-- [x] `Grid`
-- [ ] Dùng [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) cho việc truyền `data` giữa các `component`
-- [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi)
+- [x] Use [`swr`](https://swr.vercel.app/) instead of [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
+- [ ] Separate `components`
+- [ ] When using [`Image`](https://nextjs.org/docs/api-reference/next/image) component => dont use props `height` and `weight`
+- [x] `Flex` display
+- [x] `Grid` display
+- [ ] Use [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) to transport `data` between `components`
+- [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi) 🤡
+- [ ] [`Dynamic`](https://nextjs.org/docs/routing/dynamic-routes) routes
 
-## Note
+## Tasks
 
-### Vi
-
-- [x] Hạn chế sinh ra các thẻ thừa `div, span,...`
-- [x] Khi dùng `swr` thì ko cần `async function(await function() {})`
+- [x] Limit creation of unnecessary html tags `div, span,...`
+- [x] When using `swr` there is no need for `async function(await function() {})`
 - [x] Buộc dùng [`concat`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) method thay cho toán tử `spread` => Vì nhanh hơn chứ cái loz j nữa => [tài liệu](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
-- [x] Cập nhật phiên bản `Next.js` từ 12 lên 13
+- [x] Update `Next.js` version from 12 to 13
 
 ## Known bugs 🐛
 
 ### Mobile
 
-#### Vi
-
-- [ ] Component `Card` ko có `background color`
-- [ ] Component `Dialog` và `NoiseTexture` ko chuẩn
+- [ ] Component `Card` has no `background color`
+- [ ] Component `Dialog` and `NoiseTexture` not standard 😣
 
 ## Tree file
 
@@ -50,7 +46,7 @@
  ┣ pokedex.config.js // Basic configuration! (style, animation,...)
  ┗ ...
 
-📦components
+📂components
  ┣ 📂Layout
  ┃ ┣ Footer.jsx
  ┃ ┣ Header.jsx
@@ -68,18 +64,17 @@
  ┣ CodeMirror.jsx
  ┗ NoiseTexture.jsx
 
-📦hooks
+📂hooks
  ┗ useSWR.js
 
-📦pages
+📂pages
  ┣ index.jsx
  ┣ _app.jsx
  ┗ _document.jsx
 
-📦styles
+📂styles
  ┣ globals.scss
- ┣ _scrollbar.scss
- ┣ _selectors.scss
+ ┣ _codemirror.scss
  ┗ _tailwindcss.scss
 ```
 
