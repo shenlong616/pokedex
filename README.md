@@ -1,12 +1,12 @@
 # Pokédex
 
-## Screenshots
+## Screenshots 📸
 
 ![](./README/img/screenshots/3.png)
 ![](./README/img/screenshots/4.png)
 ![](./README/img/screenshots/5.png)
 
-## To do lists
+## To do lists ✨
 
 - [x] Infinite page scroll
 - [ ] Pagination
@@ -23,7 +23,7 @@
 - [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi) 🤡
 - [ ] [`Dynamic`](https://nextjs.org/docs/routing/dynamic-routes) routes
 
-## Notes
+## Notes 📝
 
 - [x] Limit creation of unnecessary html tags `div, span,...`
 - [x] When using `swr` there is no need for `async function(await function() {})`
