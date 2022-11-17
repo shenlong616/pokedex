@@ -78,7 +78,7 @@
  ┗ _tailwindcss.scss
 ```
 
-## For developers
+## Development
 
 ```text
  _______________
