@@ -27,7 +27,7 @@
 
 - [x] Limit creation of unnecessary html tags `div, span,...`
 - [x] When using `swr` there is no need for `async function(await function() {})`
-- [x] Forced to use [`concat method`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) instead of `spread operator` => because it's faster :) => [document](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
+- [x] Forced to use [`concat method`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) instead of `spread operator` => because it's faster :v => [document](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
 - [x] Update `Next.js` version from 12 to 13
 
 ## Known bugs 🐛
