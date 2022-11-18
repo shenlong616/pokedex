@@ -37,7 +37,7 @@
 - [ ] Component `Card` has no `background color`
 - [ ] Component `Dialog` and `NoiseTexture` not good 😣
 
-### Ehe 😀
+### ???
 
 - [ ] There are no focusable elements inside the `<FocusTrap />`
 - [ ] Cannot update a component (`__WEBPACK_DEFAULT_EXPORT__`) while rendering a different component (`InView`). To locate the bad setState() call inside `InView`
