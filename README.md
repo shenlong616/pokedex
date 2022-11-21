@@ -1,12 +1,12 @@
 # Pokédex
 
-## Screenshots 📸
+## Screenshots
 
-![](./README/img/screenshots/3.png)
-![](./README/img/screenshots/4.png)
-![](./README/img/screenshots/5.png)
+![](./README/images/screenshots/1.png)
+![](./README/images/screenshots/2.png)
+![](./README/images/screenshots/3.png)
 
-## To do lists ✨
+## To do
 
 - [x] Infinite page scroll
 - [ ] Pagination
@@ -22,15 +22,17 @@
 - [ ] Use [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) to transport `data` between `components`
 - [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi) 🤡
 - [ ] [`Dynamic`](https://nextjs.org/docs/routing/dynamic-routes) routes
+- [ ] [`@layer`](https://tailwindcss.com/docs/functions-and-directives#layer)
+- [ ] [`Code splitting`](https://reactjs.org/docs/code-splitting.html)
 
-## Notes 📝
+## Notes
 
 - [x] Limit creation of unnecessary html tags `div, span,...`
 - [x] When using `swr` there is no need for `async function(await function() {})`
-- [x] Forced to use [`concat method`](https://github.com/shenlong616/pokedex/blob/c9c3a88b81f99cd0a2371392a845f5a6a0f8ff76/components/Pokedex/index.jsx#L53) instead of `spread operator` => because it's faster :v => [`document`](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
+- [x] Forced to use [`concat method`](/components/Pokedex/index.jsx#L63) instead of `spread operator` => because it's faster :v => [`document`](https://stackoverflow.com/questions/48865710/spread-operator-vs-array-concat)
 - [x] Update `Next.js` version from 12 to 13
 
-## Known bugs 🐛
+## Known bugs
 
 ### Mobile
 
@@ -42,15 +44,9 @@
 - [ ] There are no focusable elements inside the `<FocusTrap />`
 - [ ] Cannot update a component (`__WEBPACK_DEFAULT_EXPORT__`) while rendering a different component (`InView`). To locate the bad setState() call inside `InView`
 
-## Tree file
-
-### Main files
+## Tree files
 
 ```text
-📦pokedex
- ┣ pokedex.config.js // Basic configuration! (style, animation,...)
- ┗ ...
-
 📂components
  ┣ 📂Layout
  ┃ ┣ Footer.jsx
@@ -69,6 +65,10 @@
  ┣ CodeMirror.jsx
  ┗ NoiseTexture.jsx
 
+ 📂function
+ ┣ _function1.js
+ ┗ _function2.js
+
 📂hooks
  ┗ useSWR.js
 
@@ -76,6 +76,13 @@
  ┣ index.jsx
  ┣ _app.jsx
  ┗ _document.jsx
+
+ 📂README
+ ┗ 📂images
+ ┃ ┗ 📂screenshots
+ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┗ 📜3.png
 
 📂styles
  ┣ globals.scss
