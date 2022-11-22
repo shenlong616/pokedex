@@ -12,7 +12,7 @@
 - [ ] Pagination
 - [x] Render only when `state1.index` is less than or equal to [`{count:{}}`](https://pokeapi.co/api/v2/pokemon/)
 - [ ] Data `state1.render` is too large => causing `lag` => learn about [`react-window`](https://www.npmjs.com/package/react-window)
-- [ ] `Search` component
+- [ ] `Search` component ([`Debounce`](https://streamich.github.io/react-use/?path=/story/side-effects-usedebounce--docs))
 - [ ] `Filter` component
 - [x] Use [`swr`](https://swr.vercel.app/) instead of [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
 - [ ] Separate `components`
