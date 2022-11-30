@@ -17,8 +17,6 @@
 - [x] Use [`swr`](https://swr.vercel.app/) instead of [`pokedex-promise-v2`](https://github.com/PokeAPI/pokedex-promise-v2)
 - [ ] Separate `components`
 - [ ] When using [`Image`](https://nextjs.org/docs/api-reference/next/image) component => dont use props `height` and `weight`
-- [x] `Flex` display
-- [x] `Grid` display
 - [ ] Use [`useContext`](https://codesandbox.io/s/react-context-hq0sm8) to transport `data` between `components`
 - [ ] Offline [`data`](https://github.com/PokeAPI/pokeapi) 🤡
 - [ ] [`Dynamic`](https://nextjs.org/docs/routing/dynamic-routes) routes
@@ -80,9 +78,9 @@
  📂README
  ┗ 📂images
  ┃ ┗ 📂screenshots
- ┃ ┃ ┣ 📜1.png
- ┃ ┃ ┣ 📜2.png
- ┃ ┃ ┗ 📜3.png
+ ┃ ┃ ┣ 1.png
+ ┃ ┃ ┣ 2.png
+ ┃ ┃ ┗ 3.png
 
 📂styles
  ┣ globals.scss
